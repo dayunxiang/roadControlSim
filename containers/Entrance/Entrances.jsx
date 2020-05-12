@@ -30,7 +30,12 @@ class Entrances extends React.Component {
     this.logoutUrl = '/simulation/sys/user/logout'
   }
   componentDidMount = () => {
-    const userInfo = JSON.parse(localStorage.getItem('userInfo'))
+    let userInfo
+    if (window.opener) {
+      userInfo = window.opener.localStorage.getItem('userInfo')
+      localStorage.setItem('userInfo', userInfo)
+    }
+    userInfo = JSON.parse(localStorage.getItem('userInfo'))
     this.coustomInterval()
     this.loginKeys.id = userInfo.id
     this.setState({ userName: userInfo.userName })

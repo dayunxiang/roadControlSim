@@ -18,15 +18,13 @@ class Login extends React.Component {
     }
   }
   componentDidMount = () => {
+    if (window.opener) {
+      console.log(window.opener.localStorage)
+    }
     document.addEventListener('keydown', this.handleEnter)
   }
   componentWillUnmount = () => {
     document.removeEventListener('keydown', this.handleEnter)
-  }
-  handleEnter = (e) => {
-    if (e.keyCode === 13) {
-      this.handleLogin()
-    }
   }
   // 转格式
   getFormData = (obj) => {
@@ -61,6 +59,11 @@ class Login extends React.Component {
           message.warning(msg)
         }
       })
+    }
+  }
+  handleEnter = (e) => {
+    if (e.keyCode === 13) {
+      this.handleLogin()
     }
   }
   handleUserName = (e) => {

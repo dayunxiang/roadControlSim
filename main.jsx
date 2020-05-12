@@ -185,8 +185,8 @@ const Parent = () => (
     <Route exact path="/facilitiesmana" component={Facilitiesmana} />
     <Route exact path="/roadtraffic" component={Roadtraffic} />
     <Route exact path="/projectmana" component={Projectmana} />
-    <Route exact path="/entrance" component={Entrance} />
-    <Route exact path="/entrances" component={Entrances} />
+    {/* <Route exact path="/entrance" component={Entrance} /> */}
+    {/* <Route exact path="/entrances" component={Entrances} /> */}
     <Route exact path="/header" component={Header} />
     <Route exact path="/flow" component={Flow} />
     <Route exact path="/allocation" component={Allocation} />
@@ -221,8 +221,8 @@ reactDom.render(
       {/* //<Provider> */}
       <HashRouter basename="" history={BrowserHistory}>
         <Switch>
-          <Redirect exact from="/" to="/login" />
-          <Route exact path="/login" component={Login} />
+          <Redirect exact from="/" to="/entrances" />
+          <Route exact path="/entrances" component={Entrances} />
           <Route path="/" component={Parent} />
         </Switch>
       </HashRouter>
