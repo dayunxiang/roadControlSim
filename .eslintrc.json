@@ -1,0 +1,60 @@
+{
+  "env": {
+      "browser": true,
+      "es6": true
+  },
+  "extends": "airbnb",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "experimentalObjectRestSpread": true,
+          "jsx": true
+      },
+      "sourceType": "module",
+      "ecmaVersion": 6
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+      "react"
+  ],
+  "rules": {
+      "indent": [
+          "error",
+          2,
+          { "SwitchCase": 1 }
+      ],
+      "linebreak-style": [
+          "error",
+          "unix"
+      ],
+      "quotes": [
+          "error",
+          "single",
+          { "allowTemplateLiterals": true }
+      ],
+      "semi": [
+          "error",
+          "never"
+      ],
+      "wrap-iife": ["error", "any"],
+      "no-underscore-dangle": ["error", 
+        {"allow": ["__DEF__","__DEFS__","__PROP__","__PROPS__"]}
+        ],
+      "object-shorthand": ["error", "always",{ "ignoreConstructors": true }],
+      "func-names": ["error", "never"],
+      "space-before-blocks":["error", { "functions": "always", "keywords": "always", "classes": "always" }],
+      "no-console": "off",
+    //   "no-console": [
+    //       "error",
+    //       {"allow": ["error"]}
+    //   ],
+      "prefer-template": "error",
+      "max-len": "off",
+      "no-nested-ternary": "off",
+      "jsx-a11y/no-static-element-interactions": "off",
+      "jsx-a11y/no-noninteractive-element-interactions": "off",
+      "jsx-a11y/no-noninteractive-tabindex": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "no-lonely-if": "off",
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+  }
+}

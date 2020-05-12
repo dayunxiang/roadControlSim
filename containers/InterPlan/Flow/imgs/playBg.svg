@@ -1,0 +1,72 @@
+<svg id="组_4" data-name="组 4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="53.937" viewBox="0 0 54 53.937">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-opacity: 0;
+        stroke: #0cf;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-width: 1px;
+      }
+
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        stroke-width: 5px;
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        stroke-width: 3px;
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1551.56" y1="866.938" x2="1551.56" y2="843.688" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#de3c46"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1577.5" y1="867" x2="1577.5" y2="842" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="1551.53" y1="842" x2="1551.53" y2="817.063" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="1577.405" y1="838.813" x2="1577.405" y2="817" xlink:href="#linear-gradient"/>
+  </defs>
+  <path id="椭圆_2" data-name="椭圆 2" class="cls-1" d="M1563.05,866.925a25,25,0,0,1-22.99-23.244" transform="translate(-1538.5 -815.563)"/>
+  <path id="椭圆_2_拷贝_2" data-name="椭圆 2 拷贝 2" class="cls-2" d="M1590,842q0,0.906-.06,1.795A25.008,25.008,0,0,1,1565,867" transform="translate(-1538.5 -815.563)"/>
+  <path id="椭圆_2_拷贝_3" data-name="椭圆 2 拷贝 3" class="cls-3" d="M1540,842a25,25,0,0,1,23.06-24.926" transform="translate(-1538.5 -815.563)"/>
+  <path id="椭圆_2_拷贝_4" data-name="椭圆 2 拷贝 4" class="cls-4" d="M1565,817a25.006,25.006,0,0,1,24.8,21.824" transform="translate(-1538.5 -815.563)"/>
+</svg>

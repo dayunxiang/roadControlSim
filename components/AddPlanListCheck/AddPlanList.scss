@@ -1,0 +1,108 @@
+.planBtn {
+  position: relative;
+  width: 120px;
+  height: 30px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  background: url(./planBtn.png) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  &:hover {
+    color: #02dff1;
+    background: url(./checkedPlan.png) center center no-repeat;
+    background-size: cover;
+  }
+  .closeBtn {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
+  s {
+    width: 25px;
+    height: 28px;
+    display: inline-block;
+    background: url(./checked_L.png) no-repeat;
+    position: absolute;
+    right: -35px;
+    top: 0;
+    cursor: pointer;
+  }
+  .current {
+    background: url(./checked.png) no-repeat;
+  }
+  .planNameInput {
+    width: 85px;
+    height: 26px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+  }
+}
+.planBtnClick {
+  color: #02dff1;
+  background: url(./checkedPlan.png) center center no-repeat;
+  background-size: cover;
+}
+.addPlanBtn {
+  width: 120px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./planBtn.png) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  cursor: pointer;
+}
+.popout {
+  width: 300px;
+  height: 100px;
+  background: url(../../containers/img/loginBox.png);
+  background-size: 100% 100%;
+  position: absolute;
+  top: 8%;
+  left: 150%;
+  color: #fff;
+  > .top {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    line-height: 50px;
+  }
+  > .bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > span {
+      width: 50px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      color: #02dff1;
+      display: inline-block;
+      margin: 0 10px;
+      background: url(../../containers/img/smallBtnBg.png) center center no-repeat;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+  }
+}
+.planCen {
+  width: 85px;
+  height: 26px;
+  position: absolute;
+  left: 14px;
+  top: 2px;
+}

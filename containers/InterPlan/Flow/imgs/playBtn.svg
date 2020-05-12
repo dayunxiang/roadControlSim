@@ -1,0 +1,63 @@
+<svg id="组_6" data-name="组 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="31" viewBox="0 0 31 31">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill-opacity: 0;
+        stroke: #0cf;
+        stroke-width: 1px;
+        fill: url(#linear-gradient);
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #0cf;
+        fill-rule: evenodd;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="15.5" y1="30.5" x2="15.5" y2="0.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#de3c46"/>
+    </linearGradient>
+    <filter id="filter" x="0.5" y="0.5" width="30" height="30" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="5.385" in="SourceAlpha"/>
+      <feFlood result="flood" flood-color="#003587" flood-opacity="0.42"/>
+      <feComposite result="composite" operator="out" in2="blur"/>
+      <feOffset result="offset" dy="8"/>
+      <feComposite result="composite-2" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: url(#linear-gradient); filter: url(#filter)">
+    <circle id="椭圆_2_拷贝" data-name="椭圆 2 拷贝" class="cls-1" cx="15.5" cy="15.5" r="15" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#椭圆_2_拷贝" style="stroke: #0cf; filter: none; fill: none"/>
+  <path id="多边形_1" data-name="多边形 1" class="cls-2" d="M1575,842l-16,9V833Z" transform="translate(-1549.5 -826.5)"/>
+</svg>

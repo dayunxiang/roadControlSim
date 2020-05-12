@@ -1,0 +1,101 @@
+.rowAddPlanListBox {
+  position: relative;
+  float: left;
+  max-width: 78%;
+  height: 50px;
+  padding: 0 170px 0 120px;
+  overflow: hidden;
+  .planListWrapper {
+    height: 100%;
+    max-width: 900px;
+    margin-left: 10px;
+    overflow: hidden;
+    .planLists {
+      position: relative;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      transition: all ease 0.2s;
+      .planItems {
+        position: relative;
+        width: 140px;
+        height: 30px;
+        padding-right: 20px;
+        margin-right: 10px;
+        background: url(../AddPlanList/planBtn.png) center center no-repeat;
+        background-size: cover;
+        color: #fff;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        .closeBtn {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          right: 5px;
+          top: 3px;
+          cursor: pointer;
+        }
+        .rowVideo {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          right: 24px;
+          top: 7px;
+          cursor: pointer;
+          background: url(../AddPlanList/video.png) center center no-repeat;
+          background-size: 100% 100%;
+        }
+        :global(.ant-select-selection) {
+          width: 90px;
+          background-color: transparent;
+          color: #fff;
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .addPlanBtn {
+    position: absolute;
+    right: 50px;
+    top: 9px;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../AddPlanList/planBtn.png) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    cursor: pointer;
+  }
+  .moveLeftBtn {
+    position: absolute;
+    left: 90px;
+    top: 10px;
+    width: 30px;
+    height: 28px;
+    border: 1px solid #1d44a9;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 26px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .moveRightBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 28px;
+    border: 1px solid #1d44a9;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 26px;
+    color: #fff;
+    cursor: pointer;
+  }
+}

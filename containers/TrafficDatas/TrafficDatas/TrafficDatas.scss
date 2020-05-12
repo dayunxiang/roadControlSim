@@ -1,0 +1,727 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../img/flowBg.png) center center no-repeat;
+  background-size: cover;
+  .mapContainer {
+    position: absolute;
+    /* top: 150px; */
+    top: 130px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px #0096ff solid;
+    .dateBox {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border: 1px #0096ff solid;
+      z-index: 10;
+      s {
+        width: 200px;
+        height: 6px;
+        display: block;
+        position: absolute;
+        left: 5px;
+        top: 3px;
+        background: url(../../img/line.png) center -1px repeat-x;
+        background-size: 100% 8px;
+        overflow: hidden;
+      }
+      .bottomRight {
+        left: unset;
+        top: unset;
+        right: 5px;
+        bottom: 3px;
+      }
+      .flowGetDate {
+        font-size: 15px;
+        color: #07eeff;
+        :global(.ant-calendar-picker-input) {
+          padding-left: 20px;
+          background-color: transparent;
+          background: url(../../img/flowBorder.png) center center no-repeat;
+          background-size: 100% 100%;
+          color: #22f4ad;
+          border: none;
+        }
+        :global(.ant-time-picker-input) {
+          padding-left: 20px;
+          background-color: transparent;
+          background: url(../../img/flowBorder.png) center center no-repeat;
+          background-size: 100% 100%;
+          color: #22f4ad;
+          border: none;
+        }
+        :global(.anticon svg) {
+          color: #07eeff;
+          background: #000b2b;
+        }
+        .flowGetTime {
+          :global(.ant-calendar-picker-input) {
+            width: 130px;
+          }
+        }
+
+        :global(.ant-select-selection--single) {
+          border: none;
+          background: url(../../img/flowBorder.png) center center no-repeat;
+          background-size: 100% 100%;
+          outline: none;
+          box-shadow: none;
+        }
+        :global(.ant-select-selection__rendered) {
+          width: 70px;
+          background-color: transparent;
+          color: #22f4ad;
+        }
+        :global(.ant-select-arrow) {
+          color: #fff;
+        }
+      }
+    }
+    .leftTopBox {
+      position: absolute;
+      top: 85px;
+      left: 10px;
+      z-index: 10;
+      user-select: none;
+      pointer-events: none;
+      dl {
+        dt {
+          width: 94px;
+          line-height: 34px;
+          display: block;
+          background: url(../imgs/level_bg.png) center center no-repeat;
+          background-size: 100% 100%;
+          margin-bottom: 8px;
+          s {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            background: #01ff00;
+            box-shadow: 0 0 20px #01ff00;
+            border-radius: 50%;
+            position: relative;
+            top: 2px;
+            margin: 0 15px 0 15px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+          }
+          span {
+            font-size: 16px;
+            display: inline-block;
+            color: #fff;
+          }
+        }
+        dt:nth-child(2) {
+          s {
+            background: #ffff00;
+            box-shadow: 0 0 20px #ffff00;
+          }
+        }
+        dt:nth-child(3) {
+          s {
+            background: #fe0000;
+            box-shadow: 0 0 20px #fe0000;
+          }
+        }
+        dt:nth-child(4) {
+          s {
+            background: #660000;
+            box-shadow: 0 0 20px #660000;
+          }
+        }
+      }
+    }
+    .leftBottomBox {
+      width: 478px;
+      height: 440px;
+      padding: 20px 15px 0;
+      background: url(../imgs/pop_left_bottom_bg.png) no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      z-index: 10;
+      dl {
+        display: block;
+        padding: 8px 8px 0;
+        dt {
+          line-height: 20px;
+          display: flex;
+          justify-content: flex-start;
+          font-size: 15px;
+          em,
+          s {
+            display: inline-block;
+            text-decoration: none;
+            padding-right: 8px;
+            font-style: normal;
+          }
+          em {
+            color: #0ab7ff;
+          }
+          s {
+            color: #1eb41e;
+          }
+        }
+      }
+      .programmeItemBox {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        .programmeItem {
+          width: 146px;
+          height: 47px;
+          margin: 3px 0;
+          background: url(../imgs/pop_left_bottom_time_bg.png) no-repeat;
+          background-size: cover;
+          time,
+          s {
+            display: block;
+            padding: 0 15px;
+            text-decoration: none;
+            font-size: 14px;
+          }
+          time {
+            color: #1eb41e;
+            line-height: 30px;
+          }
+          s {
+            line-height: 17px;
+            color: #fff;
+            text-align: right;
+          }
+        }
+      }
+      .planBox {
+        /* height: 170px; */
+        height: 275px;
+        overflow: hidden;
+        position: relative;
+        span {
+          width: 88px;
+          height: 88px;
+          line-height: 88px;
+          text-align: center;
+          font-size: 18px;
+          color: #fff;
+          border-radius: 100%;
+          border-radius: 100%;
+          -moz-border-radius: 100%;
+          -ms-border-radius: 100%;
+          -o-border-radius: 100%;
+          background: transparent;
+          position: absolute;
+        }
+        span s {
+          transition: all 1.5s;
+          transition: all 1.5s;
+          -moz-transition: all 1.5s;
+          -ms-transition: all 1.5s;
+          -o-transition: all 1.5s;
+        }
+        span:hover s {
+          width: 108px;
+          height: 108px;
+          display: inline-block;
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          transform: rotate(360deg);
+          transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+        }
+
+        span:nth-child(1) {
+          box-shadow: inset 0 0 15px #adab2e;
+          left: 45px;
+          bottom: 30px;
+        }
+        span:nth-child(2) {
+          box-shadow: inset 0 0 15px #044399;
+          left: 150px;
+          top: 85px;
+        }
+        span:nth-child(3) {
+          box-shadow: inset 0 0 15px #9589bc;
+          right: 95px;
+          top: 10px;
+        }
+        .contentBox {
+          font-size: 0;
+          position: absolute;
+          .itemox {
+            width: 448px;
+            height: 275px;
+            display: inline-block;
+            position: relative;
+          }
+        }
+      }
+
+      .btnBox {
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        span {
+          width: 166px;
+          line-height: 33px;
+          text-align: center;
+          font-size: 16px;
+          color: #0ff6fe;
+          background: url(../../img/smallBtnBg.png) center center no-repeat;
+          background-size: 100% 100%;
+          margin: 0 8px;
+          cursor: pointer;
+          &:hover {
+            background: url(../../img/btnChecked.png) center center no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+      }
+      .interLeft {
+        width: 20px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        left: 25px;
+        top: 200px;
+        cursor: pointer;
+        transition: all 0.5s;
+        color: #07eeff;
+        font-size: 20px;
+        z-index: 999;
+        &:hover {
+          background: #ccc;
+        }
+      }
+      .interRight {
+        width: 20px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        right: 25px;
+        top: 200px;
+        cursor: pointer;
+        transition: all 0.5s;
+        color: #07eeff;
+        font-size: 20px;
+        z-index: 999;
+        &:hover {
+          background: #ccc;
+        }
+      }
+    }
+    .midBottomBox {
+      width: 666px;
+      /* height:calc(100% - 5px); */
+      display: flex;
+      flex-direction: column;
+      flex-direction: column;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      z-index: 10;
+      transform: translate(-60%, 0);
+      .itemDetailBox {
+        flex: 1;
+        width: 100%;
+        margin: 0 0 10px;
+        background: url(../../img/pop_analysis_bg.png) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        .title {
+          font-size: 16px;
+          color: #41d6fd;
+          padding: 12px 0 0 16px;
+          position: relative;
+          i > svg {
+            color: #41d6fd;
+            margin: 0 5px 0 0;
+          }
+        }
+        .videoBox {
+          border: 1px solid #41d6fd;
+          position: absolute;
+          top: 45px;
+          right: 10px;
+          bottom: 10px;
+          left: 10px;
+        }
+        .formDiv {
+          display: flex;
+          flex-wrap: wrap;
+          color: #41d6fd;
+          font-size: 12px;
+          padding: 5px 0 0 0;
+          .itemDiv {
+            padding: 8px 10px 8px 5px;
+            .selectItem {
+              :global(.ant-select) {
+                width: 130px;
+              }
+              :global(.ant-select-selection--single) {
+                border: none;
+                background: url(../../img/flowBorder.png) center center no-repeat;
+                background-size: 100% 100%;
+                outline: none;
+                box-shadow: none;
+                font-size: 12px;
+              }
+              :global(.ant-select-selection__rendered) {
+                width: 70px;
+                background-color: transparent;
+                color: #22f4ad;
+              }
+              :global(.ant-select-arrow) {
+                color: #fff;
+              }
+            }
+          }
+          .itemDir {
+            padding: 8px 10px;
+            .selectItem {
+              :global(.ant-select) {
+                width: 360px;
+              }
+              :global(.ant-select-selection--multiple) {
+                background: url(../../img/flowBorder.png) center center no-repeat;
+                background-size: 100% 100%;
+                border: none;
+                outline: none;
+                box-shadow: none;
+              }
+              :global(.ant-select-selection__rendered) {
+                background-color: transparent;
+                color: #22f4ad;
+                font-size: 12px;
+                padding: 3px 0 0 8px;
+                margin-right: 0;
+              }
+              :global(.ant-select-selection--multiple .ant-select-selection__choice) {
+                background: transparent;
+                border: unset;
+                color: #22f4ad;
+                margin-right: 0;
+                padding-left: 3px;
+                i > svg {
+                  color: #fff;
+                  border: 1px blue solid;
+                  border-radius: 4px;
+                  padding: 2px;
+                  font-size: 18px;
+                  position: relative;
+                  left: 4px;
+                  top: 2px;
+                }
+              }
+              :global(.ant-select-selection__placeholder) {
+                left: 5px;
+              }
+            }
+          }
+          .itemTurn {
+            padding: 0 10px 0 249px;
+            position: relative;
+            .selectItem {
+              :global(.ant-select) {
+                width: 210px;
+              }
+              :global(.ant-select-selection--multiple) {
+                background: url(../../img/flowBorder.png) center center no-repeat;
+                background-size: 100% 100%;
+                border: none;
+                outline: none;
+                box-shadow: none;
+              }
+              :global(.ant-select-selection__rendered) {
+                background-color: transparent;
+                color: #22f4ad;
+                font-size: 12px;
+                padding: 3px 0 0 8px;
+                margin-right: 0;
+              }
+              :global(.ant-select-selection--multiple .ant-select-selection__choice) {
+                background: transparent;
+                border: unset;
+                color: #22f4ad;
+                margin-right: 0;
+                padding-left: 3px;
+                i > svg {
+                  color: #fff;
+                  border: 1px blue solid;
+                  border-radius: 4px;
+                  padding: 2px;
+                  font-size: 18px;
+                  position: relative;
+                  left: 4px;
+                  top: 2px;
+                }
+              }
+            }
+            s {
+              width: 81px;
+              line-height: 25px;
+              text-align: center;
+              font-size: 12px;
+              color: #ff7e00;
+              text-decoration: none;
+              background: url(../../img/headerClick.png) no-repeat;
+              background-size: 100% 100%;
+              position: absolute;
+              top: 2px;
+              right: -90px;
+              cursor: pointer;
+              z-index: 1;
+            }
+          }
+        }
+        .echartsBox {
+          display: block;
+          height: 200px;
+        }
+      }
+      /*  .itemDetailBox:nth-child(1){
+                background:none;
+            }
+            .itemDetailBox:nth-child(2){
+                flex:3.5;
+            }
+            .itemDetailBox:nth-child(3){
+                flex:3.5;
+            } */
+    }
+    .rightBox {
+      width: 625px;
+      position: absolute;
+      right: 10px;
+      height: calc(100% - 5px);
+      display: flex;
+      flex-direction: column;
+      flex-direction: column;
+      z-index: 10;
+      .echartsItem {
+        flex: 1;
+        width: 100%;
+        margin: 0 0 5px;
+        padding: 25px 0 0;
+        background: url(../imgs/echarts_bg.png) no-repeat;
+        background-size: 100% 100%;
+        margin-bottom: 8px;
+        position: relative;
+        .title {
+          width: 200px;
+          height: 30px;
+          margin: 10px 0 15px 0;
+          background: url(../../img/titleBg.svg) center center no-repeat;
+          background-size: contain;
+          text-indent: 40px;
+          font-size: 15px;
+          color: #00f1ff;
+        }
+        .echartsHistogram {
+          display: block;
+          height: 200px;
+        }
+      }
+      .echartsItem:nth-child(1) {
+        background: none;
+      }
+      .echartsItem:nth-child(2) {
+        flex: 5;
+      }
+      .echartsItem:nth-child(3) {
+        flex: 5;
+      }
+    }
+  }
+  .formBox {
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    min-width: 1200px;
+    left: 15%;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    color: #00eeff;
+    font-size: 14px;
+    .itemBtn {
+      line-height: 30px;
+      padding: 0 15px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .itemCurrBtn {
+      line-height: 30px;
+      padding: 0 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      background: url(../../img/headerClick.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  :global(.ant-select-selection--multiple .ant-select-selection__choice i > svg) {
+    top: -2px !important;
+  }
+}
+
+/* 标记点的效果 */
+.drawCircle {
+  position: absolute;
+  z-index: 999;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  .inner {
+    width: 40px;
+    height: 40px;
+    left: -10px;
+    top: -10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    animation-duration: 1.8s;
+    animation-name: sm-state1;
+    animation-name: sm-state1;
+    animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    opacity: 0;
+  }
+
+  @keyframes sm-state1 {
+    0% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(2.5);
+    }
+  }
+  .avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    z-index: 11;
+  }
+
+  .container {
+    animation-delay: 0.6s;
+  }
+
+  .outter {
+    animation-delay: 1.5s;
+  }
+}
+
+.inquire {
+  width: 90px;
+  height: 30px;
+  background: url(../../img/smallBtnBg.png) center center no-repeat;
+  line-height: 30px;
+  background-size: 100% 100%;
+  text-align: center;
+  color: #ff8800;
+  cursor: pointer;
+  margin-left: 20px;
+  &:hover {
+    /* transition: all 0.3s; */
+    background: url(../../img/headerClick.png) center center no-repeat;
+    background-size: 100% 100%;
+  }
+}
+:global(.ant-message-notice-content) {
+  background: #343a52;
+  color: #dcdce6;
+  margin-top: 60px;
+}
+.chartsSearch {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../img/eacherBoxBg.png) center center no-repeat;
+  background-size: 100% 100%;
+  .chartsCentent {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.chartsBoxBg {
+  background: url(../../img/eacherBg.png) center center no-repeat;
+  background-size: 100% 100%;
+  width: 66%;
+  height: 68%;
+  padding-top: 38px;
+}
+.titleBoxBg {
+  top: 42px !important;
+}
+.SearchBg {
+  right: 5px;
+  top: 5px;
+  font-size: 15px;
+}
+.videoBox {
+  background: url(../../img/pop_analysis_bg.png) center center no-repeat;
+  background-size: 100% 100%;
+  width: 32%;
+  height: 45%;
+  margin: 10px;
+  .title {
+    width: 100%;
+    height: 13%;
+    padding: 0 20px;
+    position: relative;
+    .nodeName {
+      width: 165px;
+      position: absolute;
+      left: 20px;
+      top: 6px;
+      font-size: 16px;
+      color: #00ccff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .content {
+    width: 100%;
+    height: 85%;
+    padding: 0 15px 0 12px;
+  }
+}

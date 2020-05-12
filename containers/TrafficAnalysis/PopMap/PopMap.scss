@@ -1,0 +1,46 @@
+.popMapBox{
+    width:525px;
+    height:113px;
+    padding:10px 0 0 50px;
+    background: url(../imgs/pop_mid.png) no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    dl > dt {
+        width:49%;
+        display:inline-block;
+        position: relative;
+        span{
+            color:#0ab7ff;
+        }
+        span:nth-child(2){
+            color:#1eb41e;
+        }
+        span.red{
+            color:red;
+        }
+        span.orange{
+            color:orange;
+        }
+        span.yellow{
+            color:yellow;
+        }
+        span.green{
+            color:#11ae11;
+        }
+    }
+    i > svg{
+        position: absolute;
+        top:15px;
+        right:15px;
+        cursor: pointer;
+    }
+    
+}

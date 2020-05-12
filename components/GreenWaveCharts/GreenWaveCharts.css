@@ -1,0 +1,97 @@
+.greenWaveBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5px 50px 0 0;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.greenWaveBox .yAxisBox {
+    position: absolute;
+    left: -6px;
+    width: 6px;
+    border-top: 1px solid #fff;
+    color: #00f1ff;
+}
+.greenWaveBox .yScaleText {
+    position: absolute;
+    top: -10px;
+    left: -24px;
+    font-size: 12px;
+}
+.greenWaveBox .xAxisBox {
+    position: absolute;
+    bottom: -6px;
+    height: 6px;
+    border-right: 1px solid #fff;
+    color: #00f1ff;
+}
+.greenWaveBox .xScalText {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    font-size: 12px;
+}
+.greenWaveBox .xCoordinate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.greenWaveBox .graphBox {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    /* left: 100px; */
+    width: 35px;
+    height: 100%;
+    /* background-color: rgba(36, 40, 57, 1); */
+    overflow: hidden;
+}
+.greenWaveBox .forwordGraph {
+    position: absolute;
+    width: 12px;
+    height: 100%;
+}
+.greenWaveBox .reverseGraph {
+    height: 100%;
+    overflow: hidden;
+}
+.greenWaveBox .phaseBox {
+    position: absolute;
+    bottom: 0;
+    width: 12px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.greenWaveBox .colorBox {
+    width: 100%;
+    background: #fff;
+}
+.greenWaveBox .greenBox {
+    background: green;
+}
+.greenWaveBox .redBox {
+    background: red;
+}
+.greenWaveBox .repeatBox {
+    position: absolute;
+    width: 12px;
+    height: 100%;
+}
+.greenWaveBox .begainBox {
+    position: absolute;
+    bottom: -14px;
+    left: -14px;
+    font-size: 13px;
+    color: #00f1ff;
+}
+.xAxisInterMsg {
+  position: absolute;
+  top: 20px;
+  width: 200px;
+  font-size: 13px;
+  color: #00f1ff;
+}
+
+

@@ -1,0 +1,22 @@
+.InputLabelBox {
+  min-width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  .textBox {
+    display: inline-block;
+    min-width: 0px;
+    padding-right: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .textInput {
+    width: auto;
+    max-width: 30px;
+    overflow-x: visible;
+    overflow-y: visible;
+    color: red;
+  }
+}
+

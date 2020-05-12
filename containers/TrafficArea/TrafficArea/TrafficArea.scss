@@ -1,0 +1,1127 @@
+.msrkerDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00ff00;
+  box-shadow: 0 0 20px #00ff00;
+  border: solid 1px rgba(0, 255, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+}
+.msrkerDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ccc;
+  box-shadow: 0 0 20px #ccc;
+  border: solid 1px #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+}
+.examine {
+  width: 96%;
+  height: 78%;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: url(../imgs/pop_view.png) center center no-repeat;
+  background-size: 100% 100%;
+  margin-left: 1.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  .title {
+    position: absolute;
+    top: 38px;
+    left: 45px;
+    color: rgb(0, 204, 255);
+    font-size: 25px;
+  }
+  .centerWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    .centerMoveBox,
+    .canvasBox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all ease 0.2s;
+    }
+    .interPointBox {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url(../../img/interPoint.png) center center no-repeat;
+      background-size: 100% 100%;
+      cursor: pointer;
+      .interMessageBox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .interMessage {
+          position: absolute;
+          z-index: 9999;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          font-size: 13px;
+          color: #22f4ad;
+          border-radius: 50%;
+          border: 1px solid #082545;
+          background-color: rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px #22f4ad;
+        }
+      }
+    }
+  }
+
+  > .examine_top {
+    position: absolute;
+    top: 40px;
+    right: 90px;
+    > span {
+      width: 275px;
+      height: 47px;
+      display: block;
+      background: url(../imgs/pop_view_right.png) center center no-repeat;
+      background-size: 100% 100%;
+      font-size: 15px;
+      text-align: center;
+      line-height: 47px;
+      color: #fe8500;
+      &:nth-child(1) {
+        margin-bottom: 13px;
+        > i {
+          width: 19px;
+          height: 19px;
+          display: inline-block;
+          background: url(../imgs/pop_view_qiu.png) center center no-repeat;
+          background-size: 100% 100%;
+          vertical-align: middle;
+          margin-right: 30px;
+        }
+      }
+      &:nth-child(2) {
+        > i {
+          width: 44px;
+          height: 19px;
+          display: inline-block;
+          background: url(../imgs/pop_view_rowll.png) center center no-repeat;
+          background-size: 100% 100%;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+.examineOther {
+  width: calc(100% - 21%);
+  height: 78.5%;
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  left: 10px;
+  background: url(../imgs/pop_view.png) center center no-repeat;
+  background-size: 100% 100%;
+  margin-left: 1.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1000;
+  .title {
+    width: calc(100% -1px);
+    height: 45px;
+    margin: 30px 0 15px 1px;
+    background: url(../../img/titleBg.svg) left 10px no-repeat;
+    background-size: 200px 30px;
+    text-indent: 40px;
+    font-size: 15px;
+    color: #00f1ff;
+    border-bottom: 1px blueviolet solid;
+    align-self: flex-start;
+    position: relative;
+    .clone {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: -27px;
+      right: 0;
+      background: url(../../img/clone.png) center center no-repeat;
+      background-size: 100% 100%;
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+  > .img_road {
+    width: 76%;
+    height: 60%;
+    background: url(../imgs/img_road.png) center center no-repeat;
+    background-size: 100% 90%;
+    position: absolute;
+    > span {
+      width: 42px;
+      height: 42px;
+      display: inline-block;
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+      &:nth-child(1) {
+        top: 19.5%;
+        left: 10.4%;
+      }
+      &:nth-child(2) {
+        top: 27.5%;
+        left: 22.1%;
+      }
+      &:nth-child(3) {
+        top: 39.6%;
+        left: 39%;
+      }
+      &:nth-child(4) {
+        top: 50.5%;
+        right: 41.4%;
+      }
+      &:nth-child(5) {
+        bottom: 27.9%;
+        right: 23%;
+      }
+      &:nth-child(6) {
+        bottom: 19.9%;
+        right: 10.9%;
+      }
+    }
+  }
+  > .examine_top {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    > span {
+      width: 275px;
+      height: 47px;
+      display: block;
+      background: url(../imgs/pop_view_right.png) center center no-repeat;
+      background-size: 100% 100%;
+      font-size: 15px;
+      text-align: center;
+      line-height: 47px;
+      color: #fe8500;
+      margin-bottom: 8px;
+      &:nth-child(1) {
+        > i {
+          width: 19px;
+          height: 19px;
+          display: inline-block;
+          background: url(../imgs/pop_view_qiu.png) center center no-repeat;
+          background-size: 100% 100%;
+          vertical-align: middle;
+          margin-right: 30px;
+        }
+      }
+      &:nth-child(2) {
+        > i {
+          width: 44px;
+          height: 8px;
+          display: inline-block;
+          background: red;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+      }
+      &:nth-child(3) {
+        > i {
+          width: 44px;
+          height: 19px;
+          display: inline-block;
+          background: url(../imgs/pop_view_rowll.png) center center no-repeat;
+          background-size: 100% 100%;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .examine_right {
+    position: absolute;
+    top: 270px;
+    right: 20px;
+    > span {
+      width: 76px;
+      height: 31px;
+      display: block;
+      background: url(../imgs/pop_view_actionBg.png) center center no-repeat;
+      background-size: 100% 100%;
+      font-size: 15px;
+      text-align: center;
+      line-height: 31px;
+      color: #07f8ff;
+      margin-bottom: 5px;
+      cursor: pointer;
+      > i {
+        width: 18px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      &:nth-child(1) {
+        > i {
+          background: url(../imgs/btn_One.png) center center no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      &:nth-child(2) {
+        > i {
+          background: url(../imgs/btn_Two.png) center center no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      &:nth-child(3) {
+        > i {
+          background: url(../imgs/btn_Three.png) center center no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      &:nth-child(4) {
+        margin-bottom: 0;
+        > i {
+          background: url(../imgs/btn_Four.png) center center no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
+.banksFigure {
+  width: 30%;
+  height: 55%;
+  background: url(../imgs/boder_bg_channelization.png) center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 6%;
+  left: 30%;
+  z-index: 1001;
+  .content {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.trafficFlow {
+  width: 30%;
+  height: 65%;
+  background: url(../imgs/boder_bg_channelization.png) center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 6%;
+  left: 30%;
+  z-index: 1001;
+  .content {
+    width: 100%;
+    height: 92%;
+    padding: 0 20px;
+    .roadflow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .timerShaft {
+      width: 100%;
+      height: 108px;
+      margin-top: 10px;
+      position: relative;
+      background: url(../../InterPlan/Projectmana/imgs/timerShaft.png) center center no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .flowSelect {
+      display: inline-block;
+      > div {
+        vertical-align: middle;
+        > div {
+          width: 90px;
+          height: 25px;
+          color: #00b6c1;
+          border: none !important;
+          outline: none !important;
+          background: url(../../InterPlan/Roadtraffic/img/titleOne.png) center center no-repeat !important;
+          background-size: 100% 100% !important;
+          > div {
+            > div {
+              width: 90px;
+              height: 25px;
+              line-height: 25px;
+            }
+          }
+        }
+        svg {
+          color: #00b6c1;
+        }
+      }
+    }
+    .flowSelectTwo {
+      width: 100% !important;
+      .play {
+        width: 30px;
+        height: 30px;
+        background: url(../../InterPlan/Projectmana/imgs/play.png) center center no-repeat;
+        background-size: 100% 100%;
+        display: inline-block;
+        float: right;
+        margin-right: 3px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+.signalList {
+  width: 63.5%;
+  height: 38%;
+  background: url(../imgs/boder_bg_road.png) center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 6%;
+  left: 30%;
+  z-index: 1001;
+  .content {
+    width: 100%;
+    height: 92%;
+    .bottom {
+      width: 100%;
+      height: 67%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 70px;
+      .signal_listbox {
+        /*  flex: 1;
+        height: 100%;
+        padding: 15px 56px; */
+        width: 125px;
+        height: 100%;
+        padding: 36px 0;
+      }
+      .signal_lists {
+        height: calc(100%);
+        margin-bottom: 3px;
+        margin-top: -50px;
+        zoom: 0.5 !important;
+      }
+
+      .phaseTitle {
+        height: 25px;
+        background: url(../../InterPlan/Projectmana/imgs/kuang.png) center center no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        line-height: 25px;
+        > span {
+          color: #247b44;
+          margin-left: 15px;
+        }
+      }
+    }
+    .top {
+      width: 100%;
+      height: 33%;
+      padding-left: 20px;
+      .signal_precept {
+        flex: 1;
+        height: 35px;
+        line-height: 35px;
+        > span {
+          width: 100px;
+          height: 30px;
+          display: block;
+          background: url(../../InterPlan/Projectmana/imgs/item.png) center center no-repeat;
+          background-size: 100% 100%;
+          line-height: 30px;
+          text-align: center;
+          margin: 3px 0;
+          > i {
+            width: 13px;
+            height: 13px;
+            display: inline-block;
+            background: url(../../InterPlan/Projectmana/imgs/cond_del.png) center center no-repeat;
+            background-size: 100% 100%;
+            float: right;
+            margin: 8px 5px 0 0;
+            cursor: pointer;
+          }
+        }
+      }
+      .progress {
+        height: 40px;
+        width: calc(100% - 81px);
+        position: absolute;
+        padding: 5px;
+        bottom: 40px;
+        top: unset;
+        // background: url(./img/progress.png) center center;
+        .horStepGapBig {
+          > time {
+            bottom: 8px !important;
+          }
+        }
+        .horStepGap {
+          > b {
+            width: 160px;
+            text-align: center;
+            display: block;
+            padding: 2px 10px;
+            border-radius: 5px;
+            border: 1px solid #1c44a9;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+            font-size: 14px;
+            color: white;
+            position: absolute;
+            z-index: 999;
+            top: -10px;
+            cursor: pointer;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+.timeBox {
+  display: flex;
+  height: 50px;
+  padding: 18px 30px;
+  background: rgba(62, 56, 68, 0.3);
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  box-sizing: content-box;
+  mark {
+    padding: 5px 15px;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 0px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background: url(../../img/play.png) no-repeat;
+    i {
+      width: 50px;
+      height: 50px;
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background: url(../../img/timeBtnHover.png) no-repeat;
+      animation: playGo 3s linear infinite;
+      animation: playGo 3s linear infinite;
+      &:hover {
+        background: url(../../img/timeBtnHover.png) no-repeat;
+        animation: unset;
+        animation: unset;
+      }
+    }
+  }
+  .btnSuspend {
+    background: url(../../img/suspend.png) no-repeat;
+    i {
+      width: 50px;
+      height: 50px;
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background: url(../../img/timeBtnHover.png) no-repeat;
+      animation: playGo 3s linear infinite;
+      animation: playGo 3s linear infinite;
+      &:hover {
+        background: url(../../img/timeBtnHover.png) no-repeat;
+        animation: unset;
+        animation: unset;
+      }
+    }
+  }
+
+  em {
+    height: 100%;
+    width: 0;
+    border-right: 1px #b63d5d solid;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    z-index: 2;
+    transition: all 0.2s;
+    transition-timing-function: linear;
+  }
+  em > i {
+    display: inline-block;
+    height: 30%;
+    width: 16px;
+    border-radius: 2px;
+    background: #dedede;
+    position: absolute;
+    top: 35%;
+    left: -8px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+  /* 横向效果style */
+  .stepGapHor {
+    display: inline-block;
+    height: 10%;
+    position: relative;
+    top: 40%;
+  }
+  .horStepGap {
+    display: inline-block;
+    height: 30%;
+    position: relative;
+    top: 35%;
+  }
+  .horStepGapBig {
+    display: inline-block;
+    height: 100%;
+    justify-content: stretch;
+    position: relative;
+  }
+  .horStepGapBig time {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 120%);
+    font-size: 12px;
+    color: #debdc2;
+  }
+}
+.title {
+  width: 100%;
+  height: 8%;
+  color: #0de0eb;
+  display: flex;
+  align-items: center;
+  > i {
+    width: 24px;
+    height: 15px;
+    display: inline-block;
+    background: url(../imgs/right.png) center center no-repeat;
+    background-size: 100% 100%;
+    margin: 0 10px 0 20px;
+  }
+  .clone {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    background: url(../imgs/clone.png) center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+/* .pointMarker {
+  top: 35% !important;
+  right: 20%;
+} */
+.titleTwo {
+  height: 11%;
+}
+@keyframes shake {
+  from {
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+@keyframes shadow {
+  from {
+  }
+  to {
+    box-shadow: 0px 0px 50px pink;
+  }
+}
+
+.heart {
+  margin: 100px auto;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid #0094ff; */
+  position: fixed;
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  left: 170px;
+  z-index: 9991;
+  > div {
+    /* border: 1px solid #0094ff; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: pink;
+    animation-name: shadow;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+  }
+  .topLeft,
+  .topRight {
+    border-radius: 100px 100px 0 0;
+  }
+  .topLeft {
+    transform: translate(-50px, 0) rotate(-45deg);
+  }
+  .topRight {
+    transform: translate(50px, 0) rotate(45deg);
+  }
+
+  .bottom {
+    transform: translate(0, 64px) rotate(45deg) scale(0.9, 0.9);
+  }
+}
+
+.buling {
+  animation: glowbuling 800ms ease-out infinite alternate;
+}
+
+@keyframes glowbuling {
+  0% {
+    box-shadow: 0 0 10px rgba(1, 148, 192, 0.2), inset 0 0 5px rgba(1, 148, 192, 0.1), 0 1px 0 #0194c0;
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(1, 148, 192, 1), inset 0 0 10px rgba(1, 148, 192, 1), 0 1px 0 #0194c0;
+  }
+}
+.poin_area {
+  :global(.ant-tree.ant-tree-directory
+      .ant-tree-child-tree
+      > li
+      span.ant-tree-node-content-wrapper.ant-tree-node-selected) {
+    color: #ffffff;
+    width: 235px;
+    height: 35px;
+    background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
+    background-size: 100% 100% !important;
+  }
+  :global(.ant-tree-node-content-wrapper-close) {
+    background: url(../../InterPlan/Projectmana/imgs/kuang.png) center center no-repeat !important;
+    background-size: 100% 100% !important;
+    color: #d89f07 !important;
+    margin: 5px 21px !important;
+  }
+  :global(.ant-tree-node-content-wrapper-open) {
+    background: url(../../InterPlan/Projectmana/imgs/kuang.png) center center no-repeat !important;
+    background-size: 100% 100% !important;
+    color: #d89f07 !important;
+    cursor: pointer !important;
+  }
+  :global(.ant-tree li .ant-tree-node-content-wrapper) {
+    color: #ffffff;
+    width: 235px;
+    height: 35px;
+    background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    margin: 5px 6px;
+    line-height: 35px;
+    padding: 0 !important;
+  }
+  :global(.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper:hover) {
+    width: 235px;
+    height: 35px;
+    background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
+    background-size: 100% 100% !important;
+  }
+  :global(li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span) {
+    cursor: auto;
+    color: #ffffff !important;
+  }
+  :global(.ant-tree-node-content-wrapper-normal) {
+    cursor: auto !important;
+  }
+}
+
+.timeBox {
+  display: flex;
+  height: 50px;
+  padding: 15px 30px;
+  background: rgba(62, 56, 68, 0.3);
+  position: absolute;
+  top: 17px;
+  right: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  box-sizing: content-box;
+  mark {
+    padding: 5px 15px;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 0px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background: url(../../img/play.png) no-repeat;
+    i {
+      width: 50px;
+      height: 50px;
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background: url(../../img/timeBtnHover.png) no-repeat;
+      animation: playGo 3s linear infinite;
+      animation: playGo 3s linear infinite;
+      &:hover {
+        background: url(../../img/timeBtnHover.png) no-repeat;
+        animation: unset;
+        animation: unset;
+      }
+    }
+  }
+  .btnSuspend {
+    background: url(../../img/suspend.png) no-repeat;
+    i {
+      width: 50px;
+      height: 50px;
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background: url(../../img/timeBtnHover.png) no-repeat;
+      animation: playGo 3s linear infinite;
+      animation: playGo 3s linear infinite;
+      &:hover {
+        background: url(../../img/timeBtnHover.png) no-repeat;
+        animation: unset;
+        animation: unset;
+      }
+    }
+  }
+
+  em {
+    height: 100%;
+    width: 0;
+    border-right: 1px #b63d5d solid;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    z-index: 2;
+    transition: all 0.2s;
+    transition-timing-function: linear;
+  }
+  em > i {
+    display: inline-block;
+    height: 30%;
+    width: 16px;
+    border-radius: 2px;
+    background: #dedede;
+    position: absolute;
+    top: 35%;
+    left: -8px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+  /* 横向效果style */
+  .stepGapHor {
+    display: inline-block;
+    height: 10%;
+    position: relative;
+    top: 40%;
+  }
+  .horStepGap {
+    display: inline-block;
+    height: 30%;
+    position: relative;
+    top: 35%;
+  }
+  .horStepGapBig {
+    display: inline-block;
+    height: 100%;
+    justify-content: stretch;
+    position: relative;
+  }
+  .horStepGapBig time {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 120%);
+    font-size: 12px;
+    color: #debdc2;
+  }
+}
+.containers {
+  width: 340px;
+  height: 340px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+}
+.signal_scheme {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  justify-content: space-around;
+  .signal_precept {
+    width: 115px;
+    line-height: 30px;
+    overflow-y: auto;
+    margin-top: 45px;
+    max-height: 115px;
+    > span {
+      width: 100px;
+      height: 30px;
+      display: inline-block;
+      line-height: 30px;
+      background: url(../../InterPlan/Roadtraffic/img/titleOne.png) center center no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 5px;
+      > span {
+        width: 80px;
+        height: 30px;
+        display: inline-block;
+        padding-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      > i {
+        width: 13px;
+        height: 13px;
+        display: inline-block;
+        background: url(../../InterPlan/Projectmana/imgs/cond_del.png) center center no-repeat;
+        background-size: 100% 100%;
+        float: right;
+        margin: 8px 5px 0 0;
+        cursor: pointer;
+      }
+    }
+  }
+  .signal_listbox {
+    width: 125px;
+    height: 100%;
+    padding: 36px 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row */
+  }
+  .signal_lists {
+    height: calc(100%);
+    margin-bottom: 3px;
+    margin-top: -50px;
+    zoom: 0.5 !important;
+  }
+
+  .phaseTitle {
+    height: 25px;
+    background: url(../../InterPlan/Roadtraffic/img/titleOne.png) center center no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 25px;
+    > span {
+      color: #247b44;
+      margin-left: 15px;
+    }
+  }
+}
+.pointMarker {
+  width: 530px;
+  height: 232px;
+  top: 35% !important;
+  right: 20%;
+  background: url(../../InterPlan/Projectmana/imgs/point_marker.png) center center no-repeat;
+  background-size: 100% 100%;
+  /* position: absolute; */
+  z-index: 999;
+  color: #07b7f2;
+  padding: 20px;
+  font-size: 16px;
+  top: 56px;
+  .poin_number {
+    span {
+      color: #20b422;
+      margin-left: 5px;
+    }
+  }
+  .beginBox {
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+  }
+  .beginsItem {
+    width: 490px;
+    height: 140px;
+    display: inline-block;
+  }
+  .begins {
+    position: absolute;
+  }
+  .interLeft{
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    left: 7px;
+    top: 120px;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+      background: #ccc;
+    }
+  }
+  .interRight{
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 5px;
+    top: 120px;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+      background: #ccc;
+    }
+  }
+  .poin_torus {
+    height: 140px;
+    display: flex;
+    width: 490px;
+    /* justify-content: center; */
+    align-items: center;
+    > div {
+      width: 100px;
+      height: 100px;
+      top: -10px;
+      left: -11px;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 16px;
+      cursor: pointer;
+      transition: all 0.4s;
+      text-align: center;
+      line-height: 100px;
+
+      > div {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        > span {
+          transition: all 0.4s;
+        }
+        > span:nth-child(1) {
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        // 最里圈小圆
+        > span:nth-child(2) {
+          width: 70px;
+          height: 70px;
+          display: inline-block;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          > i {
+            width: 20px;
+            height: 20px;
+            transition: all 0.4s;
+            display: none;
+            border: 1px solid #05b9f8;
+            box-shadow: 0 0 20px #05b9f8;
+            border: solid 1px rgba(5, 185, 248, 0.7);
+            border-radius: 3px;
+            position: absolute;
+            background-size: 100% 100%;
+            padding: 2px;
+            opacity: 0;
+          }
+
+          > i:nth-child(1) {
+            background: url(../../InterPlan/Roadtraffic/img/inqu.png) center center no-repeat;
+            right: 0px;
+            bottom: -46px;
+          }
+          > i:nth-child(2) {
+            background: url(../../InterPlan/Roadtraffic/img/comp.png) center center no-repeat;
+            right: -25px;
+            bottom: -46px;
+          }
+        }
+        // 最外圈大圆
+        > span:nth-child(3) {
+          width: 115px;
+          height: 115px;
+          display: inline-block;
+          position: absolute;
+          top: -9px;
+          left: -9px;
+        }
+      }
+    }
+    > div {
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 10px;
+      transition: all 0.4s;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #296ac8 inset, 0 0 5px #296ac8;
+      background: rgba(41, 106, 200, 0.2);
+      border: solid 1px rgba(41, 106, 200, 0.7);
+      &:hover {
+        border: solid 1px rgba(41, 106, 200, 0.9);
+        box-shadow: 0 0 10px #296ac8 inset, 0 0 50px #296ac8;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.leftBox {
+  max-height: 908px;
+  width: 321px;
+  background: url(../imgs/pop_left.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 8px;
+  top: 140px;
+  bottom: 30px;
+  z-index: 10;
+  padding: 30px 29px 0;
+  box-sizing: border-box;
+  svg {
+    color: #28baf5;
+  }
+  > span {
+    width: 225px;
+    height: 22px;
+    display: block;
+    line-height: initial;
+    border-radius: 30px;
+    background: #022869;
+    margin: 0 auto;
+    input {
+      background: #022869;
+      border: none;
+      outline: none;
+      height: 22px;
+      font-size: 12px;
+      text-indent: 10px;
+      border-radius: 30px;
+      color: #fff;
+    }
+    span {
+      vertical-align: sub;
+      i:active {
+        border: none;
+      }
+    }
+  }
+  .title {
+    width: 225px;
+    line-height: 33px;
+    text-align: center;
+    margin: 20px auto;
+    background: url(../imgs/roadtit.png) no-repeat;
+    background-size: contain;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    font-size: 20;
+    color: #02eeff;
+  }
+  .line {
+    width: 321px;
+    height: 12px;
+    background: url(../../img/line.png) repeat-x;
+    margin-left: 10px;
+    transform: translate(-40px);
+    transform: translate(-40px);
+    -moz-transform: translate(-40px);
+    -ms-transform: translate(-40px);
+    -o-transform: translate(-40px);
+  }
+
+  :global(.ant-collapse) {
+    width: 265px;
+  }
+  :global(.ant-collapse-borderless) {
+    background: unset;
+  }
+  :global(.ant-collapse > .ant-collapse-item > .ant-collapse-header) {
+    width: 265px;
+    height: 35px !important;
+    line-height: 35px;
+    background: url(../imgs/tit_select_bg.png) no-repeat !important;
+    background-size: 100% 100% !important;
+    color: #ffb400;
+    overflow: inherit;
+    margin: 15px auto 10px;
+    padding: 0 0 0 16px;
+    &:nth-child(1) {
+      margin: 0 auto 10px;
+    }
+  }
+  :global(.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow) {
+    right: 16px;
+    left: unset;
+  }
+  :global(.ant-collapse-content ) {
+    height: 565px;
+    max-height: 565px;
+    width: 280px;
+    overflow-y: auto;
+  }
+  :global(.ant-collapse-content > .ant-collapse-content-box) {
+    /* width: 242px;
+    padding-left: 0;
+    text-align: left; */
+    color: #fff;
+  }
+  :global(.ant-collapse-content-box p) {
+    width: 265px;
+    height: 32px;
+    line-height: 32px;
+    text-align: left;
+    padding-left: 16px;
+    background: url(../imgs/small.png) no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 12px !important;
+  }
+  :global(.ant-collapse > .ant-collapse-item) {
+    border: unset;
+  }
+  :global(.ant-collapse-content > .ant-collapse-content-box) {
+    padding: 0;
+  }
+}
+.collapse {
+  margin-top: 8px;
+}

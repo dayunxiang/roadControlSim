@@ -1,0 +1,811 @@
+.canalizWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  .rightDrawAgain {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 358px;
+    height: calc(100% - 25px);
+    background: url(../../imgs/pop_right.png) center center no-repeat;
+    background-size: 100% 100%;
+    padding: 35px 20px;
+    :global(.ant-checkbox-inner) {
+      border: 1.5px solid #233772;
+      background: transparent;
+    }
+    :global(.ant-checkbox) {
+      margin-right: 10px;
+    }
+    > .title {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #02eeff;
+      > .item {
+        width: 144px;
+        height: 35px;
+        background: url(../../../AreaPlan/imgs/area_title.png) center center no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        line-height: 35px;
+        margin-right: 20px;
+        font-weight: bold;
+      }
+    }
+    .content {
+      > .line {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #02eeff;
+        margin-bottom: 5px;
+        &:nth-last-child(1) {
+          margin-bottom: 0px;
+        }
+        > .item {
+          width: 144px;
+          height: 35px;
+          background: url(../../../AreaPlan/imgs/area_item.png) center center no-repeat;
+          background-size: 100% 100%;
+          text-align: center;
+          line-height: 35px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .canalizBox {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 75px);
+    .centerWrapper {
+      position: absolute;
+      top: 30px;
+      left: 150px;
+      width: calc(100% - 550px);
+      height: calc(100% - 30px);
+      overflow: hidden;
+      .centerMoveBox, .canvasBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all ease .2s;
+      }
+      .interPointBox {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: url(../../../img/interPoint.png) center center no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+      }
+    }
+    .planListBox {
+      position: absolute;
+      top: 55px;
+      left: 20px;
+      width: 120px;
+      height: calc(100% - 70px);
+      overflow-y: auto;
+      .planBtn {
+        position: relative;
+        width: 120px;
+        padding-right: 20px;
+        height: 30px;
+        margin-bottom: 10px;
+        background: url(../../imgs/planBtn.png) center center no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        .delPlanIcon {
+          position: absolute;
+          right: 8px;
+          top: 0px;
+        }
+      }
+      .planChecked {
+        background: url(../../imgs/checkedPlan.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .modeBox {
+      display: flex;
+      padding: 10px 0 0 20px;
+    }
+  }
+}
+
+.examine_top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  > span {
+    width: 275px;
+    height: 47px;
+    display: block;
+    background: url(../../imgs/pop_view_right.png) center center no-repeat;
+    background-size: 100% 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 47px;
+    color: #fe8500;
+    &:nth-child(1) {
+      margin-bottom: 13px;
+      > i {
+        width: 19px;
+        height: 19px;
+        display: inline-block;
+        background: url(../../imgs/pop_view_qiu.png) center center no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        margin-right: 30px;
+      }
+    }
+    &:nth-child(2) {
+      > i {
+        width: 44px;
+        height: 19px;
+        display: inline-block;
+        background: url(../../imgs/pop_view_rowll.png) center center no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.modeBtn {
+  margin-right: 40px;
+  color: #07f8ff;
+  &:nth-last-child(1) {
+    margin-right: 0;
+  }
+  > .name {
+    margin-right: 5px;
+  }
+  :global(.ant-input) {
+    width: 230px;
+    height: 34px;
+    background: url(../../../AreaPlan/imgs/kuang.png) center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    text-align: center;
+    color: #20f4aa;
+  }
+  :global(.anticon svg) {
+    color: #07f8ff;
+  }
+  :global(.ant-calendar-picker-clear) {
+    background: #010c2a;
+  }
+  :global(.ant-time-picker-input) {
+    width: 125px;
+    height: 34px;
+    background: url(../../../AreaPlan/imgs/kuang.png) center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    text-align: center;
+    color: #20f4aa;
+  }
+  :global(.ant-time-picker-clear) {
+    background: #010c2a;
+  }
+  :global(.ant-select-selection) {
+    width: 125px;
+    height: 34px;
+    background: url(../../../AreaPlan/imgs/kuang.png) center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    text-align: center;
+    color: #20f4aa;
+  }
+  :global(.ant-select-selection-selected-value) {
+    margin: 3px 0 0 28px;
+  }
+}
+.modeBtntwo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  > .play {
+    width: 30px;
+    height: 30px;
+    background: url(../../../AreaPlan/imgs/play.png) center center no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    cursor: pointer;
+  }
+}
+.close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 9px;
+  right: 13px;
+  background: url(../../../InterPlan/Projectmana/imgs/clone.png) center center no-repeat;
+  background-size: 100% 100%;
+  z-index: 9999;
+  cursor: pointer;
+}
+.canalization {
+  width: 31%;
+  height: 78%;
+  background: url(../../../InterPlan/Projectmana/imgs/canalization.png) center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 145px;
+  left: 30%;
+  .cana_title {
+    width: 241px;
+    height: 34px;
+    background: url(../../../InterPlan/Projectmana/imgs/conf_title.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #03edff;
+    padding-left: 45px;
+    line-height: 18px;
+    margin-top: 32px;
+  }
+
+  .cana_cross {
+    width: 99.6%;
+    height: 12px;
+    background: url(../../../InterPlan/Projectmana/imgs/line.png);
+  }
+  .cana_centent {
+    width: 100%;
+    height: calc(100% - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    > img {
+      width: 88%;
+    }
+    .compass {
+      width: 40px;
+      height: 50px;
+      position: absolute;
+      top: 15px;
+      right: 50px;
+      background: url(../../../InterPlan/Projectmana/imgs/zhibei.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+    .precept {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      > span {
+        width: 100px;
+        height: 30px;
+        display: block;
+        background: url(../../../InterPlan/Projectmana/imgs/item.png) center center no-repeat;
+        background-size: 100% 100%;
+        color: #ffffff;
+        font-size: 13px;
+        text-align: center;
+        line-height: 30px;
+        margin: 3px 0;
+        > i {
+          width: 13px;
+          height: 13px;
+          background: url(../../../InterPlan/Projectmana/imgs/cond_del.png) center center no-repeat;
+          background-size: 100% 100%;
+          float: right;
+          margin: 8px 5px 0 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.examine_right {
+  position: absolute;
+  top: 100px;
+  right: 17px;
+  > span {
+    width: 76px;
+    height: 31px;
+    display: block;
+    background: url(../../imgs/pop_view_actionBg.png) center center no-repeat;
+    background-size: 100% 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 31px;
+    color: #07f8ff;
+    margin-bottom: 5px;
+    cursor: pointer;
+    > i {
+      width: 18px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    &:nth-child(1) {
+      > i {
+        background: url(../../imgs/btn_One.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:nth-child(2) {
+      > i {
+        background: url(../../imgs/btn_Two.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:nth-child(3) {
+      > i {
+        background: url(../../imgs/btn_Three.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:nth-child(4) {
+      margin-bottom: 0;
+      > i {
+        background: url(../../imgs/btn_Four.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+.flowBoxMoudle {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .flowBox {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: url(../../../AreaPlan/imgs/flow_bg.png);
+    background-size: 107% 104%;
+    
+    > .title {
+      width: 100%;
+      height: 43px;
+      color: #04eaff;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 43px;
+      text-indent: 50px;
+    }
+    > .main {
+      width: 100%;
+      height: calc(100% - 100px);
+      padding: 0 35px;
+      > .main_left {
+        width: 62%;
+        height: 100%;
+        > .top {
+          width: 100%;
+          height: 75%;
+          background: url(../../../AreaPlan/imgs/roadflow.png) center center no-repeat;
+          background-size: auto;
+          margin-top: 3px;
+          position: relative;
+        }
+        > .bottom {
+          width: 100%;
+          height: 27%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      > .main_right {
+        width: 38%;
+        height: 100%;
+        display: inline-block;
+      }
+    }
+    > .footer {
+      position: absolute;
+      bottom: 5px;
+      width: 55%;
+      height: 57px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      > span {
+        width: 118px;
+        height: 33px;
+        text-align: center;
+        line-height: 33px;
+        color: #ff7f00;
+        background: url(../../../AreaPlan/imgs/area_title.png) center center no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+        &:nth-child(2) {
+          color: #4c4a57;
+          margin-left: 60px;
+        }
+        &:hover {
+          color: #04eaff;
+        }
+      }
+    }
+  }
+}
+
+
+.precept {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  > span {
+    width: 100px;
+    height: 30px;
+    display: block;
+    background: url(../../../AreaPlan/imgs/item.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+    margin: 8px 0;
+  }
+}
+
+.timerShaft {
+  width: 100%;
+  height: 108px;
+  margin-top: 10px;
+  background: url(../../../InterPlan/Projectmana/imgs/timerShaft.png) center center no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.preceptC {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  > span {
+    width: 55px;
+    height: 22px;
+    display: block;
+    background: url(../../../AreaPlan/imgs/area_item.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 22px;
+    margin: 3px 0;
+    > i {
+      width: 13px;
+      height: 13px;
+      background: url(../../../AreaPlan/imgs/btn_Three.png) center center no-repeat;
+      background-size: 100% 100%;
+      float: right;
+      margin: 5px 5px 0 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.roadFlowWrapper {
+  position: absolute;
+  width: 550px;
+  height: calc(100% - 70px);
+  right: 30px;
+  bottom: 20px;
+  background: url(../../../InterPlan/Flow/imgs/simulatRoad.png) center center no-repeat;
+  background-size: 550px 100%;
+  .roadBtnBox {
+    height: 50px;
+    margin-top: 50px;
+    display: flex;
+    .roadBtn {
+      width: 90px;
+      height: 30px;
+      margin-left: 20px;
+      margin-top: 7px;
+      background: url(../../../InterPlan/Flow/imgs/headerClick.png) center center no-repeat;
+      background-size: 100% 100%;
+      color: #fff;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .roadDetaction {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      color:#fff;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+    :global(.ant-select-selection--single){
+      border: none;
+      background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+      background-size: 100% 100%;
+      outline: none;
+      box-shadow: none;
+    }
+    :global(.ant-select-selection__rendered) {
+      display: flex;
+      justify-content: center;
+      width: 90px;
+      background-color: transparent;
+      color: #22f4ad;
+    }
+    :global(.ant-select-arrow) {
+      color: #fff;
+    }
+  }
+  .exportFlowBox {
+    position: relative;
+    display: flex;
+    padding-bottom: 20px;
+    .splitBorder {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: url(../../../InterPlan/Flow/imgs/splitBorder.png);
+      background-size: auto 10px;
+    }
+    .roadMsg {
+      flex: 0 225px;
+      padding-left: 25px;
+      font-size: 14px;
+      color: #fff;
+      .roadDetaction {
+        display: flex;
+        height: 40px;
+        align-items: center;
+      }
+      .roadName {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        .name {
+          letter-spacing: 4px;
+        }
+        .nameText {
+          display: inline-block;
+          width: 125px;
+          height: 32px;
+          text-align: center;
+          line-height: 32px;
+          background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+          background-size: 125px 32px;
+          color: #22f4ad;
+        }
+      }
+      :global(.ant-select-selection--single){
+        border: none;
+        background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+        background-size: 100% 100%;
+        outline: none;
+        box-shadow: none;
+      }
+      :global(.ant-select-selection__rendered) {
+        display: flex;
+        justify-content: center;
+        width: 90px;
+        background-color: transparent;
+        color: #22f4ad;
+      }
+      :global(.ant-select-arrow) {
+        color: #fff;
+      }
+    }
+    .flowExport {
+      position: relative;
+      flex: 1;
+      height: 80px;
+      padding-left: 10px;
+      margin-top: -5px;
+      background: url(../../../InterPlan/Flow/imgs/flowBorder.png) center center no-repeat;
+      background-size: 95% 80px;
+      .exportText {
+        position: absolute;
+        top: -13px;
+        left: 25px;
+        width: 80px;
+        height: 26px;
+        text-align: center;
+        line-height: 26px;
+        background: url(../../../InterPlan/Flow/imgs/headerClick.png) center center no-repeat;
+        background-size: 80px 26px;
+        font-size: 14px;
+        color: #ff8800;
+      }
+      .systemAutoBox {
+        display: flex;
+        height: 40px;
+        padding: 15px 0 0 20px;
+        align-items: center;
+        font-size: 14px;
+        color: #fff;
+        .systemAuto {
+          width: 200px;
+          height: 26px;
+          border: 1px solid #1e43ab;
+          border-radius: 6px;
+          text-align: center;
+          line-height: 26px;
+          color: #22f4ad;
+        }
+      }
+      .temExport {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        font-size: 14px;
+        color: #fff;
+        padding-left: 20px;
+        .templateSel {
+          position: relative;
+          width: 200px;
+          height: 26px;
+          border: 1px solid #1e43ab;
+          border-radius: 6px;
+          .importText {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 100%;
+            line-height: 26px;
+            text-align: center;
+            color: #ff8800;
+            cursor: pointer;
+          }
+          .browseText {
+            position: absolute;
+            top: 0;
+            right: 50px;
+            width: 50px;
+            height: 100%;
+            text-align: center;
+            line-height: 26px;
+            border-left: 1px solid #1e43ab;
+            border-right: 1px solid #1e43ab;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .importFlowMsg {
+    font-size: 14px;
+    color: #fff;
+    .title {
+      width: 200px;
+      height: 30px;
+      margin: 10px 0 15px 10px;
+      background: url(../../../InterPlan/Flow/imgs/titleBg.svg) center center no-repeat;
+      background-size: contain;
+      text-indent: 40px;
+      font-size: 15px;
+      color: #00f1ff;
+    }
+    .roadMsgBox {
+      overflow-y: auto;
+      .roadMsg {
+        display: flex;
+        padding-right: 10px;
+        margin-bottom: 10px;
+        .detactionBox {
+          flex: 1;
+          .mutipleBox {
+            display: flex;
+            height: 55px;
+            margin-bottom: 5px;
+            align-items: center;
+            background: url(../../../InterPlan/Flow/imgs/roadBorder.png) center center no-repeat;
+            background-size: 100% 55px;
+            div {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            div:first-child {
+              flex: 0 120px;
+            }
+          }
+          .heade {
+            display: flex;
+            height: 30px;
+            margin-bottom: 5px;
+            align-items: center;
+            background: url(../../../InterPlan/Flow/imgs/rectBorder.png) center center no-repeat;
+            background-size: 100% 30px;
+            div {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            div:first-child {
+              flex: 0 120px;
+              position: relative;
+              .checkBox {
+                width: 14px;
+                height: 14px;
+                border: 1px solid #22f4ad;
+                border-radius: 50%;
+                margin-right: 3px;
+                cursor: pointer;
+              }
+              .addLessBtn {
+                width: 12px;
+                height: 12px;
+                margin-left: 2px;
+                background-color: #0b47c9;
+                text-align: center;
+                line-height: 10px;
+                border-radius: 3px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .roadLane {
+          flex: 0 120px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .roadNameBox {
+            width: 85px;
+            height: 30px;
+            background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+            background-size: 85px 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #ff8800;
+          }
+        }
+        .details {
+          flex: 1;
+          display: flex;
+          height: 60px;
+          background: url(../../../InterPlan/Flow/imgs/roadBorder.png) center center no-repeat;
+          background-size: 100% 60px;
+          align-items: center;
+          div {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+          }
+          div:first-child {
+            flex: 0 100px;
+          }
+        }
+      }
+    }
+  }
+}

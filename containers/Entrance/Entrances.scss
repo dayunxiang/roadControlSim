@@ -1,0 +1,243 @@
+.EntrancesBox {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/flowBg.png) no-repeat;
+  background-size: cover;
+  .entrancesHead {
+    position: fixed;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: url(./imgs/head.png) center center no-repeat;
+    background-size: cover;
+    .headTime {
+      width: 300px;
+      margin-left: 25px;
+      font-size: 14px;
+      color: #0085fa;
+      .timeSpan {
+        margin-right: 10px;
+      }
+    }
+    .headUserMsg {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      min-width: 150px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      color: #0085fa;
+      font-size: 14px;
+      .userAvatar {
+        margin-right: 10px;
+      }
+      .userFeture {
+        position: relative;
+        height: 20px;
+        margin-left: 10px;
+        svg {
+          color: #0085fa;
+        }
+        &:hover .fetureList {
+          padding: 5px 0;
+          height: 70px;
+        }
+        .fetureList {
+          position: absolute;
+          top: 25px;
+          right: -5px;
+          width: 140px;
+          height: 0;
+          border-radius: 4px;
+          overflow: hidden;
+          transition: all ease 0.2s;
+          .listItems {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #0097d5;
+            background-color: #001338;
+            cursor: pointer;
+            &:hover {
+              background-color: #002353;
+            }
+          }
+        }
+      }
+    }
+  }
+  .entrancesItem,
+  .entrancesDetails {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  .entrancesItem {
+    justify-content: flex-end;
+    .menuBox {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .menuItems {
+        width: 220px;
+        height: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 30px;
+        background: url(./imgs/textBg.png) center center no-repeat;
+        background-size: 100% 100%;
+        color: #00e8f6;
+        cursor: pointer;
+        &:hover {
+          background: url(./imgs/textHover.png) center center no-repeat;
+          background-size: 100% 100%;
+          color: #fafafa;
+        }
+      }
+    }
+  }
+  .entrancesDetails {
+    justify-content: flex-start;
+    padding-top: 50px;
+    .menuDetails {
+      width: 70%;
+      height: 75%;
+      background: url(./imgs/mapBg.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+.traBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  .addListBox {
+    width: 450px;
+    // height: 400px;
+    background: url(../img/pop_analysis_bg.png) center center no-repeat;
+    background-size: 100% 100%;
+    .titleBox {
+      width: 100%;
+      height: 50px;
+      position: relative;
+      .title {
+        line-height: 40px;
+        height: 50px;
+        width: 130px;
+        text-align: center;
+        font-size: 18px;
+        color: #00b6c1;
+      }
+      .close {
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        color: #00b6c1;
+      }
+    }
+
+    .content {
+      width: 100%;
+      padding: 15px 0;
+    }
+    .treeData {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    :global(.ant-tree li .ant-tree-node-content-wrapper) {
+      color: #00b6c1;
+    }
+  }
+}
+.syetemItem {
+  width: 100%;
+  /* height: 40px; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 30px;
+  &:last-child {
+    margin-bottom: 30px;
+  }
+  .item {
+    color: #019bac;
+    margin-right: 15px;
+    font-size: 16px;
+    height: 32px;
+    width: 115px;
+    display: inline-block;
+    text-align: left;
+    line-height: 32px;
+  }
+  .inSle {
+    width: 300px;
+    height: 100%;
+    display: inline-block;
+  }
+  :global(.ant-select-selection__rendered) {
+    line-height: 30px;
+  }
+  :global(.ant-input) {
+    background: url(../InterPlan/Projectmana/imgs/small.png) center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    color: #fff;
+  }
+  :global(.ant-input:focus) {
+    border-radius: 0 15px 0 0;
+  }
+  :global(.ant-select-selection) {
+    background: url(../InterPlan/Projectmana/imgs/small.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    border-radius: 0 14px 0 0;
+  }
+  :global(.ant-select-open .ant-select-selection) {
+    border-radius: 0 14px 0 0;
+  }
+  :global(.ant-input-password-icon) {
+    color: #019bac;
+  }
+}
+.botton {
+  width: 120px;
+  height: 34px;
+  display: inline-block;
+  background: url(../img/smallBtnBg.png) center center no-repeat;
+  background-size: 100% 100%;
+  color: #ff7e00;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background: url(../img/headerClick.png) center center no-repeat;
+    background-size: 100% 100%;
+  }
+  &:last-child {
+    margin-left: 50px;
+  }
+}
+:global(.ant-message-notice-content) {
+  background: #343a52;
+  color: #dcdce6;
+  margin-top: 60px;
+}

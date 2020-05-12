@@ -1,0 +1,345 @@
+.canalizWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../img/flowBg.png) center center no-repeat;
+  background-size: cover;
+  .modeBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    .modeBtn {
+      width: 200px;
+      height: 28px;
+      margin-top: 10px;
+      text-align: center;
+      line-height: 28px;
+      background: url(../../img/flowBorder.png) center center no-repeat;
+      background-size: 200px 28px;
+      font-size: 14px;
+      color: #08dde5;
+      cursor: pointer;
+    }
+    .whichMode {
+      color: #29fbb0;
+    }
+  }
+  .canalizBox {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 110px);
+    .centerWrapper {
+      position: absolute;
+      top: 0;
+      left: 210px;
+      width: calc(100% - 570px);
+      height: 100%;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .modePicBox {
+        width: 500px;
+        height: calc(100% - 150px);
+        background: url(../../img/detection.png) center center no-repeat;
+        background-size: contain;
+      }
+      .openModePicBox {
+        width: calc(100% - 200px);
+        height: calc(100% - 150px);
+        margin-bottom: 80px;
+      }
+      .uploadPicBox {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -350px;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 14px;
+        .checkPicBox {
+          position: relative;
+          width: 500px;
+          height: 30px;
+          padding-right: 100px;
+          line-height: 30px;
+          text-indent: 10px;
+          border: 1px solid #044d91;
+          box-shadow: inset 0 0 5px #031d50;
+          .checkPic {
+            position: absolute;
+            top: -1px;
+            right: 0;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-left: 1px solid #044d91;
+            overflow: hidden;
+            .PicInput {
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+            }
+          }
+        }
+        .uploadPicBtn {
+          width: 90px;
+          height: 30px;
+          margin-left: 20px;
+          text-align: center;
+          line-height: 30px;
+          background: url(../../img/headerClick.png) no-repeat;
+          background-size: 100% 100%;
+          color: #ff8800;
+          cursor: pointer;
+        }
+      }
+      .uploadFile {
+        padding-bottom: 200px;
+        .downLoadBox {
+          width: 610px;
+          padding: 20px 110px 0 0;
+          display: flex;
+          justify-content: center;
+          color: #fff;
+          font-size: 14px; 
+          .fileName {
+            flex: 1;
+            display: flex;
+            .fileBg {
+              width: 40px;
+              height: 40px;
+              background: url(./imgs/fileBg.png) no-repeat;
+              background-size: 100% 100%;
+            }
+            .fileText {
+              padding-left: 10px;
+              .fileTip {
+                font-size: 12px;
+                color: #aaa;
+              }
+            }
+          }
+          .fileTime {
+            flex: 1;
+            display: flex;
+            position: relative;
+            align-items: center;
+            .downLoad {
+              position: absolute;
+              right: 5px;
+              color: #02edfe;
+              cursor: pointer;
+            }
+          }
+        }
+        .uploadBox {
+          display: flex;
+          align-items: center;
+          color: #fff;
+          font-size: 14px;
+          .checkFileBox {
+            position: relative;
+            width: 500px;
+            height: 30px;
+            padding-right: 100px;
+            line-height: 30px;
+            text-indent: 10px;
+            border: 1px solid #044d91;
+            box-shadow: inset 0 0 5px #031d50;
+            .checkFile {
+              position: absolute;
+              top: -1px;
+              right: 0;
+              width: 100px;
+              height: 30px;
+              text-align: center;
+              line-height: 30px;
+              border-left: 1px solid #044d91;
+              overflow: hidden;
+              .fileInput {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+              }
+            }
+          }
+          .uploadBtn {
+            width: 90px;
+            height: 30px;
+            margin-left: 20px;
+            text-align: center;
+            line-height: 30px;
+            background: url(../../img/headerClick.png) no-repeat;
+            background-size: 100% 100%;
+            color: #ff8800;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .planListBox {
+      position: absolute;
+      bottom: 0;
+      left: 35px;
+      width: 120px;
+      height: 100%;
+    }
+    .interShapeSet {
+      z-index: 5;
+      position: absolute;
+      top: 0;
+      left: 180px;
+      width: 120px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .interShape {
+        padding: 5px 10px;
+        margin-bottom: 20px;
+      }
+      .shapeSelect {
+        background: url(./imgs/checkedBg.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .interShapeBg {
+        width: 110px;
+        height: 90px;
+        background: url(./imgs/interShap.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .interSetBg {
+        width: 110px;
+        height: 90px;
+        background: url(./imgs/interSet.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .shapeText {
+        width: 80px;
+        height: 26px;
+        margin: 10px 0 0 15px;
+        text-align: center;
+        line-height: 26px;
+        background: url(../../img/smallBtnBg.png) no-repeat;
+        background-size: 100% 100%;
+        color: #08dde5;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+    .settingBox {
+      z-index: 1;
+      position: absolute;
+      top: 0px;
+      right: 30px;
+      width: 385px;
+      height: 615px;
+      background: url(../../img/pop_right.png) center center no-repeat;
+      background-size: 100% 100%;
+      .centerIsolate {
+        padding: 25px 0 10px;
+        .isolateSet {
+          padding: 0 20px 0 20px;
+          margin-top: -6px;
+        }
+      }
+      .laneConfigBox {
+        padding: 10px 0;
+        .laneConfig {
+          padding: 0 20px 0 20px;
+          margin-top: -6px;
+        }
+      }
+      .bugStopSetBox, .speedLimitSetBox {
+        padding: 10px 0;
+      }
+      .setItemsLi {
+        display: flex;
+        height: 34px;
+        background: url(./imgs/small.png) center center no-repeat;
+        background-size: 100% 30px;
+      }
+    }
+    .rightDrawAgain {
+      position: absolute;
+      right: 30px;
+      top: 0;
+      width: 260px;
+      height: 80%;
+      .splitBorder {
+        height: 10px;
+        background: url(../../img/line.png) center center;
+        background-size: 100% 10px;
+        border-left: 1px solid #1643a8;
+        border-right: 1px solid #1643a8;
+      }
+      .introduce {
+        padding-top: 5px;
+        font-size: 14px;
+        color: #08dde5;
+      }
+      .drawAgainBox {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        margin-left: -75px;
+        width: 150px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./imgs/btnBorder.png) center center no-repeat;
+        background-size: 150px 60px;
+        .drawAgainBtn {
+          width: 90px;
+          height: 28px;
+          text-align: center;
+          line-height: 28px;
+          background: url(../../img/headerClick.png) center center no-repeat;
+          background-size: 80px 28px;
+          font-size: 14px;
+          color: #ff8800;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.setItem {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 34px;
+  padding-left: 10px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #fff;
+  :global(.ant-select-arrow) {
+    color: #fff;
+  }
+  :global(.ant-select-selection) {
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}
+.confirmBox {
+  background-color: rgba(25,59,91, .8);
+  :global(.ant-modal-content) {
+    background-color: transparent;
+  }
+  :global(.ant-modal-confirm-title) {
+    color: #f1f1fb;
+  }
+}

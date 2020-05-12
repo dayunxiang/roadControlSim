@@ -1,0 +1,140 @@
+:global(.minemap-popup-content) {
+  background: url(../TrafficArea/imgs/pop_mid.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+:global(.minemap-popup-anchor-bottom .minemap-popup-tip) {
+  border-top-color: #0ab7ff;
+}
+.areapoput {
+  color: #0ab7ff;
+  font-size: 14px;
+  padding: 10px;
+  .button {
+    width: 85px;
+    height: 25px;
+    background: url(../img/smallBtnBg.png) center center no-repeat;
+    background-size: 100% 100%;
+    line-height: 25px;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+      background: url(../img/headerClick.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  > p {
+    padding: 3px 0;
+  }
+  p:nth-child(1) {
+    > span:nth-child(2) {
+      color: #1eb41e;
+    }
+  }
+  p:nth-child(2) {
+    > span:nth-child(2) {
+      color: orange;
+    }
+  }
+  p:nth-child(3) {
+    > span:nth-child(2) {
+      color: red;
+    }
+  }
+  p:nth-child(4) {
+    text-align: center;
+    > span:nth-child(2) {
+      color: red;
+    }
+  }
+}
+.popMap {
+  width: 390px;
+  height: 88px;
+  padding: 24px 0 0 100px;
+  background: url(./imgs/pop_mid.png) no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  position: absolute;
+  top: 14%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+:global(.ant-input) {
+  background: transparent;
+  border: 1px solid #0ab7ff;
+  color: #0ab7ff;
+}
+.iconTra {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+}
+.chartsBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.chartsBox {
+  position: relative;
+  width: 40%;
+  height: 45%;
+  top: 200px;
+  left: 50%;
+  padding-top: 25px;
+  margin-left: -300px;
+  background: url(../img/echarts_bg.png) center center no-repeat;
+  background-size: 100% 100%;
+  .titleBox {
+    position: absolute;
+    top: 28px;
+    left: 5px;
+    text-indent: 10px;
+    > div {
+      line-height: 35px;
+      background: none;
+      width: auto;
+    }
+  }
+  .exportBtn {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    width: 80px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    background: url(../img/smallBtnBg.png) center center no-repeat;
+    background-size: 100% 100%;
+    font-size: 14px;
+    color: #ff8800;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    cursor: pointer;
+    z-index: 999999;
+    &:hover {
+      /* transition: all 0.3s; */
+      background: url(../img/headerClick.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.Search {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  cursor: pointer;
+}
+.Search_i {
+  color: #00ccff;
+  &:hover {
+    color: #ff8800;
+  }
+}

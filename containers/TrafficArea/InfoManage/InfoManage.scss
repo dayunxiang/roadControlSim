@@ -1,0 +1,186 @@
+.positions {
+  width:530px;
+  position: absolute;
+  right: 18%;
+  top: 160px;
+  height: auto;
+  background: url(../imgs/info_bg.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 75px 20px 20px 20px;
+  z-index: 999;
+  color: #07b7f2;
+  font-size: 16px;
+  .title {
+    width: calc(100% -1px);
+    height: 45px;
+    line-height: 40px;
+    margin: 0 0 15px 1px;
+    background: url(../../img/titleBg.svg) left 10px no-repeat;
+    background-size: 200px 30px;
+    text-indent: 40px;
+    font-size: 15px;
+    color: #00f1ff;
+    border-bottom: 1px #193d9c solid;
+    align-self: flex-start;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    > span {
+      font-size: 12px;
+      position: absolute;
+      right: 35px;
+      top: 3px;
+      > s {
+        text-decoration: none;
+      }
+    }
+  }
+  .heade {
+    /* display: flex;
+    height: 30px;
+    margin-bottom: 2px;
+    align-items: stretch;
+    background: url(../imgs/rectBorder.png) center center no-repeat;
+    background-size: 100% 30px; */
+    width: 100%;
+    height: 160px;
+    max-height: 160px;
+    overflow-y: auto;
+    div {
+      /* flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right:1px #193d9c solid;
+      font-size:12px;
+      font-weight: 700;
+      position: relative; */
+      display: inline-block;
+      width: 22.6%;
+      height: 30px;
+      text-align: center;
+      position: relative;
+      background: url(../imgs/rectBorder.png) center center no-repeat;
+      background-size: 100% 30px;
+      line-height: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 5px;
+      > span {
+        width: 100%;
+        height: 30px;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      > i {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: url(../../img/clone.png) center center no-repeat;
+        background-size: 100% 100%;
+        z-index: 9999;
+        cursor: pointer;
+      }
+    }
+    div:first-child {
+      /*  flex: 0 120px;
+      position: relative; */
+    }
+    div:last-child {
+      /* border-right:unset; */
+    }
+  }
+  .textBtnBox {
+    margin-top: 8px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    font-size: 12px;
+    > div {
+      > span {
+        width: 85px;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        background: url(../imgs/area_active.png) no-repeat;
+        background-size: 100% 100%;
+        font-size: 16px;
+        text-align: center;
+        margin: 0 5px;
+        cursor: pointer;
+        &:hover {
+          background: url(../imgs/area_hover.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+  .clone {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background: url(../../img/clone.png) center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 9999;
+    cursor: pointer;
+  }
+}
+.poin_line {
+  width: 100%;
+  height: 50px;
+  color: #d89f07;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  position: absolute;
+  bottom: 18px;
+  span {
+    width: 120px;
+    height: 30px;
+    background: url(../imgs/area_active.png) center center no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 0 15px;
+    &:hover {
+      color: #d89f07;
+      background: url(../imgs/area_hover.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+.Inputname {
+  width: 140px !important;
+  background: transparent !important;
+  border: none;
+  color: rgb(0, 241, 255);
+  height: 25px;
+  box-shadow: none !important;
+}
+
+:global(.ant-message-notice-content) {
+  background: #343a52;
+  color: #dcdce6;
+  margin-top: 60px;
+}
+:global(.ant-tree-node-selected,) {
+  background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
+  background-size: 100% 100% !important;
+}
+:global(.ant-modal-content) {
+  background: #343a52;
+}
+:global(.ant-modal-confirm-body .ant-modal-confirm-title) {
+  color: #dcdce6;
+}

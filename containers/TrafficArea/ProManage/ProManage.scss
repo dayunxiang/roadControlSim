@@ -1,0 +1,578 @@
+
+  .itemBox{
+    display: flex;
+    position: absolute;
+    left:0px;
+    top:80px;
+  .flowGetDate {
+    font-size: 14px;
+    color: #07eeff;
+    :global(.ant-calendar-picker-input) {
+      padding-left: 10px;
+      background-color: transparent;
+      background: url(../../img/flowBorder.png) center center no-repeat;
+      background-size: 100% 100%;
+      color: #22f4ad;
+      border: none;
+    }
+    :global(.ant-calendar-picker i) {
+      color: #fff;
+    }
+    .flowGetTime {
+      :global(.ant-calendar-picker-input) {
+        width: 120px;
+      }
+    }
+    :global(.ant-select-selection--single){
+      border: none;
+      background: url(../../img/flowBorder.png) center center no-repeat;
+      background-size: 100% 100%;
+      outline: none;
+      box-shadow: none;
+    }
+    :global(.ant-select-selection__rendered) {
+      width: 70px;
+      background-color: transparent;
+      color: #22f4ad;
+    }
+    :global(.ant-select-arrow) {
+      color: #fff;
+    }
+  }
+  :global(.ant-radio-group label){
+    position: relative;
+    top:5px;
+}
+}
+.planListBox {
+  position: absolute;
+  top: 130px;
+  left: 20px;
+  width: 120px;
+  height: calc(100% - 40px);
+}
+.positions{
+  position: absolute;
+  right:19%;
+  top:160px !important;
+  .clone {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 1px;
+    right: 3px;
+    background: url(../../img/clone.png) center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    cursor: pointer;
+  }
+}
+.examine_top{
+  .arrow{
+    > i {
+      width: 44px;
+      height: 19px !important;
+      display: inline-block;
+      background: url(../imgs/pop_view_rowll.png) center center no-repeat !important;
+      background-size: 100% 100%;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+}
+.poin_line {
+  height: 50px;
+  color: #d89f07;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  position: absolute;
+  bottom:18px;
+  right:0;
+  span {
+    padding:0 30px;
+    height: 30px;
+    background: url(../imgs/area_active.png) center center no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 0 15px;
+    &:hover {
+      color: #d89f07;
+      background: url(../imgs/area_hover.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+.img_road {
+  width: 90% !important;
+  height: 66% !important;
+  background: url(../imgs/img_roads.png) center center no-repeat !important;
+  background-size: 100% 90% !important;
+  // position: absolute;
+  .turnBox{
+    width:185px;
+    height:296px;
+    background:url(../imgs/signal_pop.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top:10%;
+    left:24%;
+    .signal_lists{
+        height: calc(100% - 40%);
+        background: url(../../InterPlan/Roadtraffic/img/unitl_iconActive.png) center center no-repeat;
+        margin-bottom: 3px;
+        cursor: pointer;
+        &:hover {
+          background: url(../../InterPlan/Roadtraffic/img/unitl_icon.png) center center no-repeat;
+        }
+    }
+    > dl{
+      display: flex;
+      justify-content: center;
+      font-size:14px;
+      margin:0;
+      dt{
+        flex:3;
+        text-align: right;
+      }
+      dd{
+        flex:4;
+        em,s{
+          display: inline-block;
+          font-style: normal;
+          text-decoration:none;
+        }
+        em{
+          width:60px;
+          text-align: center;
+          line-height:20px;
+          border:#1c44a9 1px solid;
+          margin-right:3px;
+        }
+      }
+    }
+  }
+  .turnBox:nth-child(2){
+    top:20%;
+    left:41%;
+  }
+  .turnBox:nth-child(3){
+    top:30%;
+    left:58%;
+  }
+  > span {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    > i {
+      width: 60px;
+      height: 60px;
+      transition: all 0.4s;
+      opacity: 0;
+      display: none;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      text-align: center;
+      line-height: 60px;
+      font-style: normal;
+      background: url(../imgs/circle_05.png) center center no-repeat;
+      background-size: 100% 100%;
+      &:nth-child(1) {
+        top: 45px;
+        left: -90px;
+      }
+      &:nth-child(2) {
+        top: 70px;
+        left: -10px;
+      }
+      &:nth-child(3) {
+        top: 45px;
+        left: 70px;
+      }
+    }
+    &:hover {
+      /*  background: url(../imgs/circle_active.png) center center no-repeat;
+      background-size: 100% 100%; */
+    }
+    &:nth-child(1) {
+      top: 19.5%;
+      left: 10.4%;
+    }
+    &:nth-child(2) {
+      top: 27.5%;
+      left: 22.1%;
+    }
+    &:nth-child(3) {
+      top: 39.6%;
+      left: 39%;
+    }
+    &:nth-child(4) {
+      top: 50.5%;
+      right: 41.4%;
+    }
+    &:nth-child(5) {
+      bottom: 27.9%;
+      right: 23%;
+    }
+    &:nth-child(6) {
+      bottom: 19.9%;
+      right: 10.9%;
+    }
+  }
+}
+.examine_top{
+  :global(.ant-checkbox-wrapper){
+    position: relative;
+    left:10px;
+  }
+}
+// 流量
+.ProManage{
+  .trafficFlow {
+    width: 30%;
+    height: 65%;
+    background: url(../imgs/boder_bg_channelization.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 6%;
+    left: 30%;
+    z-index: 1001;
+    .contents {
+      width: 100%;
+      height: 92%;
+      padding: 0 20px;
+      .roadflow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .timerShaft {
+        width: 100%;
+        height: 108px;
+        margin-top: 10px;
+        background: url(../../InterPlan/Projectmana/imgs/timerShaft.png) center center no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .flowSelect {
+        display: inline-block;
+        > div {
+          vertical-align: middle;
+          > div {
+            width: 90px;
+            height: 25px;
+            color: #00b6c1;
+            border: none !important;
+            outline: none !important;
+            background: url(../../InterPlan/Roadtraffic/img/titleOne.png) center center no-repeat !important;
+            background-size: 100% 100% !important;
+            > div {
+              > div {
+                width: 90px;
+                height: 25px;
+                line-height: 25px;
+              }
+            }
+          }
+          svg {
+            color: #00b6c1;
+          }
+        }
+      }
+      .flowSelectTwo {
+        width: 100% !important;
+        .play {
+          width: 30px;
+          height: 30px;
+          background: url(../../InterPlan/Projectmana/imgs/play.png) center center no-repeat;
+          background-size: 100% 100%;
+          display: inline-block;
+          float: right;
+          margin-right: 3px;
+          margin-top: 10px;
+        }
+      }
+    }
+    .title {
+      width: 100%;
+      height: 8%;
+      color: #0de0eb;
+      display: flex;
+      align-items: center;
+      > i {
+        width: 24px;
+        height: 15px;
+        display: inline-block;
+        background: url(../imgs/right.png) center center no-repeat;
+        background-size: 100% 100%;
+        margin: 0 10px 0 20px;
+      }
+      .clone {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 6px;
+        right: 12px;
+        background: url(../imgs/clone.png) center center no-repeat;
+        background-size: 100% 100%;
+        z-index: 1 !important;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// 绿波
+.greenWaveBox{
+  width:700px;
+  height:367px;
+  background:url(../imgs/signal_pop_greenWave.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left:30px;
+  bottom:30px;
+  z-index: 1002;
+  .clone {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: url(../../img/clone.png) center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .greenWave{
+    position: absolute;
+    top:50px;
+    right:20px;
+    bottom:120px;
+    left:60px;
+  }
+}
+/* 标记点的效果 */
+
+.drawCircle {
+  position: relative;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  transform:translate(-45%,-45%);
+  cursor: pointer;
+  .inner {
+    width: 60px;
+    height: 60px;
+    background: green;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    animation-duration: 2.4s;
+    animation-name: sm-state1;
+    animation-name: sm-state1;
+    animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    opacity: 0;
+  }
+  
+  @keyframes sm-state1 {
+    0% {
+        opacity: .5;
+        transform: scale(1);
+        transform: scale(1);
+    }
+  
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+        transform: scale(2.5);
+    }
+  }
+  .avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    z-index: 11;
+  }
+  
+  .container {
+    animation-delay: .8s;
+  }
+  
+  .outter {
+    animation-delay: 1.5s;
+  }
+  
+}
+.organization {
+  width: 66%; //1010px;//1350px;
+  height: 218px;
+  background: url(../../InterPlan/Roadtraffic/img/signal.png) center center no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  bottom: 2%;
+  left: 40px;
+  color: #00b6c1;
+  padding: 22px 0 10px 0px;
+  .clone {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 1px;
+    right: 3px;
+    background: url(../../img/clone.png) center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .organ_title {
+    padding-left: 45px;
+    width: 300px;
+    height: 34px;
+    line-height: 34px;
+    background: url(../../img/wire.png) bottom center no-repeat;
+    background-size: 100%;
+    > i {
+      width: 27px;
+      height: 22px;
+      display: inline-block;
+      background: url(../../img/hexagon.png) center center no-repeat;
+      background-size: 100% 100%;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+  }
+  .organ_cross {
+    width: 99.6%;
+    height: 12px;
+    background: url(../../InterPlan/Projectmana/imgs/line.png);
+  }
+  .organ_list {
+    width: 100%;
+    padding: 8px 43px 0;
+    overflow-y: auto;
+    max-height: 135px;
+    .listItem {
+      display: flex;
+      height: 28px;
+      font-size: 13px;
+      margin: 3px 0;
+      .listTd,
+      .listTh {
+        flex: 1;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: #03edff;
+        background: url(../../InterPlan/Projectmana/imgs/list_center.png) center center no-repeat;
+        background-size: 100% 100%;
+        > span {
+          color: #c55513;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          line-height: 28px;
+          &:hover {
+            color: #00eaff;
+          }
+        }
+        :global(.ant-select-selection) {
+          background: transparent;
+          border: none;
+          color: #c55513;
+          text-align: center;
+        }
+        :global(.ant-select-selection-selected-value) {
+          float: none;
+        }
+        :global(.ant-select-arrow) {
+          width: 20px;
+          color: #ffffff;
+          background: url(../../InterPlan/Informationmana/imgs/list_icon.png) center center no-repeat;
+        }
+        :global(.ant-upload) {
+          color: #00fb00;
+        }
+        :global(.anticon svg) {
+          color: #ffffff;
+        }
+      }
+      & > div:nth-child(1) {
+        background: url(../../InterPlan/Projectmana/imgs/list_left.png) center center no-repeat;
+        background-size: 100% 100%;
+        color: #ffffff;
+      }
+      & > div:nth-child(5) {
+        background: url(../../InterPlan/Projectmana/imgs/list_right.png) center center no-repeat;
+        background-size: 100% 100%;
+        > span {
+          width: 42%;
+          height: 20px;
+          text-align: center;
+          line-height: 20px;
+          margin: 0 3px;
+          display: inline-block;
+          background: url(../../InterPlan/Projectmana/imgs/list_del.png) center center no-repeat;
+          background-size: 100% 100%;
+          cursor: pointer;
+          &:nth-child(1) {
+            color: #00fb00;
+            > i {
+              background: url(../../InterPlan/Projectmana/imgs/upload.png) center center no-repeat;
+              background-size: 100% 100%;
+            }
+          }
+          &:nth-child(2) {
+            color: #c0532a;
+            > i {
+              background: url(../../InterPlan/Projectmana/imgs/cond_del.png) center center no-repeat;
+              background-size: 100% 100%;
+            }
+          }
+          > i {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            vertical-align: -2px;
+            margin-right: 5px;
+          }
+        }
+      }
+      & > .listTh {
+        color: #fff;
+        :global(.ant-select-selection__rendered) {
+          height: 100%;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+

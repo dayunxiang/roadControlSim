@@ -1,0 +1,257 @@
+.canalizWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../img/flowBg.png) center center no-repeat;
+  background-size: cover;
+  .canalizBox {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 110px);
+    overflow: hidden;
+    .centerWrapper {
+      position: absolute;
+      top: 30px;
+      left: 150px;
+      width: calc(100% - 300px);
+      height: calc(100% - 30px);
+    }
+    .flowBoxMoudle {
+      z-index: 3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0, .3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .flowBox {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        background: url(../imgs/flow_bg.png) no-repeat;
+        background-size: 107% 104%;
+        > .title {
+          width: 100%;
+          height: 43px;
+          color: #04eaff;
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 43px;
+          text-indent: 50px;
+        }
+        > .main {
+          width: 100%;
+          height: calc(100% - 100px);
+          padding: 0 35px;
+          > .main_left {
+            width: 62%;
+            height: 100%;
+          }
+        }
+        > .footer {
+          width: 100%;
+          height: 57px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          > span {
+            width: 118px;
+            height: 33px;
+            text-align: center;
+            line-height: 33px;
+            color: #ff7f00;
+            background: url(../imgs/area_title.png) center center no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+            &:nth-child(2) {
+              color: #4c4a57;
+              margin-left: 60px;
+            }
+            &:hover {
+              color: #04eaff;
+            }
+          }
+        }
+      }
+    }
+    .centerMoveBox, .canvasBox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all ease .2s;
+    }
+    .interPointBox {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url(../../img/interPoint.png) center center no-repeat;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+    .planListBox {
+      position: absolute;
+      bottom: 0;
+      left: 35px;
+      width: 120px;
+      height: calc(100% - 40px);
+    }
+    .modeBox {
+      display: flex;
+      padding-left: 100px;
+    }
+  }
+}
+.examine_top {
+  position: absolute;
+  top: 40px;
+  right: 90px;
+  :global(.ant-checkbox-inner) {
+    border: 1.5px solid #233772;
+    background: transparent;
+  }
+  :global(.ant-checkbox) {
+    margin-left: 10px;
+  }
+  :global(.ant-checkbox-inner::after) {
+    top: 25%;
+    left: 45%;
+    width: 25px;
+    height: 30px;
+    border: none;
+    transform: rotate(0deg) scale(1) translate(-50%, -50%);
+    background: url(../imgs/gou.png) center center no-repeat;
+  }
+  > span {
+    width: 275px;
+    height: 47px;
+    display: block;
+    background: url(../../TrafficArea/imgs/pop_view_right.png) center center no-repeat;
+    background-size: 100% 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 47px;
+    color: #fe8500;
+    &:nth-child(1) {
+      margin-bottom: 13px;
+      > i {
+        width: 19px;
+        height: 19px;
+        display: inline-block;
+        background: url(../../TrafficArea/imgs/pop_view_qiu.png) center center no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        margin-right: 30px;
+      }
+    }
+    // &:nth-child(2) {
+    //   margin-bottom: 13px;
+    //   > i {
+    //     width: 50px;
+    //     height: 10px;
+    //     display: inline-block;
+    //     background: red;
+    //     vertical-align: middle;
+    //     margin-right: 10px;
+    //   }
+    // }
+    &:nth-child(2) {
+      margin-bottom: 13px;
+      > i {
+        width: 44px;
+        height: 19px;
+        display: inline-block;
+        background: url(../../TrafficArea/imgs/pop_view_rowll.png) center center no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  background: url(../../InterPlan/Projectmana/imgs/clone.png) center center no-repeat;
+  background-size: 100% 100%;
+  z-index: 9999;
+  cursor: pointer;
+}
+.modeBtn {
+  margin-left: 80px;
+  color: #07f8ff;
+  > .name {
+    margin-right: 5px;
+  }
+  :global(.ant-input) {
+    width: 230px;
+    height: 34px;
+    background: url(../imgs/kuang.png) center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    text-align: center;
+    color: #20f4aa;
+  }
+  :global(.anticon svg) {
+    color: #07f8ff;
+  }
+  :global(.ant-calendar-picker-clear) {
+    background: #010c2a;
+  }
+  :global(.ant-time-picker-input) {
+    width: 125px;
+    height: 34px;
+    background: url(../imgs/kuang.png) center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    text-align: center;
+    color: #20f4aa;
+  }
+  :global(.ant-time-picker-clear) {
+    background: #010c2a;
+  }
+  :global(.ant-select-selection) {
+    width: 125px;
+    height: 34px;
+    background: url(../imgs/kuang.png) center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    text-align: center;
+    color: #20f4aa;
+  }
+  :global(.ant-time-picker-input[disabled]) {
+    color: #20f4aa;
+    background-color: transparent;
+  }
+  :global(.ant-select-selection-selected-value) {
+    margin: 3px 0 0 28px;
+  }
+}
+.timerShaft {
+  width: 100%;
+  height: 108px;
+  margin-top: 10px;
+  background: url(../../InterPlan/Projectmana/imgs/timerShaft.png) center center no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  > img {
+    width: 99%;
+    height: 81%;
+  }
+}
+
+ 

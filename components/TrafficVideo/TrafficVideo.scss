@@ -1,0 +1,54 @@
+.chartsSearch {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../containers/img/eacherBoxBg.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.chartsBoxBg {
+  background: url(../../containers/img/eacherBg.png) center center no-repeat;
+  background-size: 100% 100%;
+  width: 66%;
+  height: 68%;
+  padding-top: 38px;
+}
+.titleBoxBg {
+  top: 42px !important;
+}
+.SearchBg {
+  right: 5px;
+  top: 5px;
+  font-size: 15px;
+}
+.videoBox {
+  background: url(../../containers/img/pop_analysis_bg.png) center center no-repeat;
+  background-size: 100% 100%;
+  width: 66%;
+  height: 68%;
+  padding-top: 38px;
+  .title {
+    width: 100%;
+    height: 7%;
+    padding: 0 20px;
+    position: relative;
+    .nodeName {
+      position: absolute;
+      left: 20px;
+      top: -15px;
+      font-size: 24px;
+      color: #00ccff;
+    }
+  }
+  .content {
+    width: 100%;
+    height: 91%;
+    padding: 0 15px 0 12px;
+  }
+}

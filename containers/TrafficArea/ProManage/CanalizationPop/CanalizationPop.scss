@@ -1,0 +1,281 @@
+.canalizWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .canalizBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 75px);
+    .centerWrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 20px);
+      text-align: center;
+      overflow: hidden;
+      .centerMoveBox, .canvasBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all ease .2s;
+      }
+      .interPointBox {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: url(../../../img/interPoint.png) center center no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+      }
+    }
+    .planListBox {
+      z-index: 2;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      width: 120px;
+      height: calc(100% - 40px);
+      overflow-y: auto;
+      .planBtn {
+        position: relative;
+        width: 120px;
+        padding-right: 20px;
+        height: 30px;
+        margin-bottom: 10px;
+        background: url(../../imgs/planBtn.png) center center no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        .delPlanIcon {
+          position: absolute;
+          right: 8px;
+          top: 0px;
+        }
+      }
+      .planChecked {
+        background: url(../../imgs/checkedPlan.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+.examine_top {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  > span {
+    width: 275px;
+    height: 47px;
+    display: block;
+    background: url(../../../TrafficArea/imgs/pop_view_right.png) center center no-repeat;
+    background-size: 100% 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 47px;
+    color: #fe8500;
+    &:nth-child(1) {
+      margin-bottom: 13px;
+      > i {
+        width: 19px;
+        height: 19px;
+        display: inline-block;
+        background: url(../../../TrafficArea/imgs/pop_view_qiu.png) center center no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        margin-right: 30px;
+      }
+    }
+    &:nth-child(2) {
+      > i {
+        width: 44px;
+        height: 19px;
+        display: inline-block;
+        background: url(../../../TrafficArea/imgs/pop_view_rowll.png) center center no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  background: url(../../../InterPlan/Projectmana/imgs/clone.png) center center no-repeat;
+  background-size: 100% 100%;
+  z-index: 9999;
+  cursor: pointer;
+}
+.canalization {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 540px;
+  height: 600px;
+  margin: -300px 0 0 -270px;
+  background: url(../../../InterPlan/Projectmana/imgs/canalization.png) center center no-repeat;
+  background-size: 100% 100%;
+  .cana_title {
+    width: 241px;
+    height: 34px;
+    background: url(../../../InterPlan/Projectmana/imgs/conf_title.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #03edff;
+    padding-left: 45px;
+    line-height: 18px;
+    margin-top: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cana_cross {
+    width: 99.6%;
+    height: 12px;
+    background: url(../../../InterPlan/Projectmana/imgs/line.png);
+  }
+  .cana_centent {
+    width: 100%;
+    height: calc(100% - 90px);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    position: relative;
+    > img {
+      width: 100%;
+      height: 90%;
+      border: none;
+      outline: none;
+    }
+    .compass {
+      width: 40px;
+      height: 50px;
+      position: absolute;
+      top: 15px;
+      right: 50px;
+      background: url(../../../InterPlan/Projectmana/imgs/zhibei.png) center center no-repeat;
+      background-size: 100% 100%;
+    }
+    .precept {
+      position: absolute;
+      height: calc(100% - 50px);
+      top: 15px;
+      left: 20px;
+      overflow-y: auto;
+      > span {
+        width: 100px;
+        height: 30px;
+        display: block;
+        background: url(../../../InterPlan/Projectmana/imgs/item.png) center center no-repeat;
+        background-size: 100% 100%;
+        color: #ffffff;
+        font-size: 13px;
+        text-align: center;
+        line-height: 30px;
+        margin: 3px 0;
+        cursor: pointer;
+      }
+      .nodeChecked {
+        background: url(../../../AreaPlan/imgs/checkedPlan.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .popBottom {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .popSave {
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background: url(../../../AreaPlan/imgs/area_title.png) center center no-repeat;
+        background-size: 100% 100%;
+        color: #ff8800;
+        cursor: pointer;
+      }
+      .popCancel {
+        width: 100px;
+        height: 30px;
+        margin-left: 30px;
+        text-align: center;
+        line-height: 30px;
+        background: url(../../../AreaPlan/imgs/area_title.png) center center no-repeat;
+        background-size: 100% 100%;
+        color: #ccc;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.examine_right {
+  position: absolute;
+  top: 164px;
+  right: 90px;
+  > span {
+    width: 76px;
+    height: 31px;
+    display: block;
+    background: url(../../../TrafficArea/imgs/pop_view_actionBg.png) center center no-repeat;
+    background-size: 100% 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 31px;
+    color: #07f8ff;
+    margin-bottom: 5px;
+    cursor: pointer;
+    > i {
+      width: 18px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    &:nth-child(1) {
+      > i {
+        background: url(../../../TrafficArea/imgs/btn_One.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:nth-child(2) {
+      > i {
+        background: url(../../../TrafficArea/imgs/btn_Two.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:nth-child(3) {
+      > i {
+        background: url(../../../TrafficArea/imgs/btn_Three.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:nth-child(4) {
+      margin-bottom: 0;
+      > i {
+        background: url(../../../TrafficArea/imgs/btn_Four.png) center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

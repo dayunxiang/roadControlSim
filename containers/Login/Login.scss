@@ -1,0 +1,151 @@
+.loginWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/loginBg.png) center center no-repeat;
+  background-size: cover;
+  input::input-placeholder{
+    color:#0cf5ff;
+    opacity: .5;
+  }
+  input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#0cf5ff;
+    opacity: .5;
+  }
+  input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#0cf5ff;
+    opacity: .5;
+  }
+  input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#0cf5ff;
+    opacity: .5;
+  }
+  .loginBox {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    width: 375px;
+    height: 340px;
+    margin-left: -187px;
+    background: url(../img/loginBox.png) center center no-repeat;
+    background-size: 100% 100%;
+    .title {
+      display: flex;
+      padding: 10px 0;
+      margin-top: 20px;
+      justify-content: center;
+      font-size: 22px;
+      letter-spacing: 20px;
+      color: #0ef5fd;
+      text-indent: 20px;
+      font-weight: bold;
+    }
+    .userMessage {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      span {
+        position: absolute;
+        left: 35px;
+        top: 25px;
+        font-size: 18px;
+        svg {
+          color: #0cf5ff;
+        }
+      }
+      .userInput {
+        width: 250px;
+        height: 35px;
+        padding-left: 5px;
+        border: 1px solid #0cf5ff;
+        background-color: transparent;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 3px;
+      }
+    }
+    .forgetPwd {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      .pwdBox {
+        display: flex;
+        width: 250px;
+        padding-top: 3px;
+        justify-content: space-between;
+        color: #0cf5ff;
+        font-size: 13px;
+        .remenberPwd {
+          cursor: pointer;
+          span {
+            color: #0cf5ff;
+            font-size: 13px;
+          }
+          :global(.ant-checkbox-inner) {
+            width: 14px;
+            height: 14px;
+            background-color: #0c477f;
+            border: 1px solid #1890ff;
+          }
+        }
+        .isForget {
+          cursor: pointer;
+        }
+      }
+    }
+    .btnBox{
+      display: flex;
+      padding-top: 10px;
+      justify-content: center;
+      .loginBtn {
+        width: 250px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        letter-spacing: 20px;
+        font-size: 18px;
+        text-indent: 20px;
+        color: #0cf5ff;
+        border-radius: 3px;
+        background-color: #11467a;
+        cursor: pointer;
+      }
+    }
+    .verificationCode {
+      display: flex;
+      justify-content: center;
+      .verification {
+        width: 250px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        input {
+          width: 80px;
+          height: 32px;
+          padding-left: 5px;
+          background: transparent;
+          border: 1px solid #0cf5ff;
+          border-radius: 3px;
+          font-size: 14px;
+          outline: none;
+        }
+        .codeShow {
+          width: 80px;
+          height: 32px;
+          margin-left: 20px;
+        }
+        .changeCode {
+          padding-left: 10px;
+          color: #0cf5ff;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

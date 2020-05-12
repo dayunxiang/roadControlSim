@@ -1,0 +1,511 @@
+.container{
+  width:600px;
+  height:600px;
+  position: fixed;
+  left: 300px;
+  top: 110px;
+  z-index: 8;
+}
+.getFLowPlay {
+  z-index: 2;
+  position: absolute;
+  bottom: 85px;
+  left: 40px;
+  width: 55%;
+  height: 160px;
+  font-size: 14px;
+  .flowTimeBox {
+    height: 125px;
+    background: url(../../../img/time_bg.png) center center no-repeat;
+    background-size: 100% 100%;
+    .timeBox{
+      display: flex;
+      height:50px;
+      padding:30px;
+      background:rgba(62,56,68,.3);
+      position: absolute;
+      top:50px;
+      right:30px;
+      left:30px;
+      display: flex;
+      justify-content: center;
+      user-select: none;
+      box-sizing: content-box;
+      mark{
+        // padding:5px 15px;
+        position: absolute;
+        right: -15px;
+        top: -45px;
+        font-weight: bold;
+        border-radius: 2px;
+        font-size:0px;
+        cursor: pointer;
+        height: 20px;
+        width:20px;
+        background: url(../../../img/play.png) no-repeat;
+        background-size: 100% 100%;
+        i{
+          width:40px;
+          height:40px;
+          display: block;
+          position: absolute;
+          top:-10px;
+          left:-10px;
+          background:url(../../../img/timeBtnHover.png) no-repeat;
+          background-size: 100% 100%;
+          animation: playGo 3s linear infinite;
+          // animation: playGo 3s linear infinite;
+          &:hover{
+            background:url(../../../img/timeBtnHover.png) no-repeat;
+            background-size: 100% 100%;
+            animation: unset;
+            // animation: unset;
+          }
+        }
+      }
+      .btnSuspend{
+        background: url(../../../img/suspend.png) no-repeat;
+        background-size: 100% 100%;
+        i{
+          width:40px;
+          height:40px;
+          display: block;
+          position: absolute;
+          top:-10px;
+          left:-10px;
+          background:url(../../../img/timeBtnHover.png) no-repeat;
+          background-size: 100% 100%;
+          animation: playGo 3s linear infinite;
+          animation: playGo 3s linear infinite;
+          &:hover{
+            background:url(../../../img/timeBtnHover.png) no-repeat;
+            background-size: 100% 100%;
+            animation: unset;
+            // animation: unset;
+          }
+        }
+      }
+      
+      em{
+        height:100%;
+        width:0;
+        border-right:1px #b63d5d solid;
+        position: absolute;
+        top:0;
+        left:30px;
+        z-index: 2;
+        transition:all 1s;
+        transition-timing-function: linear;
+      }
+      em > i{
+        display: inline-block;
+        height:30%;
+        width:16px;
+        border-radius: 2px;
+        background:#dedede;
+        position: absolute;
+        top:35%;
+        left:-8px;
+        // border-radius: 2px;
+        // -moz-border-radius: 2px;
+        // -ms-border-radius: 2px;
+        // -o-border-radius: 2px;
+      }
+          /* 横向效果style */
+      .stepGapHor{
+        display: inline-block;
+        height:10%;
+        position: relative;
+        top:40%;
+      }
+      .horStepGap{
+        display: inline-block;
+        height:30%;
+        position: relative;
+        top:35%;
+      }
+      .horStepGapBig{
+        display: inline-block;
+        height:100%;
+        justify-content: stretch;
+        position: relative;
+      }
+      .horStepGapBig time{
+        position: absolute;
+        left:0;
+        bottom:0;
+        transform: translate(-50%,120%);
+        font-size:12px;
+        color:#debdc2;
+      }
+    }
+  }
+  .flowDate {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #00f1ff;
+    :global(.ant-select-selection) {
+      width: 100px;
+      height: 28px;
+      background-color: transparent;
+      color: #22f4ad;
+      background: url(../../../InterPlan/Flow/imgs/planBtn.png) no-repeat;
+      background-size: 100% 100%;
+      border: none;
+    }
+    :global(.ant-select-selection__rendered) {
+      line-height: 30px;
+    }
+  }
+  .flowPlay {
+    position: relative;
+    height: 120px;
+    background: url(../../../InterPlan/Singal/imgs/addBg.png) center center no-repeat;
+    background-size: 100% 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .flowPlayBtn {
+      position: absolute;
+      top: -30px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
+      background: url(../../../InterPlan/Flow/imgs/playBg.svg) center center no-repeat;
+      background-size: 30px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      color: #00f1ff;
+    }
+    .flowTimeBox {
+      width: 98%;
+      height: 100px;
+      margin-top: 5px;
+      background: url(../../../InterPlan/Flow/imgs/time_img.png) center center no-repeat;
+      background-size: 100% 100px;
+    }
+  }
+}
+.roadFlowWrapper {
+  position: absolute;
+  width: 40%;
+  height: calc(100% - 55px);
+  right: 20px;
+  bottom: 10px;
+  background: url(../../../InterPlan/Flow/imgs/simulatRoad.png) center center no-repeat;
+  background-size: 100% 100%;
+  .exportFlowBox {
+    position: relative;
+    display: flex;
+    height: 80px;
+    margin-top: 20px;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    .roadBtnBox {
+      display: flex;
+      .roadBtn {
+        width: 90px;
+        height: 30px;
+        margin-left: 20px;
+        background: url(../../../InterPlan/Flow/imgs/headerClick.png) center center no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .activeBtn {
+        color: #ff8800;
+      }
+    }
+    .splitBorder {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: url(../../../InterPlan/Flow/imgs/splitBorder.png);
+      background-size: auto 10px;
+    }
+    .roadDetaction {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      margin-left: 20px;
+      :global(.ant-select-selection__rendered) {
+        line-height: 30px;
+      }
+    }
+    .roadName {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      .name {
+        letter-spacing: 4px;
+      }
+      .nameText {
+        display: inline-block;
+        width: 125px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+        background-size: 125px 32px;
+        color: #22f4ad;
+      }
+    }
+    :global(.ant-select-selection--single){
+      border: none;
+      background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+      background-size: 100% 100%;
+      outline: none;
+      box-shadow: none;
+    }
+    :global(.ant-select-selection__rendered) {
+      display: flex;
+      justify-content: center;
+      width: 90px;
+      background-color: transparent;
+      color: #22f4ad;
+    }
+    :global(.ant-select-arrow) {
+      color: #fff;
+    }
+    .flowExport {
+      position: relative;
+      flex: 1;
+      height: 80px;
+      padding-left: 10px;
+      margin-top: -5px;
+      background: url(../../../InterPlan/Flow/imgs/flowBorder.png) center center no-repeat;
+      background-size: 95% 80px;
+      .exportText {
+        position: absolute;
+        top: -13px;
+        left: 25px;
+        width: 80px;
+        height: 26px;
+        text-align: center;
+        line-height: 26px;
+        background: url(../../../InterPlan/Flow/imgs/headerClick.png) center center no-repeat;
+        background-size: 80px 26px;
+        font-size: 14px;
+        color: #ff8800;
+      }
+      .systemAutoBox {
+        display: flex;
+        height: 40px;
+        padding: 15px 0 0 20px;
+        align-items: center;
+        font-size: 14px;
+        color: #fff;
+        .systemAuto {
+          width: calc(100% - 100px);
+          height: 26px;
+          border: 1px solid #1e43ab;
+          border-radius: 6px;
+          text-align: center;
+          line-height: 26px;
+          color: #22f4ad;
+        }
+      }
+      .temExport {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        font-size: 14px;
+        color: #fff;
+        padding-left: 20px;
+        .templateSel {
+          position: relative;
+          width: calc(100% - 100px);
+          height: 26px;
+          padding-right: 101px;
+          line-height: 26px;
+          border: 1px solid #1e43ab;
+          border-radius: 6px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          text-indent: 5px;
+          color: #ff8800;
+          .importText {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 100%;
+            line-height: 26px;
+            text-align: center;
+            color: #ff8800;
+            cursor: pointer;
+          }
+          .browseText {
+            position: absolute;
+            top: 0;
+            right: 50px;
+            width: 50px;
+            height: 100%;
+            text-align: center;
+            line-height: 26px;
+            border-left: 1px solid #1e43ab;
+            border-right: 1px solid #1e43ab;
+            cursor: pointer;
+            overflow: hidden;
+            .uploadExcel {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .importFlowMsg {
+    height: calc(100% - 130px);
+    font-size: 14px;
+    color: #fff;
+    .title {
+      width: 200px;
+      height: 30px;
+      margin: 10px 0 15px 10px;
+      background: url(../../../InterPlan/Flow/imgs/titleBg.svg) center center no-repeat;
+      background-size: contain;
+      text-indent: 40px;
+      font-size: 15px;
+      color: #00f1ff;
+    }
+    .roadMsgBox {
+      height: calc(100% - 50px);
+      overflow: auto;
+      .roadMsg {
+        display: flex;
+        padding-right: 10px;
+        margin-bottom: 10px;
+        &:first-child {
+          margin-bottom: 0;
+        }
+        .detactionBox {
+          .mutipleBox {
+            display: flex;
+            height: 55px;
+            margin-bottom: 5px;
+            align-items: center;
+            background: url(../../../InterPlan/Flow/imgs/roadBorder.png) center center no-repeat;
+            background-size: 100% 55px;
+            div {
+              width: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+          .heade {
+            display: flex;
+            height: 30px;
+            margin-bottom: 5px;
+            align-items: center;
+            background: url(../../../InterPlan/Flow/imgs/rectBorder.png) center center no-repeat;
+            background-size: 100% 30px;
+            div {
+              width: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            div:first-child {
+              // flex: 0 120px;
+              position: relative;
+              .checkBox {
+                width: 14px;
+                height: 14px;
+                border: 1px solid #22f4ad;
+                border-radius: 50%;
+                margin-right: 3px;
+                cursor: pointer;
+              }
+              .addLessBtn {
+                width: 12px;
+                height: 12px;
+                margin-left: 2px;
+                background-color: #0b47c9;
+                text-align: center;
+                line-height: 10px;
+                border-radius: 3px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .roadLane {
+          padding: 0 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .roadNameBox {
+            width: 85px;
+            height: 30px;
+            background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+            background-size: 85px 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #ff8800;
+          }
+        }
+        .details {
+          flex: 1;
+          display: flex;
+          height: 60px;
+          background: url(../../../InterPlan/Flow/imgs/roadBorder.png) center center no-repeat;
+          background-size: 100% 60px;
+          align-items: center;
+          div {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+          }
+          div:first-child {
+            flex: 0 100px;
+          }
+        }
+      }
+    }
+    .loadingTipBox {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.flowPlanList {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  > span {
+    width: 100px;
+    height: 30px;
+    display: block;
+    background: url(../../../InterPlan/Projectmana/imgs/item.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+    margin: 3px 0;
+    cursor: pointer;
+  }
+  .flowPlanChecked {
+    background: url(../../imgs/checkedPlan.png) center center no-repeat;
+    background-size: 100% 100%;
+  }
+}

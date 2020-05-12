@@ -1,0 +1,146 @@
+
+@keyframes run {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+.entranceWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: url('./imgs/entrance.jpg') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .contentxRotate{
+    animation: run 40s linear infinite;
+  }
+  .pauseRotate {
+    animation-play-state:paused;
+  }
+  .transformBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 648px;
+    background: url('./imgs/cycle.png') center center no-repeat;
+    background-size: 600px auto;
+    .systemTextBox {
+      position: fixed;
+      width: 180px;
+      height: 70px;
+      transition: all ease .5s;
+    }
+    .systemPicBox {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .rotateBox {
+        z-index: 2;
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        transform: scale(1.0);
+        transition: all ease 1s;
+        cursor: pointer;
+        // &:hover {
+        //   transform: scale(1.2);
+        // }
+      }
+      .rotateBox:nth-child(1) {
+        top: -60px;
+        left: 50%;
+        margin-left: -90px;
+        background: url(./imgs/rotate6.png) center center no-repeat;
+        background-size: cover;
+      }
+      .rotateBox:nth-child(2) {
+        top: 90px;
+        left: -30px;
+        background: url(./imgs/rotate4.png) center center no-repeat;
+        background-size: cover;
+      }
+      .rotateBox:nth-child(3) {
+        top: 90px;
+        right: -30px;
+        background: url(./imgs/rotate5.png) center center no-repeat;
+        background-size: cover;
+      }
+      .rotateBox:nth-child(4) {
+        bottom: 85px;
+        left: -35px;
+        background: url(./imgs/rotate3.png) center center no-repeat;
+        background-size: cover;
+      }
+      .rotateBox:nth-child(5) {
+        bottom: 85px;
+        right: -35px;
+        background: url(./imgs/rotate1.png) center center no-repeat;
+        background-size: cover;
+      }
+      .rotateBox:nth-child(6) {
+        bottom: -60px;
+        left: 50%;
+        margin-left: -90px;
+        background: url(./imgs/rotate2.png) center center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .earhBgBox {
+    z-index: 3;
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    background: url(./imgs/bool.png) center center no-repeat;
+    background-size: 300px auto;
+  }
+  .systemListBox {
+    position: fixed;
+    bottom: 3%;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .moveBtn {
+      margin: 0 10px;
+      font-size: 18px;
+      cursor: pointer;
+      i {
+        color: #04efff;
+      }
+    }
+    .listWrapper {
+      position: relative;
+      width: 270px;
+      height: 35px;
+      border: 1px solid #0f556e;
+      overflow: hidden;
+      .listBox {
+        position: absolute;
+        top: 0;
+        display: flex;
+        height: 100%;
+        transition: all ease .3s;
+        .sysName {
+          display: flex;
+          width: 270px;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          color: #04efff;
+        }
+      }
+    }
+  }
+}

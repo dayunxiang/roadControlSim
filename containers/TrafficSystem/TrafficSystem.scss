@@ -1,0 +1,383 @@
+.mapContainer {
+  background: url(../img/flowBg.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.syetem_bg {
+  background: url(./imgs/system_bg.png) center center no-repeat;
+  background-size: 100% 100%;
+  width: calc(100% - 70px);
+  height: calc(100% - 220px);
+  position: absolute;
+  top: 150px;
+  left: 35px;
+}
+.syetem_top {
+  width: 100%;
+  height: 90px;
+  padding: 0 1px;
+  position: relative;
+  .searchBtn {
+    width: 120px;
+    height: 34px;
+    display: inline-block;
+    background: url(../img/smallBtnBg.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #ff7e00;
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .line {
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    background: url(../img/line.png) center center;
+  }
+  .syetem_item {
+    height: 100%;
+    width: 270px;
+    line-height: 100px;
+    margin-left: 100px;
+    display: inline-block;
+    .item {
+      color: #019bac;
+      margin-right: 15px;
+      font-size: 16px;
+    }
+    .inSle {
+      width: 200px;
+      height: 100%;
+      display: inline-block;
+    }
+    :global(.anticon svg) {
+      color: #07f8ff;
+    }
+    :global(.ant-select-selection__rendered) {
+      line-height: 30px;
+    }
+    :global(.ant-input) {
+      background: url(../img/flowBorder.png) center center no-repeat;
+      background-size: 100% 100%;
+      border: none;
+      color: #fff;
+    }
+    :global(.ant-select-selection) {
+      background: url(../img/flowBorder.png) center center no-repeat;
+      background-size: 100% 100%;
+      color: #fff;
+    }
+  }
+}
+.botton {
+  width: 120px;
+  height: 34px;
+  display: inline-block;
+  background: url(../img/smallBtnBg.png) center center no-repeat;
+  background-size: 100% 100%;
+  color: #ff7e00;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background: url(../img/headerClick.png) center center no-repeat;
+    background-size: 100% 100%;
+  }
+  &:last-child {
+    margin-left: 50px;
+  }
+}
+.syetem_buttom {
+  width: 100%;
+  height: calc(100% - 90px);
+  .title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    > span {
+      width: 120px;
+      height: 34px;
+      display: inline-block;
+      color: #fff;
+      float: right;
+      font-size: 16px;
+      text-align: center;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+  }
+  .listBox {
+    height: calc(100% - 40px);
+    .listItems {
+      display: flex;
+      padding: 0 25px;
+      height: calc((100% - 75px) / 11);
+      margin-bottom: 4px;
+      &:nth-child(1) {
+        color: #ff7e00;
+      }
+      .listTd {
+        flex: 1;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: url(./imgs/02.png) center center no-repeat;
+        background-size: 100% 100%;
+        &:first-child {
+          background: url(./imgs/01.png) center center no-repeat;
+          background-size: 100% 100%;
+        }
+        &:last-child {
+          flex: 1.4;
+          background: url(./imgs/03.png) center center no-repeat;
+          background-size: 100% 100%;
+        }
+        .roadName {
+          max-width: 100%;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: break-all;
+        }
+        .icon {
+          margin-right: 5px;
+        }
+        .updateName {
+          color: #00c90d;
+          width: 30%;
+          padding: 3px 0;
+          text-align: center;
+          cursor: pointer;
+          margin: 0 5px;
+          background: url(../img/icon.png) center center no-repeat;
+          background-size: 100% 100%;
+          &:hover {
+            background: url(../img/iconBg.png) center center no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+        .spantName {
+          color: #d46909;
+          width: 100%;
+          padding: 3px 0;
+          cursor: pointer;
+          text-align: center;
+          &:hover {
+            color: #1890ff;
+          }
+        }
+        .delectName {
+          color: #d46909;
+          width: 30%;
+          padding: 3px 0;
+          cursor: pointer;
+          text-align: center;
+          margin: 0 5px;
+          background: url(../img/icon.png) center center no-repeat;
+          background-size: 100% 100%;
+          &:hover {
+            background: url(../img/iconBg.png) center center no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+      }
+    }
+    .noData {
+      font-size: 30px;
+      color: #07f8ff;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      margin-left: -105px;
+    }
+  }
+}
+.pagination {
+  width: calc(100% - 70px);
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+  .page {
+    float: right;
+    margin-top: 14px;
+    margin-right: 80px;
+  }
+  :global(.ant-pagination-item-link) {
+    background-color: transparent;
+    /* border: 1px solid #1c44a9; */
+    &:last-child {
+      border: none;
+    }
+    &:first-child {
+      border: none;
+    }
+  }
+  :global(.ant-pagination-item) {
+    background-color: transparent;
+    border: 1px solid #1c44a9;
+  }
+  :global(.ant-pagination-item a) {
+    color: #fff;
+  }
+  :global(.ant-pagination-options-quick-jumper input) {
+    background-color: transparent;
+    border: 1px solid #1c44a9;
+    color: #fff;
+  }
+  :global(.ant-pagination-options-quick-jumper) {
+    color: #1890ff;
+  }
+  :global(.ant-pagination-item-ellipsis) {
+    color: #1890ff !important;
+  }
+  :global(.ant-pagination) {
+    display: inline-block;
+  }
+  .count {
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.traBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  .addListBox {
+    width: 580px;
+    // height: 400px;
+    background: url(../img/pop_analysis_bg.png) center center no-repeat;
+    background-size: 100% 100%;
+    .titleBox {
+      width: 100%;
+      height: 50px;
+      position: relative;
+      .title {
+        line-height: 50px;
+        height: 50px;
+        width: 130px;
+        text-align: center;
+        font-size: 18px;
+      }
+      .close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+      }
+    }
+
+    .content {
+      width: 100%;
+      padding: 15px 0;
+    }
+    .treeData {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    :global(.ant-tree li .ant-tree-node-content-wrapper) {
+      color: #00b6c1;
+    }
+    :global(.anticon svg) {
+      color: #00b6c1;
+    }
+    :global(.ant-tree li .ant-tree-node-content-wrapper):hover {
+      background-color: transparent;
+    }
+    :global(.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected) {
+      background-color: transparent;
+    }
+    :global(.ant-select-selection__clear) {
+      background: none;
+    }
+  }
+}
+.syetemItem {
+  width: 100%;
+  /* height: 40px; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 15px;
+  .item {
+    color: #019bac;
+    margin-right: 15px;
+    font-size: 16px;
+    height: 32px;
+    width: 80px;
+    display: inline-block;
+    text-align: left;
+    line-height: 32px;
+  }
+  .inSle {
+    width: 300px;
+    height: 100%;
+    display: inline-block;
+    :global(.ant-tree) {
+      color: #07f8ff;
+    }
+  }
+  :global(.ant-select-selection__rendered) {
+    line-height: 30px;
+  }
+  :global(.ant-input) {
+    background: url(../InterPlan/Projectmana/imgs/small.png) center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    color: #fff;
+  }
+  :global(.ant-input:focus) {
+    border-radius: 0 15px 0 0;
+  }
+  :global(.ant-select-selection) {
+    background: url(../InterPlan/Projectmana/imgs/small.png) center center no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    border: none;
+    border-radius: 0 14px 0 0;
+  }
+  :global(.ant-select-open .ant-select-selection) {
+    border-radius: 0 14px 0 0;
+  }
+}
+:global(.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link) {
+  background: transparent;
+}
+:global(.ant-radio-wrapper) {
+  color: #fff !important;
+}
+:global(.ant-select-dropdown) {
+  background: url(../img/selectBg.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+:global(.ant-select-tree li .ant-select-tree-node-content-wrapper) {
+  color: #019bac !important;
+}
+:global(.ant-pagination-item-active a) {
+  color: #ff7e00 !important;
+}
+:global(.ant-pagination-item-active) {
+  border-color: #ff7e00 !important;
+}
