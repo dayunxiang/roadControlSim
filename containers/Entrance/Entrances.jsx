@@ -19,7 +19,7 @@ class Entrances extends React.Component {
       { name: '交通预测分析', href: '/trafficAnalysis', limitId: 4 },
       { name: '仿真资源管理', href: '/trafficManage', limitId: 3 },
       { name: '数据分析', href: '/trafficDatas', limitId: 2 },
-      { name: '系统管理', href: '/trafficSystem', limitId: 1 },
+      // { name: '系统管理', href: '/trafficSystem', limitId: 1 },
     ]
     this.loginKeys = {
       password: '',

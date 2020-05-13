@@ -62,31 +62,6 @@ const Trafficassess = Loadable({
   loading: Loading,
   delay: 0,
 })
-const Trafficsystem = Loadable({
-  loader: () => import('./containers/TrafficSystem/TrafficSystem'),
-  loading: Loading,
-  delay: 0,
-})
-const Jurisdiction = Loadable({
-  loader: () => import('./containers/TrafficSystem/Jurisdiction'),
-  loading: Loading,
-  delay: 0,
-})
-const Usergroup = Loadable({
-  loader: () => import('./containers/TrafficSystem/Usergroup'),
-  loading: Loading,
-  delay: 0,
-})
-const Journal = Loadable({
-  loader: () => import('./containers/TrafficSystem/Journal'),
-  loading: Loading,
-  delay: 0,
-})
-const TrafficMenu = Loadable({
-  loader: () => import('./containers/TrafficSystem/TrafficMenu'),
-  loading: Loading,
-  delay: 0,
-})
 const Canalization = Loadable({
   loader: () => import('./containers/InterPlan/Canalization/Canalization'),
   loading: Loading,
@@ -134,11 +109,6 @@ const Promanage = Loadable({
 })
 const Header = Loadable({
   loader: () => import('./containers/Header/Header'),
-  loading: Loading,
-  delay: 0,
-})
-const Login = Loadable({
-  loader: () => import('./containers/Login/Login'),
   loading: Loading,
   delay: 0,
 })
@@ -202,11 +172,6 @@ const Parent = () => (
     <Route exact path="/infomanage" component={Infomanage} />
     <Route exact path="/trafficmanage" component={Trafficmanage} />
     <Route exact path="/trafficassess" component={Trafficassess} />
-    <Route exact path="/trafficsystem" component={Trafficsystem} />
-    <Route exact path="/trafficMenu" component={TrafficMenu} />
-    <Route exact path="/jurisdiction" component={Jurisdiction} />
-    <Route exact path="/usergroup" component={Usergroup} />
-    <Route exact path="/journal" component={Journal} />
     <Route exact path="/areaSingal" component={AreaSingal} />
     <Route exact path="/areaFlow" component={AreaFlow} />
     <Route exact path="/areaAllocation" component={AreaAllocation} />
