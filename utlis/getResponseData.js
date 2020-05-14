@@ -12,7 +12,7 @@ instance.interceptors.request.use((config) => {
     if (userInfo) {
       config.headers.Authorization = userInfo.token
     } else {
-      window.location.href = '#/login'
+      window.location.href = 'http://39.100.128.220:30000/road/control/system/#/login'
     }
   }
   return config
@@ -22,7 +22,7 @@ instance.interceptors.request.use((config) => {
 instance.interceptors.response.use((response) => {
   if (response.data.code === -10) {
     localStorage.clear()
-    window.location.href = '#/login'
+    window.location.href = 'http://39.100.128.220:30000/road/control/system/#/login'
   }
   return response
 }, error => (Promise.reject(error)))
