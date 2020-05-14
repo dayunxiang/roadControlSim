@@ -9,8 +9,8 @@ class StaticEntrance extends React.Component {
     this.modalItems = [
       { name: '路口交通组织方案设计', href: '/roadtraffic', limitId: 6, clsname: 'traffic' },
       { name: '区域交通组织方案设计', href: '/trafficArea', limitId: 5, clsname: 'trafficArea' },
-      { name: '仿真资源管理', href: '/trafficManage', limitId: 3, clsname: 'trafficManage' },
       { name: '交通事故组织方案设计', href: '', limitId: 2, clsname: 'trafficAnalysis' },
+      { name: '仿真资源管理', href: '/trafficManage', limitId: 3, clsname: 'trafficManage' },
       { name: '数据分析', href: '/trafficDatas', limitId: 2, clsname: 'trafficDatas' },
       // { name: '系统管理', href: '/trafficSystem', limitId: 1 },
     ]
