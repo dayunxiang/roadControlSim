@@ -599,7 +599,7 @@ class Roadtraffic extends React.Component {
         {Infowindow ?
           <div className={styles.Infowindow}>
             <p className={styles.info_py}>路口编号:<span>{this.state.interPlanMsg ? this.state.interPlanMsg.nodeId : '--'}</span></p>
-            <p className={styles.info_pe}>路口名称:<span>{this.state.interPlanMsg ? this.state.interPlanMsg.nodeName : '--'}</span></p>
+            <p className={styles.info_py}>路口名称:<span>{this.state.interPlanMsg ? this.state.interPlanMsg.nodeName : '--'}</span></p>
             <p className={styles.info_ps}>建模方案:<span>{this.state.interPlanMsg ? this.state.interPlanMsg.lengths : '--'}套</span></p>
             {this.state.interPlanMsg && this.state.interPlanMsg.tasks.length > 1 ?
               [<span className={styles.interLeft} onClick={this.getArrowLeft}><Icon type="left" /></span>,

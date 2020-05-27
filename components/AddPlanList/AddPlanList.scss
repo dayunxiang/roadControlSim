@@ -5,13 +5,14 @@
   height: 30px;
   padding-right: 20px;
   margin-bottom: 10px;
-  background: url(./planBtn.png) center center no-repeat;
-  background-size: cover;
+  // background: url(./planBtn.png) center center no-repeat;
+  // background-size: cover;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  background-color: #193364;
   .planName {
     position: absolute;
     top: 0;
@@ -22,6 +23,7 @@
     background-color: transparent;
     border: none;
     outline: none;
+    color: #539BD6;
   }
   .planNameBox {
     position: absolute;
@@ -39,6 +41,7 @@
     right: 5px;
     top: 5px;
     cursor: pointer;
+    color: #539BD6;
   }
 }
 .addPlanBtn {
@@ -47,12 +50,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(./planBtn.png) center center no-repeat;
-  background-size: cover;
-  color: #fff;
+  background-color: #193364;
+  color: #539BD6;
   cursor: pointer;
 }
 .planBtnChecked {
-  background: url(./checkedPlan.png) no-repeat;
-  background-size: 100% 100%;
+  background-color: #0673B6;
+  .planName, .closeBtn {
+    color: #23D1F3;
+  }
 }

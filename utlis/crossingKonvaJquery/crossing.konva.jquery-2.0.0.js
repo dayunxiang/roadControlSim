@@ -9,10 +9,10 @@ import Konva from 'konva'
     relyOnId: '', //依赖id句柄
     pathR: 400, //圆直径
     crossingFill: "transparent", //8方向路口填充色
-    crossingStroke: '#2e3e5b', //边框色
+    crossingStroke: '#07BAD2', //边框色
     crossingWidth: 4, //边框宽度
-    arrowFill: '#2e3e5b', //箭头填充色
-    arrowStroke: '#2e3e5b', //箭头边框色
+    arrowFill: '#07BAD2', //箭头填充色
+    arrowStroke: '#07BAD2', //箭头边框色
     arrowWidth: 4, //初始化箭头宽度    
     selectWidth: 8, //点击选中后箭头宽度
     arrowArrColor: ['#e61e19', '#5a60a2', '#58b048', '#e66424', '#3a593b', '#dfa29d', '#23aae2', '#efb70e'],

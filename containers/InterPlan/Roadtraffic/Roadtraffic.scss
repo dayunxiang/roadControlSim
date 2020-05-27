@@ -1,3 +1,8 @@
+
+$fontColor: #5BBDFF;
+$numColor: #FEFCFA;
+$gradient: linear-gradient(to right, rgba(19, 42, 83, .9), rgba(26, 66, 112, .9));
+$gradientB: linear-gradient(to bottom, rgba(26, 66, 112, .9), rgba(19, 42, 83, .9));
 @font-face {
   font-family: num;
   src: url(../../../utlis/290.7218c42.woff) format("woff");
@@ -27,11 +32,11 @@
     height: 100%;
   }
   .clone {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     position: absolute;
-    top: 4px;
-    right: 3px;
+    top: 10px;
+    right: 10px;
     background: url(../../img/clone.png) center center no-repeat;
     background-size: 100% 100%;
     z-index: 9999;
@@ -39,16 +44,17 @@
   }
   .Infowindow {
     width: 474px;
-    height: 327px;
-    background: url(./img/popup.png) center center no-repeat !important;
-    background-size: 100% 100%;
+    // background: url(./img/popup.png) center center no-repeat !important;
+    // background-size: 100% 100%;
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     left: 10px;
     z-index: 9999;
-    color: #05b9f8;
-    padding: 40px 70px;
+    color: $fontColor;
+    padding: 20px;
     transition: all 0.2s ease;
+    border-radius: 8px;
+    background-image: $gradient;
     p {
       > span {
         padding-left: 10px;
@@ -56,7 +62,7 @@
     }
     .info_py {
       > span {
-        color: #33a720;
+        color: $numColor;
       }
     }
     .info_pe {
@@ -67,19 +73,21 @@
       }
     }
     .info_unint {
-      width: 118px;
-      height: 34px;
-      background: url(./img/until.svg) center center no-repeat;
+      width: 110px;
+      height: 32px;
+      // background: url(./img/until.svg) center center no-repeat;
       position: absolute;
-      bottom: 35px;
+      bottom: 10px;
       left: 50%;
-      margin-left: -92px;
+      margin-left: -55px;
       text-align: center;
-      line-height: 34px;
+      line-height: 32px;
       cursor: pointer;
-      &:hover {
-        background: url(./img/area_active.png) center center no-repeat;
-      }
+      // &:hover {
+      //   background: url(./img/area_active.png) center center no-repeat;
+      // }
+      background-color: #0673B6;
+      color: #2CCBF6;
     }
     .beginBox {
       width: 100%;
@@ -233,22 +241,23 @@
   }
   .road_phase {
     width: 470px;
-    height: 486px;
+    height: 446px;
     position: absolute;
     left: 10px;
-    bottom: 342px;
-    background: url(./img/flow.png) center center no-repeat;
-    background-size: 100% 100%;
+    bottom: 352px;
+    // background: url(./img/flow.png) center center no-repeat;
+    // background-size: 100% 100%;
     z-index: 9999;
-    color: #00b6c1;
-    padding: 25px 10px;
+    color: $fontColor;
+    padding: 10px;
     top: 71px;
+    background-image: $gradientB;
+    border-radius: 8px;
     .road_phase_top {
       width: 237px;
       height: 33px;
-      padding-left: 45px;
-      background: url(./img/sakuya.png) center center no-repeat;
-      background-size: 100% 100%;
+      // background: url(./img/sakuya.png) center center no-repeat;
+      // background-size: 100% 100%;
     }
     .road_phase_bottom {
       height: calc(100% - 43px);
@@ -260,22 +269,24 @@
   .road_signal {
     width: 66%; //1010px;//1350px;
     height: 234px;
-    background: url(./img/signal.png) center center no-repeat;
-    background-size: 100% 100%;
+    // background: url(./img/signal.png) center center no-repeat;
+    // background-size: 100% 100%;
+    background-image: $gradientB;
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     right: 10px;
     color: #00b6c1;
-    padding: 22px 25px 10px 20px;
+    padding: 12px;
+    border-radius: 6px;
     .signal_title {
       width: 234px;
       height: 33px;
       position: absolute;
-      background: url(./img/sakuya.png) center center no-repeat;
-      background-size: 100% 100%;
-      padding-left: 45px;
-      top: 24px;
-      left: 0;
+      // background: url(./img/sakuya.png) center center no-repeat;
+      // background-size: 100% 100%;
+      top: 10px;
+      left: 10px;
+      color: $fontColor;
     }
     .progress {
       height: 18px;
@@ -326,9 +337,10 @@
           height: 35px;
           display: inline-block;
           line-height: 35px;
-          background: url(./img/titleOne.png) center center no-repeat;
-          background-size: 100% 100%;
+          // background: url(./img/titleOne.png) center center no-repeat;
+          // background-size: 100% 100%;
           text-align: center;
+          color: $fontColor;
         }
       }
       .signal_listbox {
@@ -349,12 +361,14 @@
 
       .phaseTitle {
         height: 25px;
-        background: url(./img/titleOne.png) center center no-repeat;
-        background-size: 100% 100%;
+        // background: url(./img/titleOne.png) center center no-repeat;
+        // background-size: 100% 100%;
         text-align: center;
         line-height: 25px;
+        background-color: #28508B;
+        color: #51A2DC;
         > span {
-          color: #247b44;
+          color: $numColor;
           margin-left: 15px;
         }
       }
@@ -364,20 +378,20 @@
     width: 534px;
     /* height: 716px; */
     position: absolute;
-    right: 0;
+    right: 10px;
     bottom: 250px; //250px;
-    background: url(./img/untilFlow.png) center center no-repeat;
-    background-size: 100% 100%;
-    padding: 30px 14px;
+    // background: url(./img/untilFlow.png) center center no-repeat;
+    // background-size: 100% 100%;
+    background-image: $gradientB;
+    padding: 14px;
     z-index: 999;
-    input {
-    }
+    border-radius: 8px;
+    color: $fontColor;
     .roadtraffic_title {
       width: 237px;
       height: 33px;
-      padding-left: 45px;
-      background: url(./img/sakuya.png) center center no-repeat;
-      background-size: 100% 100%;
+      // background: url(./img/sakuya.png) center center no-repeat;
+      // background-size: 100% 100%;
     }
     .roadtraffic_data {
       width: 100%;
@@ -388,7 +402,7 @@
           width: 190px;
           height: 25px;
           text-indent: 10px;
-          color: #00b6c1;
+          color: $fontColor;
           border: none !important;
           background: url(./img/kuang.png) center center no-repeat !important;
           background-size: 100% 100% !important;
@@ -411,7 +425,7 @@
         width: 84px;
         height: 25px;
         text-indent: 10px;
-        color: #00b6c1;
+        color: $fontColor;
         border: none !important;
         background: url(./img/titleOne.png) center center no-repeat !important;
         background-size: 100% 100% !important;
@@ -424,7 +438,7 @@
         > div {
           width: 90px;
           height: 25px;
-          color: #00b6c1;
+          color: $fontColor;
           border: none !important;
           outline: none !important;
           background: url(./img/titleOne.png) center center no-repeat !important;
@@ -438,7 +452,7 @@
           }
         }
         svg {
-          color: #00b6c1;
+          color: $fontColor;
         }
       }
     }
@@ -513,7 +527,7 @@
           display: inline-block;
           font-size: 25px;
           font-weight: 400;
-          color: #12f2f9;
+          color: $fontColor;
           text-align: left;
         }
         > span:nth-child(1) {
@@ -532,7 +546,7 @@
           width: 60px;
           display: inline-block;
           font: 90px num;
-          color: #ffff15;
+          color: $numColor;
           text-align: center;
           line-height: 105px;
           background: url(./img/22.png) center center no-repeat;
@@ -554,7 +568,7 @@
       //外层3
       > div:nth-child(3) {
         display: inline-block;
-        color: #ffff15;
+        color: $fontColor;
         position: absolute;
         bottom: 20px;
         right: 10px;

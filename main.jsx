@@ -147,6 +147,11 @@ const Facilitiesmana = Loadable({
   loading: Loading,
   delay: 0,
 })
+const Login = Loadable({
+  loader: () => import('./containers/Login/Login'),
+  loading: Loading,
+  delay: 0,
+})
 
 const Parent = () => (
   <div>
@@ -186,8 +191,9 @@ reactDom.render(
       {/* //<Provider> */}
       <HashRouter basename="" history={BrowserHistory}>
         <Switch>
-          <Redirect exact from="/" to="/entrances" />
+          <Redirect exact from="/" to="/login" />
           <Route exact path="/entrances" component={Entrances} />
+          <Route exact path="/login" component={Login} />
           <Route path="/" component={Parent} />
         </Switch>
       </HashRouter>

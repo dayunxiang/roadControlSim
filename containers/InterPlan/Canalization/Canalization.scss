@@ -1,11 +1,16 @@
+$bgColor: #193364;
+$txtColor: #4EAAE0;
+$numColor: #FEFCFA;
+
 .canalizWrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../../img/flowBg.png) center center no-repeat;
-  background-size: cover;
+  // background: url(../../img/flowBg.png) center center no-repeat;
+  // background-size: cover;
+  background-color: #0D1B42;
   .modeBox {
     display: flex;
     flex-direction: column;
@@ -61,7 +66,7 @@
         margin-left: -350px;
         display: flex;
         align-items: center;
-        color: #fff;
+        color: $numColor;
         font-size: 14px;
         .checkPicBox {
           position: relative;
@@ -70,8 +75,8 @@
           padding-right: 100px;
           line-height: 30px;
           text-indent: 10px;
-          border: 1px solid #044d91;
-          box-shadow: inset 0 0 5px #031d50;
+          border: 1px solid #3B709A;
+          box-shadow: inset 0 0 5px #3B709A;
           .checkPic {
             position: absolute;
             top: -1px;
@@ -96,9 +101,8 @@
           margin-left: 20px;
           text-align: center;
           line-height: 30px;
-          background: url(../../img/headerClick.png) no-repeat;
-          background-size: 100% 100%;
-          color: #ff8800;
+          background-color: $bgColor;
+          color: $txtColor;
           cursor: pointer;
         }
       }
@@ -208,10 +212,6 @@
         padding: 5px 10px;
         margin-bottom: 20px;
       }
-      .shapeSelect {
-        background: url(./imgs/checkedBg.png) no-repeat;
-        background-size: 100% 100%;
-      }
       .interShapeBg {
         width: 110px;
         height: 90px;
@@ -230,11 +230,16 @@
         margin: 10px 0 0 15px;
         text-align: center;
         line-height: 26px;
-        background: url(../../img/smallBtnBg.png) no-repeat;
-        background-size: 100% 100%;
-        color: #08dde5;
+        // background: url(../../img/smallBtnBg.png) no-repeat;
+        // background-size: 100% 100%;
+        background-color: $bgColor;
+        color: $txtColor;
         font-size: 14px;
         cursor: pointer;
+      }
+      .shapeSelect {
+        background-color: #0673B6;
+        color: #23D1F3;
       }
     }
     .settingBox {

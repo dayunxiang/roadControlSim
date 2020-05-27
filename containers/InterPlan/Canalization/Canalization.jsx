@@ -674,23 +674,27 @@ class Canalization extends React.Component {
             }
           </div>
           <div className={styles.interShapeSet}>
-            <div
-              className={classNames({
-                [styles.interShape]: true,
-                [styles.shapeSelect]: this.state.shapeSelect,
-              })}
-            >
+            <div className={styles.interShape}>
               <div className={styles.interShapeBg} />
-              <div className={styles.shapeText} onClick={() => { this.handleShapeTextClick(true) }}>路口形状</div>
+              <div
+                className={classNames({
+                  [styles.shapeText]: true,
+                  [styles.shapeSelect]: this.state.shapeSelect,
+                })}
+                onClick={() => { this.handleShapeTextClick(true) }}
+              >路口形状
+              </div>
             </div>
-            <div
-              className={classNames({
-                [styles.interShape]: true,
-                [styles.shapeSelect]: !this.state.shapeSelect,
-              })}
-            >
+            <div className={styles.interShape}>
               <div className={styles.interSetBg} />
-              <div className={styles.shapeText} onClick={() => { this.handleShapeTextClick(false) }}>车道配置</div>
+              <div
+                className={classNames({
+                  [styles.shapeText]: true,
+                  [styles.shapeSelect]: !this.state.shapeSelect,
+                })}
+                onClick={() => { this.handleShapeTextClick(false) }}
+              >车道配置
+              </div>
             </div>
           </div>
           {
