@@ -29,7 +29,7 @@ class InputLabel extends React.Component {
           {this.props.value}
         </span>
         <span style={{ color: this.props.color }}>
-          {this.props.units || null}{this.props.edit ? null : <Icon type="edit" style={{ marginLeft: 5 }} />}
+          {this.props.units || null}{this.props.edit ? null : <Icon type="edit" style={{ position: 'absolute', right: '10px', bottom: '5px' }} />}
         </span>
       </div>
     )

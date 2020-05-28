@@ -1,3 +1,8 @@
+$fontColor: #5BBDFF;
+$numColor: #FEFCFA;
+$borColor: #3C72A3;
+$gradientB: linear-gradient(to bottom, rgba(26, 66, 112, .9), rgba(19, 42, 83, .9));
+
 @keyframes playGo {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
@@ -8,8 +13,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../../img/flowBg.png) center center no-repeat;
-  background-size: cover;
+  // background: url(../../img/flowBg.png) center center no-repeat;
+  // background-size: cover;
+  background-color: #0D1B42;
   .getFLowPlay {
     z-index: 2;
     position: fixed;
@@ -148,15 +154,17 @@
       height: 40px;
       display: flex;
       align-items: center;
-      color: #00f1ff;
+      color: $fontColor;
       :global(.ant-select-selection) {
         width: 100px;
-        height: 28px;
+        height: 30px;
         background-color: transparent;
-        color: #22f4ad;
-        background: url(./imgs/planBtn.png) no-repeat;
-        background-size: 100% 100%;
-        border: none;
+        color: $numColor;
+        border-color: #1D305B;
+        outline: none;
+      }
+      :global(.ant-select-arrow) {
+        color: $numColor;
       }
     }
     .flowPlay {
@@ -217,22 +225,22 @@
     .flowGetDate {
       padding-left: 40px;
       font-size: 15px;
-      color: #07eeff;
+      color: $fontColor;
       :global(.ant-calendar-picker-input) {
         padding-left: 20px;
         background-color: transparent;
-        background: url(./imgs/planBtn.png) center center no-repeat;
-        background-size: 100% 100%;
-        color: #22f4ad;
-        border: none;
+        // background: url(./imgs/planBtn.png) center center no-repeat;
+        // background-size: 100% 100%;
+        border: 1px solid #1D305B;
+        color: $numColor;
       }
       :global(.ant-time-picker-input) {
         padding-left: 20px;
         background-color: transparent;
-        background: url(./imgs/planBtn.png) center center no-repeat;
-        background-size: 100% 100%;
-        color: #22f4ad;
-        border: none;
+        // background: url(./imgs/planBtn.png) center center no-repeat;
+        // background-size: 100% 100%;
+        border: 1px solid #1D305B;
+        color: $numColor;
       }
       :global(.ant-calendar-picker i) {
         color: #fff;
@@ -243,16 +251,18 @@
         }
       }
       :global(.ant-select-selection--single){
-        border: none;
-        background: url(./imgs/planBtn.png) center center no-repeat;
-        background-size: 100% 100%;
+        // background: url(./imgs/planBtn.png) center center no-repeat;
+        // background-size: 100% 100%;
+        border: 1px solid #1D305B;
+        color: $numColor;
         outline: none;
         box-shadow: none;
+        background-color: transparent;
       }
       :global(.ant-select-selection__rendered) {
         width: 70px;
         background-color: transparent;
-        color: #22f4ad;
+        color: $numColor;
       }
       :global(.ant-select-arrow) {
         color: #fff;
@@ -272,17 +282,17 @@
       height: 100%;
       right: 30px;
       bottom: 0;
-      background: url(./imgs/simulatRoad.png) center center no-repeat;
-      background-size: 100% 100%;
+      // background: url(./imgs/simulatRoad.png) center center no-repeat;
+      // background-size: 100% 100%;
+      background-color: #12244C;
       .roadBtnBox {
-        height: 50px;
-        margin: 45px 0 10px 0;
+        height: 30px;
         display: flex;
         position: relative;
         .checkedBaseRate {
           position: absolute;
           right: 30px;
-          bottom:0;
+          bottom: 3px;
           color: #fff;
           :global(.ant-checkbox-inner) {
             background-color: transparent;
@@ -303,10 +313,10 @@
         .roadBtn {
           width: 90px;
           height: 30px;
-          margin-left: 20px;
-          background: url(./imgs/headerClick.png) center center no-repeat;
-          background-size: 100% 100%;
-          color: #fff;
+          // margin-left: 20px;
+          // background: url(./imgs/headerClick.png) center center no-repeat;
+          // background-size: 100% 100%;
+          color: $fontColor;
           font-size: 15px;
           display: flex;
           justify-content: center;
@@ -314,27 +324,19 @@
           cursor: pointer;
         }
         .activeBtn {
-          color: #ff8800;
+          background-color: #1E3A6C;
+          color: $numColor;
         }
       }
       .exportFlowBox {
-        position: relative;
         display: flex;
-        padding-bottom: 20px;
-        .splitBorder {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 10px;
-          background: url(./imgs/splitBorder.png);
-          background-size: auto 10px;
-        }
+        padding: 10px 0;
+        background-image: $gradientB;
         .roadMsg {
           flex: 0 225px;
           padding-left: 25px;
           font-size: 14px;
-          color: #fff;
+          color: $fontColor;
           .roadDetaction {
             display: flex;
             height: 40px;
@@ -353,24 +355,26 @@
               height: 32px;
               text-align: center;
               line-height: 32px;
-              background: url(./imgs/planBtn.png) center center no-repeat;
-              background-size: 125px 32px;
-              color: #22f4ad;
+              // background: url(./imgs/planBtn.png) center center no-repeat;
+              // background-size: 125px 32px;
+              border: 1px solid $borColor;
+              color: $numColor;
             }
           }
           :global(.ant-select-selection--single){
-            border: none;
-            background: url(./imgs/planBtn.png) center center no-repeat;
-            background-size: 100% 100%;
+            margin-left: 1px;
+            background-color: transparent;
+            border: 1px solid $borColor;
+            border-radius: 0;
             outline: none;
             box-shadow: none;
           }
           :global(.ant-select-selection__rendered) {
             display: flex;
             justify-content: center;
-            width: 90px;
+            width: 88px;
             background-color: transparent;
-            color: #22f4ad;
+            color: $numColor;
           }
           :global(.ant-select-arrow) {
             color: #fff;
@@ -379,89 +383,85 @@
         .flowExport {
           position: relative;
           flex: 1;
-          height: 80px;
-          padding-left: 10px;
-          margin-top: -5px;
-          background: url(./imgs/flowBorder.png) center center no-repeat;
-          background-size: 95% 80px;
+          display: flex;
+          padding-left: 20px;
+          align-items: center;
+          // background: url(./imgs/flowBorder.png) center center no-repeat;
+          // background-size: 95% 80px;
           .exportText {
-            position: absolute;
-            top: -13px;
-            left: 25px;
-            width: 80px;
-            height: 26px;
+            flex: 0 80px;
+            height: 75px;
             text-align: center;
-            line-height: 26px;
-            background: url(./imgs/headerClick.png) center center no-repeat;
-            background-size: 80px 26px;
+            line-height: 75px;
+            background-color: #214275;
             font-size: 14px;
-            color: #ff8800;
+            color: $fontColor;
           }
-          .systemAutoBox {
-            display: flex;
-            height: 40px;
-            padding: 15px 0 0 20px;
-            align-items: center;
-            font-size: 14px;
-            color: #fff;
-            .systemAuto {
-              width: calc(100% - 100px);
-              height: 26px;
-              border: 1px solid #1e43ab;
-              border-radius: 6px;
-              text-align: center;
-              line-height: 26px;
-              color: #22f4ad;
-            }
-          }
-          .temExport {
-            display: flex;
-            height: 40px;
-            align-items: center;
-            font-size: 14px;
-            color: #fff;
-            padding-left: 20px;
-            .templateSel {
-              position: relative;
-              width: calc(100% - 100px);
-              height: 26px;
-              padding-right: 101px;
-              line-height: 26px;
-              border: 1px solid #1e43ab;
-              border-radius: 6px;
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
-              text-indent: 5px;
-              color: #ff8800;
-              .importText {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 50px;
-                height: 100%;
-                line-height: 26px;
+          .exportWay {
+            flex: 1;
+            padding-left: 10px;
+            .systemAutoBox {
+              display: flex;
+              height: 40px;
+              align-items: center;
+              font-size: 14px;
+              color: $fontColor;
+              .systemAuto {
+                width: calc(100% - 100px);
+                height: 26px;
+                border: 1px solid $borColor;
                 text-align: center;
-                color: #ff8800;
-                cursor: pointer;
+                line-height: 26px;
+                color: #346290;
               }
-              .browseText {
-                position: absolute;
-                top: 0;
-                right: 50px;
-                width: 50px;
-                height: 100%;
-                text-align: center;
+            }
+            .temExport {
+              display: flex;
+              height: 40px;
+              align-items: center;
+              font-size: 14px;
+              color: $fontColor;
+              .templateSel {
+                position: relative;
+                width: calc(100% - 100px);
+                height: 26px;
+                padding-right: 101px;
                 line-height: 26px;
-                border-left: 1px solid #1e43ab;
-                border-right: 1px solid #1e43ab;
-                cursor: pointer;
+                border: 1px solid $borColor;
+                text-overflow: ellipsis;
                 overflow: hidden;
-                .uploadExcel {
+                white-space: nowrap;
+                text-indent: 5px;
+                color: $fontColor;
+                .importText {
                   position: absolute;
-                  width: 100%;
+                  top: 0;
+                  right: 0;
+                  width: 50px;
                   height: 100%;
-                  opacity: 0;
+                  line-height: 26px;
+                  text-align: center;
+                  color: $fontColor;
+                  cursor: pointer;
+                }
+                .browseText {
+                  position: absolute;
+                  top: 0;
+                  right: 50px;
+                  width: 50px;
+                  height: 100%;
+                  text-align: center;
+                  line-height: 26px;
+                  border-left: 1px solid $borColor;
+                  border-right: 1px solid $borColor;
+                  cursor: pointer;
+                  overflow: hidden;
+                  .uploadExcel {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                  }
                 }
               }
             }
@@ -469,30 +469,31 @@
         }
       }
       .importFlowMsg {
-        height: calc(100% - 240px);
+        height: calc(100% - 130px);
         font-size: 14px;
         color: #fff;
         .title {
-          width: 200px;
-          height: 30px;
-          margin: 10px 0 15px 10px;
-          background: url(./imgs/titleBg.svg) center center no-repeat;
-          background-size: contain;
-          text-indent: 40px;
+          height: 40px;
+          line-height: 40px;
+          // background: url(./imgs/titleBg.svg) center center no-repeat;
+          // background-size: contain;
+          text-indent: 30px;
           font-size: 15px;
-          color: #00f1ff;
+          color: $fontColor;
         }
         .roadMsgBox {
-          height: calc(100% - 50px);
+          height: calc(100% - 40px);
+          background-image: $gradientB;
           overflow: auto;
           .roadMsg {
             display: flex;
-            padding-right: 10px;
+            // padding-right: 10px;
             margin-bottom: 10px;
             &:first-child {
               margin-bottom: 0;
             }
             .detactionBox {
+              flex: 1;
               .mutipleBox {
                 display: flex;
                 height: 55px;
@@ -510,15 +511,15 @@
               .heade {
                 display: flex;
                 height: 30px;
-                margin-bottom: 5px;
                 align-items: center;
-                background: url(./imgs/rectBorder.png) center center no-repeat;
-                background-size: 100% 30px;
+                // background: url(./imgs/rectBorder.png) center center no-repeat;
+                // background-size: 100% 30px;
                 div {
                   width: 120px;
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                  border: none;
                 }
                 div:first-child {
                   // flex: 0 120px;
@@ -526,7 +527,7 @@
                   .checkBox {
                     width: 14px;
                     height: 14px;
-                    border: 1px solid #22f4ad;
+                    border: 1px solid #146A98;
                     border-radius: 50%;
                     margin-right: 3px;
                     cursor: pointer;
@@ -535,7 +536,7 @@
                     width: 12px;
                     height: 12px;
                     margin-left: 2px;
-                    background-color: #0b47c9;
+                    background-color: #63BEFE;
                     text-align: center;
                     line-height: 10px;
                     border-radius: 3px;
@@ -543,20 +544,29 @@
                   }
                 }
               }
+              .heade:nth-child(2n) {
+                background-color: #1B3864;
+              }
+              .heade:nth-child(2n-1) {
+                background-color: #1B2F54;
+              }
             }
             .roadLane {
               padding: 0 10px;
               display: flex;
               justify-content: center;
               align-items: center;
+              background-color: #264274;
+              border-bottom: 1px solid #1B335F;
               .roadNameBox {
                 width: 85px;
                 height: 30px;
-                background: url(./imgs/planBtn.png) center center no-repeat;
-                background-size: 85px 30px;
+                // background: url(./imgs/planBtn.png) center center no-repeat;
+                // background-size: 85px 30px;
                 text-align: center;
                 line-height: 30px;
-                color: #ff8800;
+                
+                color: $fontColor;
               }
             }
             .details {

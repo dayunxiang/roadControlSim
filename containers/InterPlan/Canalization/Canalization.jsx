@@ -7,7 +7,6 @@ import getResponseDatas from '../../../utlis/getResponseData'
 
 import Header from '../../Header/Header'
 import AddPlanList from '../../../components/AddPlanList/AddPlanList'
-import Title from '../../../components/Title/Title'
 import InputLabel from '../Allocation/InputLabel/InputLabel'
 import SplitLine from '../../../components/SplitLine/SplitLine'
 
@@ -17,10 +16,10 @@ function SetItems(props) {
   const { itemname, color, types, text, value, handleTextChange, paramsname } = props
   return (
     <div className={styles.setItem}>
-      <span>{itemname}</span>:&nbsp;
+      <span>{itemname}：</span>
       {
         types === 'text' ?
-          <span style={{ color: color }}>{text}</span> : types === 'input' ?
+          <span className={styles.itemSpan} style={{ color: color }}>{text}</span> : types === 'input' ?
             <InputLabel key={value + paramsname} value={value} color={color} paramsname={paramsname} handleChange={handleTextChange} /> : null
       }
     </div>
@@ -746,7 +745,7 @@ class Canalization extends React.Component {
             !this.state.isShape ?
               <div className={styles.settingBox}>
                 <div className={styles.centerIsolate}>
-                  <div style={{ paddingLeft: '10px' }}><Title title="中心隔离带设置" /></div>
+                  <div className={styles.setTitle}>中心隔离带设置</div>
                   <div className={styles.isolateSet}>
                     <ul>
                       <li className={styles.setItemsLi}>
@@ -787,6 +786,9 @@ class Canalization extends React.Component {
                             </Select>
                           }
                         </div>
+                        
+                      </li>
+                      <li className={styles.setItemsLi}>
                         <SetItems
                           key={this.state.separateWidth}
                           itemname="分隔带宽度"
@@ -817,6 +819,8 @@ class Canalization extends React.Component {
                             </Select>
                           }
                         </div>
+                      </li>
+                      <li className={styles.setItemsLi}>
                         <SetItems
                           key={this.state.ifTurnDistance}
                           itemname="提前距离"
@@ -867,6 +871,8 @@ class Canalization extends React.Component {
                             </Select>
                           }
                         </div>
+                      </li>
+                      <li className={styles.setItemsLi}>
                         <div className={styles.setItem}>
                           <span>行人道安全道：</span>
                           {
@@ -889,9 +895,8 @@ class Canalization extends React.Component {
                     </ul>
                   </div>
                 </div>
-                <div><SplitLine /></div>
                 <div className={styles.laneConfigBox}>
-                  <div style={{ paddingLeft: '10px' }}><Title title="车道配置" /></div>
+                  <div className={styles.laneTitle}>车道配置</div>
                   <div className={styles.laneConfig}>
                     <ul>
                       <li className={styles.setItemsLi}>
@@ -915,6 +920,8 @@ class Canalization extends React.Component {
                       </li>
                       <li className={styles.setItemsLi}>
                         <SetItems key={this.state.roadName} itemname="道路名" types="text" text={this.state.roadName} color="#ff8800" />
+                      </li>
+                      <li className={styles.setItemsLi}>
                         <div className={styles.setItem}>
                           <span>车道编号：</span>
                           {
@@ -1023,6 +1030,8 @@ class Canalization extends React.Component {
                           handleTextChange={this.handleTextChange}
                           paramsname="laneWidth"
                         />
+                      </li>
+                      <li className={styles.setItemsLi}>
                         <SetItems
                           key={this.state.laneLength}
                           itemname="车道长度"
@@ -1035,7 +1044,7 @@ class Canalization extends React.Component {
                       </li>
                       <li className={styles.setItemsLi}>
                         <div className={styles.setItem}>
-                          <span>是否有待行区</span>
+                          <span>是否有待行区：</span>
                           {
                             !!this.state.trueOrFalse &&
                             <Select
@@ -1052,6 +1061,8 @@ class Canalization extends React.Component {
                             </Select>
                           }
                         </div>
+                      </li>
+                      <li className={styles.setItemsLi}>
                         <SetItems
                           key={this.state.waitingLength}
                           itemname="待行区长度"
@@ -1064,7 +1075,7 @@ class Canalization extends React.Component {
                       </li>
                       <li className={styles.setItemsLi}>
                         <div className={styles.setItem}>
-                          <span>所属道路结构</span>
+                          <span>所属道路结构：</span>
                           {
                             !!this.state.constructions &&
                             <Select

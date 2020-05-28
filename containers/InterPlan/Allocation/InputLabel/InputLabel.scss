@@ -1,8 +1,11 @@
 .InputLabelBox {
-  min-width: 80px;
+  position: relative;
+  width: 130px;
   height: 30px;
+  padding-left: 10px;
   display: flex;
   align-items: center;
+  border: 1px solid #3D79AA;
   .textBox {
     display: inline-block;
     min-width: 0px;

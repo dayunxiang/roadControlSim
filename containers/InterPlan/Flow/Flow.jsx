@@ -733,33 +733,36 @@ class Flow extends React.Component {
               </div>
               <div className={styles.flowExport}>
                 <div className={styles.exportText}>流量导出</div>
-                <div className={styles.systemAutoBox}>
-                  <span>系统自动：</span>
-                  <div className={styles.systemAuto}>通过接入采集平台导入</div>
-                </div>
-                <div className={styles.temExport}>
-                  <span>模版导入：</span>
-                  <div className={styles.templateSel} title={this.state.excelName}>
-                    {this.state.excelName}
-                    <span className={styles.importText} onClick={this.handleExcelUpload}>导入</span>
-                    <span className={styles.browseText}>
-                      <input type="file" accept=".xls,.xlsx" className={styles.uploadExcel} ref={(input) => { this.uploadExcelInput = input }} onChange={this.handleUploadExcel} />
-                      浏览
-                    </span>
+                <div className={styles.exportWay}>
+                  <div className={styles.systemAutoBox}>
+                    <span>系统自动：</span>
+                    <div className={styles.systemAuto}>通过接入采集平台导入</div>
+                  </div>
+                  <div className={styles.temExport}>
+                    <span>模版导入：</span>
+                    <div className={styles.templateSel} title={this.state.excelName}>
+                      {this.state.excelName}
+                      <span className={styles.importText} onClick={this.handleExcelUpload}>导入</span>
+                      <span className={styles.browseText}>
+                        <input type="file" accept=".xls,.xlsx" className={styles.uploadExcel} ref={(input) => { this.uploadExcelInput = input }} onChange={this.handleUploadExcel} />
+                        浏览
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className={styles.splitBorder} />
             </div>
             <div className={styles.importFlowMsg}>
               <div className={styles.title}>进口流量信息</div>
               {
                 !!this.state.flowData && this.state.flowData.length > 0 ?
                   <div className={styles.roadMsgBox}>
-                    <div className={styles.roadMsg}>
-                      <div className={styles.roadLane} />
-                      <div className={styles.detactionBox} style={{ marginLeft: '85px' }}>
-                        <div className={styles.heade}>
+                    <div className={styles.roadMsg} style={{ backgroundColor: '#2B5391' }}>
+                      <div className={styles.roadLane} style={{ backgroundColor: '#2B5391' }}>
+                        <div className={styles.roadNameBox}>车道</div>
+                      </div>
+                      <div className={styles.detactionBox}>
+                        <div className={styles.heade} style={{ backgroundColor: '#2B5391' }}>
                           <div>类型/时段</div>
                           {
                             this.state.flowData[0].sort.map((item) => {
