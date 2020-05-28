@@ -493,7 +493,7 @@ class Informationmana extends React.Component {
         const map = new window.minemap.Map({
           container: 'InmainMap',
           /* style: '//minedata.cn/service/solu/style/id/2365', */
-          style: '//minedata.cn/service/solu/style/id/2301',
+          style: '//10.11.57.105:60050/service/solu/style/id/4636',
           center: [106.709075, 26.586574],
           zoom: 13,
           pitch: 0,
@@ -565,7 +565,7 @@ class Informationmana extends React.Component {
     /* 初始化地图实例 */
     const map = new window.minemap.Map({
       container: 'mapContainer',
-      style: '//minedata.cn/service/solu/style/id/2301',
+      style: '//10.11.57.105:60050/service/solu/style/id/4636',
       center: [106.706278, 26.590897],
       zoom: 13.8,
       pitch: 0,

@@ -1,8 +1,9 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'http://39.100.128.220:20199',
+  // baseURL: 'http://39.100.128.220:20199',
   // baseURL: 'http://221.13.10.30:20199',
+  baseURL: 'http://10.11.57.101:20206',
 })
 // 请求拦截
 instance.interceptors.request.use((config) => {
@@ -12,7 +13,7 @@ instance.interceptors.request.use((config) => {
     if (userInfo) {
       config.headers.Authorization = userInfo.token
     } else {
-      window.location.href = 'http://39.100.128.220:30000/road/control/system/#/login'
+      window.location.href = 'http://10.11.57.101:20206/#/login'
     }
   }
   return config
@@ -22,7 +23,7 @@ instance.interceptors.request.use((config) => {
 instance.interceptors.response.use((response) => {
   if (response.data.code === -10) {
     localStorage.clear()
-    window.location.href = 'http://39.100.128.220:30000/road/control/system/#/login'
+    window.location.href = 'http://10.11.57.101:20206/#/login'
   }
   return response
 }, error => (Promise.reject(error)))
