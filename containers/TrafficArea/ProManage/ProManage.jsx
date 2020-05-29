@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { Select, Tree, message, Icon, Modal } from 'antd'
 
+import mapStyles from '../../../utlis/styles_2301'
 import styles from './ProManage.scss'
 import style from '../TrafficArea/TrafficArea.scss'
 import roadStyles from '../../InterPlan/Roadtraffic/Roadtraffic.scss'
@@ -259,7 +260,8 @@ class ProManage extends React.Component {
     /* 初始化地图实例 */
     const map = new window.minemap.Map({
       container: 'mapContainer',
-      style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      // style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      style: mapStyles,
       center: [106.706278, 26.590897],
       zoom: 13.8,
       pitch: 0,

@@ -6,6 +6,7 @@ import style from '../TrafficArea/TrafficArea.scss'
 import roadStyles from '../../InterPlan/Roadtraffic/Roadtraffic.scss'
 import Prostyles from '../../InterPlan/Projectmana/Projectmana.scss'
 import styles from './InfoManage.scss'
+import mapStyles from '../../../utlis/styles_2301'
 import getResponseDatas from '../../../utlis/getResponseData'
 import { getDrag } from '../../../utlis/drag'
 import AreaNavgation from '../AreaNavgation/AreaNavgation'
@@ -382,7 +383,8 @@ class InfoManage extends React.Component {
     /* 初始化地图实例 */
     const map = new window.minemap.Map({
       container: 'mapContainer',
-      style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      // style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      style: mapStyles,
       center: [106.706278, 26.590897],
       zoom: 13.8,
       pitch: 0,

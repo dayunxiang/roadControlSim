@@ -8,6 +8,7 @@ import getResponseDatas from '../../../utlis/getResponseData' // 请求公用方
 import moment from 'moment';
 import Header from '../../Header/RoadHeader' // 有路口转向的头
 // import Header from '../../Header/AnalysisHeader' // 有单选按钮  平均速度的头
+import mapStyles from '../../../utlis/styles_2301'
 import '../../../utlis/scrollTime/scrollTime.jquery.min' // 引用时间轴插件
 import styles from './TrafficAreaDatas.scss'
 import classNames from 'classnames'
@@ -15,6 +16,7 @@ import TrafficVideo from '../../../components/TrafficVideo/TrafficVideo'
 import Title from '../../../components/Title/Title'
 import TrafficCharts from '../../../components/TrafficCharts/TrafficCharts'
 import fnDown from '../../../utlis/drags'
+
 const format = 'HH:mm'
 const { Option } = Select
 let timeout
@@ -713,7 +715,8 @@ class TrafficAreaDatas extends React.Component {
     /* 初始化地图实例 */
     const map = new window.minemap.Map({
       container: 'mapContainer',
-      style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      // style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      style: mapStyles,
       center: [106.709075, 26.586574],
       zoom: 14,
       pitch: 0,

@@ -12,6 +12,8 @@ import styles from '../InterPlan/Navigation/Navigation.scss'
 import Title from '../../components/Title/Title'
 import roadStyles from '../InterPlan/Roadtraffic/Roadtraffic.scss'
 import moment from 'moment'
+import mapStyles from '../../utlis/styles_2301'
+
 const { RangePicker } = DatePicker
 class TrafficAnalysis extends React.Component {
   constructor(props) {
@@ -581,7 +583,8 @@ class TrafficAnalysis extends React.Component {
     /* 初始化地图实例 */
     const map = new window.minemap.Map({
       container: 'mapContainer',
-      style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      // style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      style: mapStyles,
       center: [106.706278, 26.590897],
       zoom: 13.8,
       pitch: 0,

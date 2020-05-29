@@ -5,6 +5,7 @@ import { DatePicker, TimePicker, Select, message, Icon } from 'antd'
 import moment from 'moment'
 import classNames from 'classnames'
 import styles from './Roadtraffic.scss'
+import mapStyles from '../../../utlis/styles_2301'
 import '../../../utlis/crossingKonvaJquery/crossing.konva.jquery-2.0.0'
 import '../../../utlis/scrollTime/scrollTime.jquery.min' // 引用时间轴插件
 import Navigation from '../Navigation/Navigation'
@@ -562,7 +563,8 @@ class Roadtraffic extends React.Component {
     /* 初始化地图实例 */
     const map = new window.minemap.Map({
       container: 'mapContainer',
-      style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      // style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      style: mapStyles,
       center: [106.706278, 26.590897],
       zoom: 13.8,
       pitch: 0,

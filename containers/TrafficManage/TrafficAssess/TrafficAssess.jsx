@@ -10,6 +10,7 @@ import classNames from 'classnames'
 import TrafficVideo from '../../../components/TrafficVideo/TrafficVideo'
 import Title from '../../../components/Title/Title'
 import style from './TrafficAssess.scss'
+import mapStyles from '../../../utlis/styles_2301'
 import navStyles from '../../InterPlan/Navigation/Navigation.scss'
 import '../../../utlis/crossingKonvaJquery/crossing.konva.jquery-2.0.0'
 import '../../../utlis/scrollTime/scrollTime.jquery.min' // 引用时间轴插件
@@ -577,7 +578,8 @@ class TrafficAssess extends React.Component {
     /* 初始化地图实例 */
     const map = new window.minemap.Map({
       container: 'mapContainer',
-      style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      // style: '//10.11.57.105:60050/service/solu/style/id/4636',
+      style: mapStyles,
       center: [106.709075, 26.586574],
       zoom: 14,
       pitch: 0,
