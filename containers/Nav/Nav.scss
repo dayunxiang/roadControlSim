@@ -1,8 +1,10 @@
+$defColor: #59B0EE;
+
 .navWrapper {
   position: fixed;
   top: 0;
   left: 0;
-  height: 70px;
+  height: 80px;
   width: 100%;
   color: #fff;
   font-size: 13px;
@@ -13,20 +15,22 @@
   background-size: 100% 100%;
   .navWrapper_left {
     width: 280px;
-    height: 31px;
-    line-height: 32px;
+    height: 55px;
+    line-height: 55px;
     text-align: center;
-    margin-left: 32px;
     display: inline-block;
+    color: $defColor;
     span {
       margin-left: 17px;
     }
   }
   .navWrapper_right {
     width: 608px;
-    height: 31px;
-    line-height: 30px;
+    height: 55px;
+    line-height: 55px;
     float: right;
+    display: flex;
+    align-items: center;
     svg {
       color: #fff;
       border: 1px blue solid;
@@ -42,8 +46,8 @@
       background: #022869;
       margin-right: 10px;
       input {
-        background: #022869;
-        border: none;
+        background: #152C56;
+        border: 1px solid #31698C;
         outline: none;
         height: 22px;
         font-size: 12px;
@@ -80,23 +84,14 @@
     .homepage {
       width: 86px;
       height: 22px;
-      display: inline-block;
-      background: #022869;
       line-height: 22px;
       border-radius: 30px;
       text-align: center;
-      /*  margin-left: 10px; */
       cursor: pointer;
       position: absolute;
-      top: 5px;
+      top: 18px;
       right: 25px;
-      i {
-        width: 23px;
-        height: 23px;
-        display: inline-block;
-        background: url(../img/nav_icon_two.png) center center no-repeat;
-        vertical-align: middle;
-      }
+      color: $defColor;
     }
   }
   ::input-placeholder {
@@ -151,7 +146,6 @@
 
   :global(.ant-select-dropdown-menu)::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgba(0, 234, 255, 0.2);
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 234, 255, 0.2);
     border-radius: 10px;
     background: #1d67ac;
   }
@@ -191,36 +185,39 @@
     color: #22f4ad;
   }
   :global(.ant-select-selection__rendered) {
-    line-height: 22px;
+    line-height: 28px;
   }
   :global(.ant-select-selection--multiple) {
     min-height: 22px;
-    background: #022869;
+    background: transparent;
+    border: 1px solid #31698C;
     border-radius: 30px;
     color: #fff;
+    height: 28px;
   }
   :global(.ant-select-selection) {
-    border: none;
+    // border: none;
   }
   
 }
 .searchNav {
   width: 178px;
-  height: 22px;
+  height: 28px;
   margin-right: 10px;
-  display: inline-block;
+  display: flex;
 
   :global(.ant-select-selection--single) {
-    height: 22px;
+    height: 28px;
   }
   :global(.ant-select-selection__rendered) {
-    line-height: 22px;
+    line-height: 28px;
   }
   :global(.ant-select-selection) {
     border-radius: 30px;
-    background: #022869;
+    background: #152C56;
     margin-right: 10px;
-    border: none;
+    border: 1px solid #31698C;
+    color: #4178A5;
   }
   :global(.ant-select) {
     color: #fff;

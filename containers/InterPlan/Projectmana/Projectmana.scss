@@ -6,60 +6,41 @@
     transform: rotate(360deg);
   }
 }
+$gradient: linear-gradient(to right, rgba(19, 42, 83, .9), rgba(26, 66, 112, .9));
+$numColor: #FEFCFA;
+$fontColor: #5AB2EC;
+$btnBg: #244372;
 .poin_area {
-  height: 741px;
+  height: calc(100% - 120px);
   width: 327px;
-  background: url(./imgs/point_area.png) center center no-repeat;
-  background-size: 100% 100%;
   position: absolute;
   right: 10px;
-  bottom: 50px;
+  top: 120px;
   padding: 25px 0;
-  .poin_line {
-    width: 100%;
-    height: 50px;
-    color: #ffffff;
-    font-weight: 400;
-    background: url(./imgs/line.png) left bottom no-repeat;
+  .titleBox {
     display: flex;
-    justify-content: center;
-    font-size: 14px;
-    /* align-items: center; */
-    span {
-      width: 100px;
-      height: 30px;
-      background: url(./imgs/area_hover.png) center center no-repeat;
-      background-size: 100% 100%;
-      display: inline-block;
+    height: 30px;
+    background-color: rgba(13,27,66, .5);
+    .titleName {
+      width: 80px;
+      height: 100%;
       text-align: center;
       line-height: 30px;
-      cursor: pointer;
-      margin: 0 15px;
-      &:nth-child(1) {
-        color: #03edff;
-        background: url(./imgs/area_active.png) center center no-repeat;
-        background-size: 100% 100%;
-      }
-      &:hover {
-        color: #03edff;
-        background: url(./imgs/area_active.png) center center no-repeat;
-        background-size: 100% 100%;
-      }
+      color: $numColor;
+      background-color: #183263;
+      border-radius: 4px 4px 0 0;
     }
   }
   .pro_Button {
     width: 100%;
-    /*   display: flex;
-    justify-content: center; */
-    height: calc(100% - 100px);
-    max-height: calc(100% - 100px);
+    height: calc(100% - 40px);
     overflow-y: auto;
+    background-color: #192F54;
     :global(.ant-tree li .ant-tree-node-content-wrapper) {
-      color: #ffffff;
+      color: $fontColor;
       width: 235px;
       height: 35px;
-      background: url(../Projectmana/imgs/small.png) center center no-repeat !important;
-      background-size: 100% 100% !important;
+      background: $btnBg;
       text-align: center;
       margin: 5px 6px;
       line-height: 35px;
@@ -121,17 +102,11 @@
     height: 35px;
     background: url(../../img/kuang.png) center center no-repeat !important;
     background-size: 100% 100% !important; */
+    color: $fontColor;
+    background-color: $btnBg;
   }
-  :global(.ant-tree-node-content-wrapper-close) {
-    background: url(../Projectmana/imgs/kuang.png) center center no-repeat !important;
-    background-size: 100% 100% !important;
-    color: #d89f07 !important;
-    margin: 5px 21px !important;
-  }
-  :global(.ant-tree-node-content-wrapper-open) {
-    background: url(../Projectmana/imgs/kuang.png) center center no-repeat !important;
-    background-size: 100% 100% !important;
-    color: #d89f07 !important;
+  :global(.ant-tree-node-content-wrapper-open:hover) {
+    background-color: $btnBg;
   }
   :global(.ant-tree > li:last-child) {
     padding-bottom: none !important;
@@ -141,6 +116,7 @@
   }
 }
 .Content {
+  position: fixed;
   width: 100%;
   height: 100%;
   .mapContainer {
@@ -152,8 +128,8 @@
     width: 15px;
     height: 15px;
     position: absolute;
-    top: 4px;
-    right: 3px;
+    top: 8px;
+    right: 8px;
     background: url(../../img/clone.png) center center no-repeat;
     background-size: 100% 100%;
     z-index: 9999;
@@ -161,34 +137,23 @@
   }
 
   .canalization {
-    width: 35%; //673px;
-    height: 78%; // 849px;
-    background: url(./imgs/canalization.png) center center no-repeat;
-    background-size: 100% 100%;
+    width: 30%; //673px;
+    height: 60%; // 849px;
+    // background-color: rgba(40, 59, 102, .7);
+    background-image: $gradient;
     position: absolute;
     top: 145px;
     /* margin-top: -425px; */
     left: 10px;
+    border-radius: 6px;
     .cana_title {
       width: 400px;
       height: 34px;
-      background: url(../../img/wire.png) bottom center no-repeat;
       color: #03edff;
-      background-size: 100%;
-      padding-left: 45px;
+      padding-left: 20px;
       line-height: 34px;
-      margin-top: 27px;
       font-size: 16px;
-      margin-bottom: 5px;
-      > i {
-        width: 27px;
-        height: 22px;
-        display: inline-block;
-        background: url(../../img/hexagon.png) center center no-repeat;
-        background-size: 100% 100%;
-        vertical-align: middle;
-        margin-right: 6px;
-      }
+      margin: 5px 0 5px;
     }
     .cana_close {
       width: 15px;
@@ -230,9 +195,8 @@
           width: 100px;
           height: 30px;
           display: block;
-          background: url(./imgs/item.png) center center no-repeat;
-          background-size: 100% 100%;
-          color: #ffffff;
+          background-color: #23467C;
+          color: $fontColor;
           font-size: 13px;
           text-align: center;
           line-height: 30px;
@@ -263,12 +227,11 @@
   }
   .flow {
     width: 35%; //673px;
-    height: 81%; // 730px;
-    background: url(./imgs/canalization.png) center center no-repeat;
-    background-size: 100% 100%;
+    height: 72%; // 730px;
+    background-image: $gradient;
     position: absolute;
     top: 140px;
-    color: #03edff;
+    color: $fontColor;
     font-size: 13px;
     padding: 0 5px 0 10px;
     /* margin-top: -425px; */
@@ -276,23 +239,11 @@
     .flow_title {
       width: 300px;
       height: 34px;
-      background: url(../../img/wire.png) bottom center no-repeat;
       color: #03edff;
-      background-size: 100%;
-      padding-left: 45px;
+      padding-left: 10px;
       line-height: 34px;
-      margin-top: 27px;
       font-size: 16px;
-      margin-bottom: 5px;
-      > i {
-        width: 27px;
-        height: 22px;
-        display: inline-block;
-        background: url(../../img/hexagon.png) center center no-repeat;
-        background-size: 100% 100%;
-        vertical-align: middle;
-        margin-right: 6px;
-      }
+      margin: 5px 0;
     }
     .flow_cross {
       width: 99.6%;
@@ -300,28 +251,25 @@
       background: url(./imgs/line.png);
     }
     > .flow_box {
-      max-height: calc(100% - 110px);
+      max-height: calc(100% - 40px);
       overflow: auto;
       .roadtraffic_data {
         margin-top: 10px;
         display: inline-block;
         .datepicker {
-          background: transparent !important;
           input {
             width: 120px;
             height: 25px;
-            color: #00b6c1;
-            border: none !important;
-            background: url(../Roadtraffic/img/kuang.png) center center no-repeat !important;
-            background-size: 100% 100% !important;
+            color: $numColor;
+            border: 1px solid #234573;
+            background-color: transparent;
           }
           svg {
-            color: #00b6c1;
+            color: $numColor;
           }
         }
       }
       .timePicker {
-        background: transparent !important;
         margin-top: 10px;
         display: inline-block;
         margin: 8px;
@@ -331,13 +279,12 @@
         input {
           width: 80px;
           height: 25px;
-          color: #00b6c1;
-          border: none !important;
-          background: url(../Roadtraffic/img/titleOne.png) center center no-repeat !important;
-          background-size: 100% 100% !important;
+          color: $numColor;
+          background-color: transparent;
+          border: 1px solid #234573;
         }
         svg {
-          color: #00b6c1;
+          color: $numColor;
         }
       }
       .flowSelect {
@@ -347,11 +294,9 @@
           > div {
             width: 100px;
             height: 25px;
-            color: #00b6c1;
-            border: none !important;
-            outline: none !important;
-            background: url(../Roadtraffic/img/titleOne.png) center center no-repeat !important;
-            background-size: 100% 100% !important;
+            color: $numColor;
+            border: 1px solid #234573;
+            background-color: transparent;
             > div {
               > div {
                 width: 100px;
@@ -361,7 +306,7 @@
             }
           }
           svg {
-            color: #00b6c1;
+            color: $numColor;
           }
         }
       }
@@ -382,15 +327,15 @@
         /* width: 100%;
         margin-top: 20px; */
         position: absolute;
-        top: 130px;
+        top: 100px;
         max-height: 175px;
         overflow-y: auto;
         > span {
           width: 100px;
           height: 30px;
           display: block;
-          background: url(./imgs/item.png) center center no-repeat;
-          color: #ffffff;
+          background-color: #22467A;
+          color: $fontColor;
           font-size: 13px;
           text-align: center;
           line-height: 30px;
@@ -465,34 +410,18 @@
   .organization {
     width: 66%; //1010px;//1350px;
     height: 218px;
-    background: url(../Roadtraffic/img/signal.png) center center no-repeat;
-    background-size: 100% 100%;
+    background-image: $gradient;
     position: absolute;
     bottom: 2%;
     left: 40px;
-    color: #00b6c1;
-    padding: 22px 0 10px 0px;
+    color: $fontColor;
+    padding: 10px 0;
+    border-radius: 6px;
     .organ_title {
-      padding-left: 45px;
+      padding-left: 20px;
       width: 300px;
       height: 34px;
       line-height: 34px;
-      background: url(../../img/wire.png) bottom center no-repeat;
-      background-size: 100%;
-      > i {
-        width: 27px;
-        height: 22px;
-        display: inline-block;
-        background: url(../../img/hexagon.png) center center no-repeat;
-        background-size: 100% 100%;
-        vertical-align: middle;
-        margin-right: 6px;
-      }
-    }
-    .organ_cross {
-      width: 99.6%;
-      height: 12px;
-      background: url(./imgs/line.png);
     }
     .organ_list {
       width: 100%;
@@ -504,6 +433,14 @@
         height: 28px;
         font-size: 13px;
         margin: 3px 0;
+        &:nth-child(2n-1) {
+          background-color: #1B3864;
+        }
+        &:first-child{
+          .listTh {
+            color: #5DB5E9;
+          }
+        }
         .listTd,
         .listTh {
           flex: 1;
@@ -512,24 +449,19 @@
           justify-content: center;
           align-items: center;
           overflow: hidden;
-          color: #ffffff;
-          background: url(./imgs/list_center.png) center center no-repeat;
-          background-size: 100% 100%;
+          color: $numColor;
           > span {
-            color: #c55513;
+            color: $numColor;
             cursor: pointer;
             width: 100%;
             height: 100%;
             text-align: center;
             line-height: 28px;
-            &:hover {
-              color: #00eaff;
-            }
           }
           :global(.ant-select-selection) {
             background: transparent;
             border: none;
-            color: #c55513;
+            color: $numColor;
             text-align: center;
           }
           :global(.ant-select-selection-selected-value) {
@@ -547,14 +479,7 @@
             color: #ffffff;
           }
         }
-        & > div:nth-child(1) {
-          background: url(./imgs/list_left.png) center center no-repeat;
-          background-size: 100% 100%;
-          color: #ffffff;
-        }
         & > div:nth-child(5) {
-          background: url(./imgs/list_right.png) center center no-repeat;
-          background-size: 100% 100%;
           > span {
             width: 42%;
             height: 20px;
@@ -562,34 +487,12 @@
             line-height: 20px;
             margin: 0 3px;
             display: inline-block;
-            background: url(./imgs/list_del.png) center center no-repeat;
-            background-size: 100% 100%;
+            color: #28BBCF;
             cursor: pointer;
-            &:nth-child(1) {
-              color: #00fb00;
-              > i {
-                background: url(./imgs/upload.png) center center no-repeat;
-                background-size: 100% 100%;
-              }
-            }
-            &:nth-child(2) {
-              color: #c0532a;
-              > i {
-                background: url(./imgs/cond_del.png) center center no-repeat;
-                background-size: 100% 100%;
-              }
-            }
-            > i {
-              width: 15px;
-              height: 15px;
-              display: inline-block;
-              vertical-align: sub;
-              margin-right: 5px;
-            }
           }
         }
         & > .listTh {
-          color: #03edff;
+          color: $numColor;
         }
       }
     }
@@ -597,22 +500,18 @@
   .road_signal {
     width: 66%; //1010px;//1350px;
     height: 234px;
-    background: url(../Roadtraffic/img/signal.png) center center no-repeat;
-    background-size: 100% 100%;
+    background-image: $gradient;
     position: absolute;
     bottom: 5px;
     left: 10px;
-    color: #00b6c1;
-    padding: 22px 25px 10px 20px;
+    color: $fontColor;
+    padding: 10px;
+    border-radius: 6px;
     .signal_title {
-      position: absolute;
-      padding-left: 45px;
-      top: 24px;
-      left: 0;
       width: 300px;
       height: 34px;
-      background: url(../../img/wire.png) bottom center no-repeat;
-      background-size: 100%;
+      line-height: 34px;
+      padding-left: 10px;
       > i {
         width: 27px;
         height: 22px;
@@ -665,6 +564,7 @@
       overflow-y: auto;
       margin-top: 45px;
       max-height: 120px;
+      top: 20px;
       > span {
         width: 100px;
         height: 30px;
@@ -776,17 +676,19 @@
 .pointMarker {
   width: 530px;
   height: 232px;
-  background: url(./imgs/point_marker.png) center center no-repeat;
-  background-size: 100% 100%;
+  // background: url(./imgs/point_marker.png) center center no-repeat;
+  // background-size: 100% 100%;
   /* position: absolute; */
+  background-image: $gradient;
   z-index: 999;
   color: #07b7f2;
   padding: 20px;
   font-size: 16px;
   top: 56px;
+  border-radius: 8px;
   .poin_number {
     span {
-      color: #20b422;
+      color: $numColor;
       margin-left: 5px;
     }
   }
@@ -1251,10 +1153,6 @@
 .containers {
   width: 340px;
   height: 340px;
-  position: absolute;
-  left: 53%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   z-index: 8;
 }
 .cursorStyle {
@@ -1262,8 +1160,6 @@
 }
 .planBtnChecked {
   color: #26cef2 !important;
-  background: url(./imgs/checkedPlan.png) no-repeat !important;
-  background-size: 100% 100% !important;
 }
 
 :global(.ant-modal-content) {

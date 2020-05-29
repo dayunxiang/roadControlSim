@@ -1,3 +1,8 @@
+$gradient: linear-gradient(to right, rgba(19, 42, 83, .9), rgba(26, 66, 112, .9));
+$numColor: #FEFCFA;
+$fontColor: #5AB2EC;
+$btnBg: #244372;
+
 .Content {
   width: 100%;
   height: 100%;
@@ -6,49 +11,46 @@
     width: 100%;
     height: 100%;
   }
-
   .configuration {
     width: 26%; //470px;
     height: 69%; //;714px;
-    background: url(./imgs/configuration.png) center center no-repeat;
-    background-size: 100% 100%;
     position: absolute;
     bottom: 5px;
     left: 10px;
     z-index: 999;
-    padding: 35px 20px;
+    padding: 10px 20px;
+    background-image: $gradient;
+    border-radius: 8px;
     .conf_title {
       width: 241px;
       height: 34px;
-      background: url(./imgs/conf_title.png) center center no-repeat;
-      background-size: 100% 100%;
-      color: #03edff;
-      padding-left: 45px;
-      line-height: 18px;
+      color: $fontColor;
+      line-height: 24px;
+      font-size: 15px;
     }
     .message {
       width: 100%;
-      height: 25px;
-      background: url(./imgs/message.png) center center no-repeat;
-      background-size: 100% 100%;
-      color: #ffffff;
+      height: 28px;
+      color: $fontColor;
       font-size: 13px;
       padding-left: 10px;
-      line-height: 25px;
-      margin-top: 1px;
+      line-height: 28px;
+      margin-top: 2px;
+      border: 1px solid #135980;
+      border-radius: 0 8px 0 0;
       :global(.ant-input) {
         width: 72%;
         height: 100%;
         background: transparent;
         border: none;
-        color: #03edff;
+        color: $numColor;
         box-shadow: none;
         outline: none;
       }
       :global(.ant-select-selection) {
         background: transparent;
         border: none;
-        color: #e38708 !important;
+        color: $numColor !important;
         font-size: 13px;
         box-shadow: none;
       }
@@ -56,7 +58,7 @@
         display: none;
       }
       > span {
-        color: #03edff;
+        color: $numColor;
       }
       > i {
         width: 15px;
@@ -88,6 +90,14 @@
         display: flex;
         height: 30px;
         font-size: 13px;
+        &:nth-child(2n) {
+          background-color: #1B3864;
+        }
+        &:first-child{
+          .listTh {
+            color: #5DB5E9;
+          }
+        }
         .listTd,
         .listTh {
           flex: 1;
@@ -96,9 +106,7 @@
           justify-content: center;
           align-items: center;
           overflow: hidden;
-          color: #ffffff;
-          background: url(./imgs/list_Img.png) center center no-repeat;
-          background-size: 100% 100%;
+          color: $numColor;
           > i {
             width: 20px;
             height: 20px;
@@ -150,76 +158,50 @@
       > span {
         width: 100px;
         height: 30px;
-        background: url(./imgs/delect.png) center center no-repeat;
-        background-size: 100% 100%;
         text-align: center;
         line-height: 30px;
-        color: #f6770c;
+        color: $fontColor;
         margin-top: 20px;
         margin-right: 20px;
+        background-color: #214174;
         cursor: pointer;
         &:hover {
-          color: #d89f07;
-          background: url(./imgs/area_active.png) center center no-repeat;
-          background-size: 100% 100%;
+          color: #26cef2;
         }
       }
     }
   }
 
   .poin_area {
-    height: 741px;
+    height: calc(100% - 200px);
     width: 327px;
-    background: url(../Projectmana/imgs/point_area.png) center center no-repeat;
-    background-size: 100% 100%;
     position: absolute;
     right: 10px;
-    bottom: 50px;
-    padding: 25px 16px 25px 0;
-    .poin_line {
-      width: 100%;
-      height: 50px;
-      color: #ffffff;
-      font-weight: 400;
-      background: url(../Projectmana/imgs/line.png) left bottom no-repeat;
+    top: 150px;
+    background-color: #192F54;
+    .titleBox {
       display: flex;
-      justify-content: center;
-      /* align-items: center; */
-      span {
-        width: 100px;
-        height: 30px;
-        background: url(../Projectmana/imgs/area_hover.png) center center no-repeat;
-        background-size: 100% 100%;
-        display: inline-block;
+      height: 30px;
+      background-color: rgba(13,27,66, .5);
+      .titleName {
+        width: 80px;
+        height: 100%;
         text-align: center;
         line-height: 30px;
-        cursor: pointer;
-        margin: 0 15px;
-        &:nth-child(1) {
-          color: #03edff;
-          background: url(../Projectmana/imgs/area_active.png) center center no-repeat;
-          background-size: 100% 100%;
-        }
-        &:hover {
-          color: #03edff;
-          background: url(../Projectmana/imgs/area_active.png) center center no-repeat;
-          background-size: 100% 100%;
-        }
+        color: $numColor;
+        background-color: #183263;
+        border-radius: 4px 4px 0 0;
       }
     }
     .pro_Button {
       width: 100%;
-      /*   display: flex;
-      justify-content: center; */
-      height: calc(100% - 100px);
-      max-height: calc(100% - 100px);
+      height: calc(100% - 90px);
       overflow-y: auto;
       :global(.ant-tree li .ant-tree-node-content-wrapper) {
-        color: #ffffff;
+        color: $fontColor;
         width: 235px;
         height: 35px;
-        background: url(../Projectmana/imgs/small.png) center center no-repeat !important;
-        background-size: 100% 100% !important;
+        background: $btnBg;
         text-align: center;
         margin: 5px 6px;
         line-height: 35px;
@@ -259,27 +241,24 @@
       > .poin_item {
         width: 100%;
         height: 50px;
-        color: #d89f07;
+        color: #6BBBF8;
         font-weight: 700;
         display: flex;
         justify-content: center;
         font-size: 14px;
         position: absolute;
-        bottom: 18px;
+        bottom: 0;
         > span {
           width: 120px;
           height: 30px;
-          background: url(./imgs/delect.png) center center no-repeat;
-          background-size: 100% 100%;
           display: inline-block;
           text-align: center;
           line-height: 30px;
+          background-color: #244372;
           cursor: pointer;
           margin: 0 15px;
           &:hover {
-            color: #d89f07;
-            background: url(./imgs/area_active.png) center center no-repeat;
-            background-size: 100% 100%;
+            color: #26cef2;
           }
         }
       }
@@ -305,16 +284,17 @@
       color: #d89f07 !important;
       margin: 5px 21px !important;
     } */
-    :global(.ant-tree-node-content-wrapper-close) {
-      background: url(../Projectmana/imgs/kuang.png) center center no-repeat !important;
-      background-size: 100% 100% !important;
-      color: #d89f07 !important;
-      margin: 5px 21px !important;
+    :global(.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper:hover) {
+      /* color: #03edff;
+      width: 235px;
+      height: 35px;
+      background: url(../../img/kuang.png) center center no-repeat !important;
+      background-size: 100% 100% !important; */
+      color: $fontColor;
+      background-color: $btnBg;
     }
-    :global(.ant-tree-node-content-wrapper-open) {
-      background: url(../Projectmana/imgs/kuang.png) center center no-repeat !important;
-      background-size: 100% 100% !important;
-      color: #d89f07 !important;
+    :global(.ant-tree-node-content-wrapper-open:hover) {
+      background-color: $btnBg;
     }
     :global(.ant-tree > li:last-child) {
       padding-bottom: none !important;

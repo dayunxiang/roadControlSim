@@ -639,8 +639,8 @@ class Projectmana extends React.Component {
           }, () => {
             // 添加marker
             this.popup = new window.minemap.Popup({ closeOnClick: true, closeButton: false, anchor: 'bottom', offset: [0, -20] }).setLngLat([item.unitLongitude, item.unitLatitude]).setHTML(`<div id="pointMarker" class=${styles.pointMarker}>
-    <div class=${styles.poin_number}>路口编号:<span>${item.nodeId}</span></div>
-    <div class=${styles.poin_name}>路口名称:<span>${item.nodeName}</span></div>
+    <div class=${styles.poin_number}>路口编号：<span>${item.nodeId}</span></div>
+    <div class=${styles.poin_number}>路口名称：<span>${item.nodeName}</span></div>
     <div class=${styles.poin_torus} id="markerIds">
     <div class=${styles.circle_one}><div><span>渠化${this.state.proGetgfpt && this.state.proGetgfpt.geometryTotal}套</span><span></span><span></span></div></div>
     <div class=${styles.circle_two}><div><span>流量${this.state.proGetgfpt && this.state.proGetgfpt.flowTotal}套</span><span></span><span></span></div></div>
@@ -895,9 +895,8 @@ class Projectmana extends React.Component {
         <Navigation {...this.props} />
         {/* 右侧弹框 */}
         <div className={styles.poin_area}>
-          <div className={styles.poin_line}>
-            <span>区域</span>
-            {/* <span>管理单位</span> */}
+          <div className={styles.titleBox}>
+            <div className={styles.titleName}>区域</div>
           </div>
           <div className={styles.pro_Button}>
             {
@@ -918,13 +917,12 @@ class Projectmana extends React.Component {
         {/* 渠化弹窗 */}
         {banksfigure ?
           <div className={styles.canalization}>
-            <div className={styles.cana_title}><i />{nodeName}渠化方案管理</div>
+            <div className={styles.cana_title}>{nodeName}渠化方案管理</div>
             <span className={styles.clone} onClick={this.getClone} />
             {/* <span className={styles.cana_close} /> */}
-            <div className={styles.cana_cross} />
             <div className={styles.cana_centent}>
               <span className={styles.compass} />
-              <img src={geometryBg} key={geometryBg} alt="加载中" style={{ width: '80%' }} />
+              <img src={geometryBg} key={geometryBg} alt="加载中" style={{ width: '90%' }} />
               <div className={styles.precept}>
                 {banksfigure.map((item, index) => {
                   return <span key={item.geometryTitle + index} className={classNames({ [styles.planBtnChecked]: geometryIndex === index })} title={item.geometryTitle} onClick={() => { this.getbanksfigureBg(index, item.geometryId, item.rowId) }}><span>{item.geometryTitle}</span><i onClick={(e) => { this.getPrecept(e, item.geometryId, item.rowId, index) }} /></span>
@@ -937,8 +935,7 @@ class Projectmana extends React.Component {
         {
           flow ?
             <div className={styles.flow}>
-              <div className={styles.flow_title}><i />{nodeName}流量</div>
-              <div className={styles.flow_cross} />
+              <div className={styles.flow_title}>{nodeName}流量</div>
               <span className={styles.clone} onClick={this.getClone} />
               <div className={classNames({ [styles.flow_box]: true, [styles.scrollBox]: true })}>
                 <div className={styles.roadtraffic_data}>流量采集日期 : {flowDay ? <DatePicker id="datepicker" defaultValue={moment(flowDay && flowDay.day, 'YYYY-MM-DD')} className={styles.datepicker} disabled /> : null}</div>
@@ -975,7 +972,7 @@ class Projectmana extends React.Component {
           signalList ?
             <div className={classNames(styles.road_signal, 'dragMove')} >
               <span className={styles.clone} onClick={() => { this.getClone('signalList') }} />
-              <div className={styles.signal_title}><i />{nodeName}信号</div>
+              <div className={styles.signal_title}>{nodeName}信号</div>
               <div className={styles.signal_precept} style={{ position: 'absolute' }}>
                 {!!signalPhase && signalPhase.map((item, index) => {
                   return <span key={item.stpDes} className={classNames({ [styles.planBtnChecked]: geometryIndex === index })} onClick={() => { this.handleStpIdData(item, index) }}><span>{item.stpDes}</span><i onClick={(e) => { this.getdeletePlanInfo(e, item, index) }} /></span>
@@ -1012,11 +1009,10 @@ class Projectmana extends React.Component {
           listItemList ?
             <div className={styles.organization}>
               <span className={styles.clone} onClick={this.getClone} />
-              <div className={styles.organ_title}><i />{nodeName}组织方案管理</div>
-              <div className={styles.organ_cross} />
+              <div className={styles.organ_title}>{nodeName}组织方案管理</div>
               <div className={styles.organ_list}>
-                <div className={styles.listItem}>
-                  <div className={styles.listTh} style={{ color: '#03edff' }}>组织方案</div>
+                <div className={styles.listItem} style={{ backgroundColor: '#2B5391' }}>
+                  <div className={styles.listTh}>组织方案</div>
                   <div className={styles.listTh}>渠化方案</div>
                   <div className={styles.listTh}>流量方案</div>
                   <div className={styles.listTh}>信号方案</div>

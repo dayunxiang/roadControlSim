@@ -117,8 +117,13 @@ const Entrance = Loadable({
   loading: Loading,
   delay: 0,
 })
+// const Entrances = Loadable({
+//   loader: () => import('./containers/Entrance/StaticEntrance'),
+//   loading: Loading,
+//   delay: 0,
+// })
 const Entrances = Loadable({
-  loader: () => import('./containers/Entrance/StaticEntrance'),
+  loader: () => import('./containers/EntrancePlus/EntrancePlus'),
   loading: Loading,
   delay: 0,
 })

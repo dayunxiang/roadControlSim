@@ -619,9 +619,8 @@ class Informationmana extends React.Component {
           </div> : null}
         {/* 右侧弹框 */}
         <div className={styles.poin_area}>
-          <div className={styles.poin_line}>
-            <span>区域</span>
-            {/* <span>管理单位</span> */}
+          <div className={styles.titleBox}>
+            <div className={styles.titleName}>区域</div>
           </div>
           <div className={styles.pro_Button}>
             {
@@ -677,7 +676,7 @@ class Informationmana extends React.Component {
             <div className={styles.message}>黄灯时间(s) : <Input defaultValue={interPlanMsg.yellowTime || ''} onChange={(e) => { this.handleChange(e, 'yellowTime') }} /><i /></div>
             {/* <div className={styles.message}>全红时间(s) : <Input defaultValue={interPlanMsg.yellowTime || ''} /><i /></div> */}
             <div className={styles.infor_centent}>
-              <div className={styles.listItem}>
+              <div className={styles.listItem} style={{ backgroundColor: '#2B5391' }}>
                 <div className={styles.listTh}>路口方向</div>
                 <div className={styles.listTh}>所属道路</div>
                 <div className={styles.listTh}>流向路口</div>

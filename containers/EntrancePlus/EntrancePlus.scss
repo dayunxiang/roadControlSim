@@ -1,0 +1,69 @@
+.entranceBox {
+    position: fixed;
+    min-width: 1200px;
+    width: 100%;
+    height: 100%;
+    background: url(./bg.png) center center no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .logoBox {
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        .logo {
+            width: 570px;
+            height: 120px;
+            background: url(./logo.png) center center no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    .modalWrapper {
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        .modalBg {
+            position: relative;
+            width: 1200px;
+            height: 600px;
+            background: url(./modalbg.png) center center no-repeat;
+            background-size: 100% 100%;
+            .modalItem {
+                position: absolute;
+                width: 235px;
+                height: 205px;
+                cursor: pointer;
+            }
+            .inter {
+                top: 218px;
+                left: 0;
+                background: url(./02.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .area {
+                top: 108px;
+                left: 194px;
+                background: url(./03.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .manage {
+                top: 218px;
+                left: 387px;
+                background: url(./04.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .analysis {
+                top: 330px;
+                left: 580px;
+                background: url(./05.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .datas {
+                top: 220px;
+                left: 772px;
+                background: url(./06.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

@@ -118,7 +118,7 @@ class Nav extends React.Component {
                   </Select>
                 </div>),
                 this.state.modelValue &&
-                <Select key="multiple" mode="multiple" placeholder="图  层" style={{ width: '300px', height: '22px' }} defaultValue={this.state.modelValue || []} onChange={this.handlemodelState}>
+                <Select key="multiple" mode="multiple" placeholder="图  层" style={{ width: '300px', height: '28px' }} defaultValue={this.state.modelValue || []} onChange={this.handlemodelState}>
                   {
                     this.props.interColor && this.props.interColor.map((item, index) => {
                       return (
@@ -128,7 +128,7 @@ class Nav extends React.Component {
                   }
                 </Select>
                 ] : null}
-              <div className={styles.homepage} onClick={this.handleGoEntrance}>主&nbsp;&nbsp;页<i /></div>
+              <div className={styles.homepage} onClick={this.handleGoEntrance}>返回主页</div>
             </div>
         }
       </div>
