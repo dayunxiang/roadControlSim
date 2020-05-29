@@ -668,8 +668,8 @@ class TrafficAssess extends React.Component {
             </div>
             <div className={styles.rightBox}>
               <div className={styles.pageTit}>
-                {/* <Icon type="backward" />
-                <Icon type="forward" /> */}
+                <Icon type="backward" />
+                <Icon type="forward" />
               </div>
               <div className={styles.echartsBox} ref={(el) => { this.vid = el }}>
                 {
@@ -677,7 +677,7 @@ class TrafficAssess extends React.Component {
                     return (
                       <div className={styles.echartsItem} key={item.name + item.title}>
                         <span className={styles.Search} onClick={() => { this.getSearch(item) }}><Icon type="search" className={styles.Search_i} /> </span>
-                        <div className={styles.title}><Icon type="double-right" />{item.name}<s onClick={() => { this.getExportBtn(item) }}>导 出</s></div>
+                        <div className={styles.title}>{item.name}<s onClick={() => { this.getExportBtn(item) }}>导 出</s></div>
                         <div className={styles.box} >
                           <TrafficCharts height="210px" chartsItems={item} />
                         </div>

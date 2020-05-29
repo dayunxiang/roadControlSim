@@ -1,3 +1,5 @@
+$ft_color: #5f9fdc;
+$bor_color: #12214b;
 .rowAddPlanListBox {
   position: relative;
   float: left;
@@ -22,9 +24,8 @@
         height: 30px;
         padding-right: 20px;
         margin-right: 10px;
-        background: url(../AddPlanList/planBtn.png) center center no-repeat;
-        background-size: cover;
-        color: #fff;
+        border: 1px solid #12214b;
+        color: $ft_color;
         display: flex;
         flex-shrink: 0;
         justify-content: center;
@@ -51,7 +52,7 @@
         :global(.ant-select-selection) {
           width: 90px;
           background-color: transparent;
-          color: #fff;
+          color: $ft_color;
           border: none;
           box-shadow: none;
         }
@@ -67,9 +68,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../AddPlanList/planBtn.png) center center no-repeat;
-    background-size: cover;
-    color: #fff;
+    border: 1px solid $bor_color;
+    color: $ft_color;
     cursor: pointer;
   }
   .moveLeftBtn {
@@ -78,7 +78,7 @@
     top: 10px;
     width: 30px;
     height: 28px;
-    border: 1px solid #1d44a9;
+    border: 1px solid $bor_color;
     border-radius: 4px;
     text-align: center;
     line-height: 26px;
@@ -91,7 +91,7 @@
     top: 10px;
     width: 30px;
     height: 28px;
-    border: 1px solid #1d44a9;
+    border: 1px solid $bor_color;
     border-radius: 4px;
     text-align: center;
     line-height: 26px;

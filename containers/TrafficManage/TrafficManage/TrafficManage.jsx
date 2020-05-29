@@ -565,14 +565,13 @@ class TrafficManage extends React.Component {
           <div className={styles.evaluateBox} onClick={this.evaluateBoxS}>
             {paramerDetailInfo ?
               <div className={styles.simulatSet} key={this.simParameterId}>
+                <div className={styles.titleBigBox}>
+                  交通特性模型参数标定
+                  <span className={styles.designTime}>设计时间：{paramerDetailInfo.sim_date || ''}</span>
+                  <span className={styles.designUser}>设计人：{paramerDetailInfo.user_name || ''}</span>
+                  <s className={palnSave ? styles.save : styles.nosave} onClick={palnSave ? this.getAddPlan : null} />
+                </div>
                 <div className={styles.settingBox}>
-                  <div className={styles.titleBigBox}>
-                    交通特性模型参数标定
-                    <span className={styles.designTime}>设计时间：{paramerDetailInfo.sim_date || ''}</span>
-                    <span className={styles.designUser}>设计人：{paramerDetailInfo.user_name || ''}</span>
-                    <s className={palnSave ? styles.save : styles.nosave} onClick={palnSave ? this.getAddPlan : null} />
-                    <div className={styles.splitBorder} />
-                  </div>
                   <div className={styles.title}>模型参数评估设置</div>
                   <div className={styles.setItemsBox}>
                     <div className={styles.setItems}>
@@ -652,7 +651,6 @@ class TrafficManage extends React.Component {
                         <Checkbox value={1}>仿真过程中录制视频</Checkbox>
                       </Checkbox.Group> : '加载中...'}
                   </div>
-                  <div className={styles.splitBorder} />
                 </div>
                 <div className={styles.driveParams}>
                   <div className={styles.title}>模型参数标定</div>
@@ -666,19 +664,19 @@ class TrafficManage extends React.Component {
                       </Select>
                     </div>
                     <div className={styles.setItems}>
-                      <span style={{ color: '#ff0000' }}>前向观测距离：</span>
+                      <span>前向观测距离：</span>
                       <InputLabel labelText="最小值：" value={paramerDetailInfo.front_distance_minimum || ''} units="m" color="#00994c" handleChange={(e) => { this.handleChangeBot(e, 'front_distance_minimum') }} />
                       <InputLabel left="10px" labelText="最大值：" value={paramerDetailInfo.front_distance_maximum || ''} units="m" color="#ff0000" handleChange={(e) => { this.handleChangeBot(e, 'front_distance_maximum') }} />
                     </div>
                   </div>
                   <div className={styles.setItemsBox}>
                     <div className={styles.setItems}>
-                      <span style={{ color: '#ff0000' }}>后向观测距离：</span>
+                      <span>后向观测距离：</span>
                       <InputLabel labelText="最小值：" value={paramerDetailInfo.rear_distance_minimum || ''} units="m" color="#00994c" handleChange={(e) => { this.handleChangeBot(e, 'rear_distance_minimum') }} />
                       <InputLabel left="10px" labelText="最大值：" value={paramerDetailInfo.rear_distance_maximum || ''} units="m" color="#ff0000" handleChange={(e) => { this.handleChangeBot(e, 'rear_distance_maximum') }} />
                     </div>
                     <div className={styles.setItems}>
-                      <span style={{ color: '#ff0000' }}>临时走神参数：</span>
+                      <span>临时走神参数：</span>
                       <InputLabel labelText="走神持续时间：" value={paramerDetailInfo.wander_time || ''} color="#ff8800" units="s" handleChange={(e) => { this.handleChangeBot(e, 'wander_time') }} />
                       <InputLabel left="10px" labelText="走神概率：" value={paramerDetailInfo.wander_probability || ''} color="#ff8800" units="%" handleChange={(e) => { this.handleChangeBot(e, 'wander_probability') }} />
                     </div>
@@ -699,7 +697,7 @@ class TrafficManage extends React.Component {
                       <InputLabel value={paramerDetailInfo.slow_down_maximum || ''} units="m/s2" color="#ff8800" handleChange={(e) => { this.handleChangeBot(e, 'slow_down_maximum') }} />
                     </div>
                     <div className={styles.setItems}>
-                      <span style={{ color: 'yellow' }}>黄灯期驾驶行为：</span>
+                      <span>黄灯期驾驶行为：</span>
                       <Radio.Group onChange={(e) => { this.handleRadioBot(e, 'yellow_driving_behavior') }} defaultValue={paramerDetailInfo.yellow_driving_behavior || ''}>
                         <Radio value={1} style={{ color: '#00994c' }}>与绿灯保持一致</Radio>
                         <Radio value={2} style={{ color: '#fff' }}>与红灯保持一致</Radio>
@@ -712,11 +710,10 @@ class TrafficManage extends React.Component {
                       <InputLabel value={paramerDetailInfo.non_vehicle_red_probability || ''} units="%" color="#ff0000" handleChange={(e) => { this.handleChangeBot(e, 'non_vehicle_red_probability') }} />
                     </div>
                     <div className={styles.setItems}>
-                      <span style={{ color: '#ff0000' }}>行人闯红灯概率：</span>
+                      <span>行人闯红灯概率：</span>
                       <InputLabel value={paramerDetailInfo.pedestrian_red_probability || ''} units="%" color="#ff0000" handleChange={(e) => { this.handleChangeBot(e, 'pedestrian_red_probability') }} />
                     </div>
                   </div>
-                  <div className={styles.splitBorder} />
                 </div>
                 <div className={styles.simulatStatus}>
                   <div className={styles.title}>仿真状态</div>
@@ -737,7 +734,7 @@ class TrafficManage extends React.Component {
                   </div> */}
                   <div className={styles.progressBox}>
                     <div className={styles.setNumBox}>
-                      <span className={styles.setNum}>仿真进度 :<span style={{ color: '#ff8800', marginLeft: 10 }}>{paramerDetailInfo && paramerDetailInfo.simState === 3 ? '仿真异常' : paramerDetailInfo && paramerDetailInfo.simState === -1 ? '未开始仿真' : paramerDetailInfo && paramerDetailInfo.simFlagName}</span></span>
+                      <span className={styles.setNum}>仿真进度 :<span style={{ marginLeft: 10 }}>{paramerDetailInfo && paramerDetailInfo.simState === 3 ? '仿真异常' : paramerDetailInfo && paramerDetailInfo.simState === -1 ? '未开始仿真' : paramerDetailInfo && paramerDetailInfo.simFlagName}</span></span>
                     </div>
                     <Progress
                       percent={paramerDetailInfo ? paramerDetailInfo.simProgress : 0}
