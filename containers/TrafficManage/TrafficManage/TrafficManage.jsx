@@ -571,7 +571,6 @@ class TrafficManage extends React.Component {
                     <span className={styles.designTime}>设计时间：{paramerDetailInfo.sim_date || ''}</span>
                     <span className={styles.designUser}>设计人：{paramerDetailInfo.user_name || ''}</span>
                     <s className={palnSave ? styles.save : styles.nosave} onClick={palnSave ? this.getAddPlan : null} />
-                    <div className={styles.splitBorder} />
                   </div>
                   <div className={styles.title}>模型参数评估设置</div>
                   <div className={styles.setItemsBox}>
@@ -652,7 +651,6 @@ class TrafficManage extends React.Component {
                         <Checkbox value={1}>仿真过程中录制视频</Checkbox>
                       </Checkbox.Group> : '加载中...'}
                   </div>
-                  <div className={styles.splitBorder} />
                 </div>
                 <div className={styles.driveParams}>
                   <div className={styles.title}>模型参数标定</div>
@@ -716,7 +714,6 @@ class TrafficManage extends React.Component {
                       <InputLabel value={paramerDetailInfo.pedestrian_red_probability || ''} units="%" color="#ff0000" handleChange={(e) => { this.handleChangeBot(e, 'pedestrian_red_probability') }} />
                     </div>
                   </div>
-                  <div className={styles.splitBorder} />
                 </div>
                 <div className={styles.simulatStatus}>
                   <div className={styles.title}>仿真状态</div>

@@ -1,19 +1,14 @@
+$ft_color: #5F9FDC;
+$bg_color:linear-gradient(to bottom, rgba(29, 64, 113, 0.9), rgba(21, 46, 83, 0.9));
 .titleBigBox {
-  font-size: 28px;
-  color: #02dff1;
+  font-size: 20px;
+  color: $ft_color;
   display: block;
-  padding: 5px 50px 20px 30px;
+  height: 40px;
+  padding: 0 50px 0 30px;
   margin-bottom: 15px;
   position: relative;
-  .splitBorder {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: url(../../img/line.png);
-    background-size: auto 10px;
-  }
+  background-color: rgba(13, 27, 66, 0.9);
   span {
     position: relative;
     top: 15px;
@@ -71,11 +66,10 @@
     display: flex;
     justify-content: center;
     .simulatSet {
+      color: $ft_color;
       width: 990px;
       height: 100%;
       /* height: calc(100% - 30px); */
-      background: url(../imgs/pop_bg.png) center center no-repeat;
-      background-size: 990px 100%;
       overflow-y: auto;
       position: absolute;
       top: -25px;
@@ -133,15 +127,6 @@
             }
           }
         }
-        .splitBorder {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 10px;
-          background: url(../../img/line.png);
-          background-size: auto 10px;
-        }
         .radiosBox {
           padding: 10px 35px;
           display: flex;
@@ -193,15 +178,6 @@
               line-height: 30px;
             }
           }
-        }
-        .splitBorder {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 10px;
-          background: url(../../img/line.png);
-          background-size: auto 10px;
         }
       }
       .simulatStatus {
