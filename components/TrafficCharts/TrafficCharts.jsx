@@ -118,28 +118,28 @@ class TrafficCharts extends React.Component {
         data: chartsItems && chartsItems.data[0].time,
         axisLine: {
           lineStyle: {
-            color: '#67c6e6',
+            color: '#5F9FDC',
           },
         },
         axisLabel: {
-          color: '#02fbff',
+          color: '#5F9FDC',
         },
       },
       yAxis: {
         /* name: 'Y轴的名字', */
         type: 'value',
         axisLabel: {
-          color: '#02fbff',
+          color: '#5F9FDC',
           /* formatter: '{value} ' + this.chartsName, */
         },
         axisLine: {
           lineStyle: {
-            color: '#17396b',
+            color: '#5F9FDC',
           },
         },
         splitLine: {
           lineStyle: {
-            color: ['#17396b'],
+            color: '#5F9FDC',
           },
         },
       },

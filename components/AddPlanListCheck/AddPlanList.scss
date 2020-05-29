@@ -4,9 +4,8 @@
   height: 30px;
   padding-right: 20px;
   margin-bottom: 10px;
-  background: url(./planBtn.png) center center no-repeat;
-  background-size: cover;
-  color: #fff;
+  color: #549CDA;
+  background-color: #122255;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +13,6 @@
   cursor: pointer;
   &:hover {
     color: #02dff1;
-    background: url(./checkedPlan.png) center center no-repeat;
-    background-size: cover;
   }
   .closeBtn {
     position: absolute;
@@ -29,7 +26,7 @@
     width: 25px;
     height: 28px;
     display: inline-block;
-    background: url(./checked_L.png) no-repeat;
+    border: 1px solid #153A69;
     position: absolute;
     right: -35px;
     top: 0;
@@ -49,9 +46,8 @@
   }
 }
 .planBtnClick {
-  color: #02dff1;
-  background: url(./checkedPlan.png) center center no-repeat;
-  background-size: cover;
+  color: #549CDA;
+  background-color: #122255;
 }
 .addPlanBtn {
   width: 120px;
@@ -59,9 +55,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(./planBtn.png) center center no-repeat;
-  background-size: cover;
-  color: #fff;
+  color: #549CDA;
+  background-color: #122255;
   cursor: pointer;
 }
 .popout {
