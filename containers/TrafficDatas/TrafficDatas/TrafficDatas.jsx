@@ -517,8 +517,6 @@ class TrafficDatas extends React.Component {
         </div>
         <div id="mapContainer" className={styles.mapContainer} >
           <div className={styles.dateBox}>
-            <s />
-            <s className={styles.bottomRight} />
             <div className={styles.flowGetDate}>
               <span style={{ marginLeft: '20px' }}>分析日期范围： </span>
               <span className={styles.flowGetTime}>
@@ -673,7 +671,7 @@ class TrafficDatas extends React.Component {
                 return (
                   <div className={styles.videoBox} key={item.url}>
                     <div className={styles.title}>
-                      <div className={styles.nodeName}><Icon style={{ fontSize: '18px', color: '#00ccff', marginRight: '10px' }} type="double-right" />{item.program_title}视频观看</div>
+                      <div className={styles.nodeName}>{item.program_title}视频观看</div>
                       <Icon type="close" onClick={() => { this.handlevideoBoxs(index) }} style={{ fontSize: '15px', color: '#00ccff', position: 'absolute', right: '20px', top: '8px' }} />
                     </div>
                     <div className={styles.content}>

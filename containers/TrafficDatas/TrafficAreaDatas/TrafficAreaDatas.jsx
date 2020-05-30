@@ -818,8 +818,6 @@ class TrafficAreaDatas extends React.Component {
           </div>
 
           <div className={styles.dateBox}>
-            <s />
-            <s className={styles.bottomRight} />
             {/* <div className={styles.flowGetDate}>
               <span style={{ marginLeft: '20px' }}>分析日期范围： </span>
               <span className={styles.flowGetTime}>
@@ -870,7 +868,7 @@ class TrafficAreaDatas extends React.Component {
           </div>
           {direction ?
             <div className={styles.nodeRank} ref={(el) => { el ? el.onmousedown = fnDown : null }}>
-              <div className={styles.nodeRank_top}><i />{this.areaName}</div>
+              <div className={styles.nodeRank_top}>{this.areaName}</div>
               <div className={styles.nodeRank_bottom}>
                 <div className={styles.listItem}>
                   <div className={styles.listTh}>序号</div>
