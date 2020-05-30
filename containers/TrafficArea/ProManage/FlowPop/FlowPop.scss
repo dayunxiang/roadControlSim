@@ -1,3 +1,7 @@
+$fontColor: #5BBDFF;
+$btnBgColor: #204073;
+$numColor: #FEFCFA;
+
 .canalizWrapper {
   position: absolute;
   top: 0;
@@ -11,27 +15,26 @@
     top: 0;
     width: 358px;
     height: calc(100% - 25px);
-    background: url(../../imgs/pop_right.png) center center no-repeat;
-    background-size: 100% 100%;
-    padding: 35px 20px;
+    background-color: rgba(25,47,84, .6);
+    padding: 20px;
     :global(.ant-checkbox-inner) {
-      border: 1.5px solid #233772;
+      border: 1px solid $fontColor;
       background: transparent;
     }
     :global(.ant-checkbox) {
       margin-right: 10px;
     }
     > .title {
-      height: 70px;
+      height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #02eeff;
+      color: $fontColor;
+      padding-bottom: 10px;
       > .item {
         width: 144px;
         height: 35px;
-        background: url(../../../AreaPlan/imgs/area_title.png) center center no-repeat;
-        background-size: 100% 100%;
+        background-color: $btnBgColor;
         text-align: center;
         line-height: 35px;
         margin-right: 20px;
@@ -43,7 +46,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #02eeff;
+        color: $numColor; // #02eeff
         margin-bottom: 5px;
         &:nth-last-child(1) {
           margin-bottom: 0px;
@@ -51,8 +54,7 @@
         > .item {
           width: 144px;
           height: 35px;
-          background: url(../../../AreaPlan/imgs/area_item.png) center center no-repeat;
-          background-size: 100% 100%;
+          background-color: $btnBgColor;
           text-align: center;
           line-height: 35px;
           margin-right: 20px;
@@ -62,10 +64,10 @@
   }
   .canalizBox {
     position: absolute;
-    top: 75px;
+    top: 55px;
     left: 0;
     width: 100%;
-    height: calc(100% - 75px);
+    height: calc(100% - 55px);
     .centerWrapper {
       position: absolute;
       top: 30px;
@@ -103,12 +105,11 @@
         padding-right: 20px;
         height: 30px;
         margin-bottom: 10px;
-        background: url(../../imgs/planBtn.png) center center no-repeat;
-        background-size: 100% 100%;
+        background-color: $btnBgColor;
         text-align: center;
         line-height: 30px;
         font-size: 14px;
-        color: #fff;
+        color: $fontColor;
         cursor: pointer;
         .delPlanIcon {
           position: absolute;
@@ -117,8 +118,7 @@
         }
       }
       .planChecked {
-        background: url(../../imgs/checkedPlan.png) center center no-repeat;
-        background-size: 100% 100%;
+        color: #03edff;
       }
     }
     .modeBox {
@@ -133,11 +133,10 @@
   top: 0;
   right: 0;
   > span {
-    width: 275px;
+    width: 175px;
     height: 47px;
     display: block;
-    background: url(../../imgs/pop_view_right.png) center center no-repeat;
-    background-size: 100% 100%;
+    background-color: $btnBgColor;
     font-size: 15px;
     text-align: center;
     line-height: 47px;
@@ -169,7 +168,7 @@
 }
 .modeBtn {
   margin-right: 40px;
-  color: #07f8ff;
+  color: $fontColor;
   &:nth-last-child(1) {
     margin-right: 0;
   }
@@ -179,14 +178,13 @@
   :global(.ant-input) {
     width: 230px;
     height: 34px;
-    background: url(../../../AreaPlan/imgs/kuang.png) center center no-repeat;
-    background-size: 100% 100%;
-    border: none;
+    border: 1px solid #2B4D7A;
     text-align: center;
-    color: #20f4aa;
+    color: $numColor;
+    background-color: transparent;
   }
   :global(.anticon svg) {
-    color: #07f8ff;
+    color: $numColor;
   }
   :global(.ant-calendar-picker-clear) {
     background: #010c2a;
@@ -194,11 +192,10 @@
   :global(.ant-time-picker-input) {
     width: 125px;
     height: 34px;
-    background: url(../../../AreaPlan/imgs/kuang.png) center center no-repeat;
-    background-size: 100% 100%;
-    border: none;
+    border: 1px solid #2B4D7A;
     text-align: center;
-    color: #20f4aa;
+    color: $numColor;
+    background-color: transparent;
   }
   :global(.ant-time-picker-clear) {
     background: #010c2a;
@@ -206,11 +203,10 @@
   :global(.ant-select-selection) {
     width: 125px;
     height: 34px;
-    background: url(../../../AreaPlan/imgs/kuang.png) center center no-repeat;
-    background-size: 100% 100%;
-    border: none;
+    border: 1px solid #2B4D7A;
     text-align: center;
-    color: #20f4aa;
+    color: $numColor;
+    background-color: transparent;
   }
   :global(.ant-select-selection-selected-value) {
     margin: 3px 0 0 28px;
