@@ -1,3 +1,7 @@
+$gradientB: linear-gradient(to bottom, rgba(27, 63, 111, 0.9), rgba(21, 46, 86, 0.9));
+$numColor: #fefcfa;
+$fontColor: #5ab2ec;
+$btnBg: #244372;
 .canalizWrapper {
   position: fixed;
   top: 0;
@@ -55,12 +59,11 @@
     width: 275px;
     height: 47px;
     display: block;
-    background: url(../../TrafficArea/imgs/pop_view_right.png) center center no-repeat;
-    background-size: 100% 100%;
+    background: $btnBg;
     font-size: 15px;
     text-align: center;
     line-height: 47px;
-    color: #fe8500;
+    color: #d89f07;
     &:nth-child(1) {
       margin-bottom: 13px;
       > i {
@@ -104,26 +107,16 @@
   width: 540px;
   height: 600px;
   margin: -300px 0 0 -270px;
-  background: url(../../InterPlan/Projectmana/imgs/canalization.png) center center no-repeat;
-  background-size: 100% 100%;
+  background: $gradientB;
   .cana_title {
     width: 241px;
-    height: 34px;
-    background: url(../../InterPlan/Projectmana/imgs/conf_title.png) center center no-repeat;
-    background-size: 100% 100%;
-    color: #03edff;
+    height: 40px;
+    color: $fontColor;
     padding-left: 45px;
-    line-height: 18px;
-    margin-top: 32px;
+    line-height: 40px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  .cana_cross {
-    width: 99.6%;
-    height: 12px;
-    background: url(../../InterPlan/Projectmana/imgs/line.png);
   }
   .cana_centent {
     width: 100%;
@@ -158,9 +151,8 @@
         width: 100px;
         height: 30px;
         display: block;
-        background: url(../../InterPlan/Projectmana/imgs/item.png) center center no-repeat;
-        background-size: 100% 100%;
-        color: #ffffff;
+        background: $btnBg;
+        color: $fontColor;
         font-size: 13px;
         text-align: center;
         line-height: 30px;
@@ -168,8 +160,8 @@
         cursor: pointer;
       }
       .nodeChecked {
-        background: url(../imgs/checkedPlan.png) center center no-repeat;
-        background-size: 100% 100%;
+        background: $btnBg;
+        color: $fontColor;
       }
     }
     .popBottom {
@@ -186,9 +178,8 @@
         height: 30px;
         text-align: center;
         line-height: 30px;
-        background: url(../imgs/area_title.png) center center no-repeat;
-        background-size: 100% 100%;
-        color: #ff8800;
+        background: $btnBg;
+        color: $fontColor;
         cursor: pointer;
       }
       .popCancel {
@@ -197,9 +188,8 @@
         margin-left: 30px;
         text-align: center;
         line-height: 30px;
-        background: url(../imgs/area_title.png) center center no-repeat;
-        background-size: 100% 100%;
-        color: #ccc;
+        background: $btnBg;
+        color: $fontColor;
         cursor: pointer;
       }
     }
