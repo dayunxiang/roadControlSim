@@ -1,21 +1,23 @@
+$gradientB: linear-gradient(to bottom, rgba(27, 63, 111, 0.9), rgba(21, 46, 86, 0.9));
+$numColor: #fefcfa;
+$fontColor: #5ab2ec;
+$btnBg: #244372;
 .positions {
-  width:530px;
+  width: 530px;
   position: absolute;
   right: 18%;
   top: 160px;
   height: auto;
-  background: url(../imgs/info_bg.png) no-repeat;
-  background-size: 100% 100%;
+  background: $gradientB;
   padding: 75px 20px 20px 20px;
   z-index: 999;
-  color: #07b7f2;
+  color: $fontColor;
   font-size: 16px;
   .title {
     width: calc(100% -1px);
     height: 45px;
     line-height: 40px;
     margin: 0 0 15px 1px;
-    background: url(../../img/titleBg.svg) left 10px no-repeat;
     background-size: 200px 30px;
     text-indent: 40px;
     font-size: 15px;
@@ -61,8 +63,7 @@
       height: 30px;
       text-align: center;
       position: relative;
-      background: url(../imgs/rectBorder.png) center center no-repeat;
-      background-size: 100% 30px;
+      border: 1px solid #253E67;
       line-height: 30px;
       font-size: 12px;
       font-weight: 700;
@@ -108,16 +109,12 @@
         height: 30px;
         line-height: 30px;
         display: inline-block;
-        background: url(../imgs/area_active.png) no-repeat;
-        background-size: 100% 100%;
+        background: $btnBg;
+        color: $fontColor;
         font-size: 16px;
         text-align: center;
         margin: 0 5px;
         cursor: pointer;
-        &:hover {
-          background: url(../imgs/area_hover.png) no-repeat;
-          background-size: 100% 100%;
-        }
       }
     }
   }
@@ -142,22 +139,22 @@
   justify-content: center;
   font-size: 14px;
   position: absolute;
-  bottom: 18px;
+  bottom: 35px;
   span {
     width: 120px;
     height: 30px;
-    background: url(../imgs/area_active.png) center center no-repeat;
-    background-size: 100% 100%;
+    background: $btnBg;
+    color: $fontColor;
     display: inline-block;
     text-align: center;
     line-height: 30px;
     cursor: pointer;
     margin: 0 15px;
-    &:hover {
-      color: #d89f07;
-      background: url(../imgs/area_hover.png) center center no-repeat;
-      background-size: 100% 100%;
-    }
+    // &:hover {
+    //   color: #d89f07;
+    //   background: url(../imgs/area_hover.png) center center no-repeat;
+    //   background-size: 100% 100%;
+    // }
   }
 }
 .Inputname {
@@ -174,7 +171,7 @@
   color: #dcdce6;
   margin-top: 60px;
 }
-:global(.ant-tree-node-selected,) {
+:global(.ant-tree-node-selected, ) {
   background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
   background-size: 100% 100% !important;
 }

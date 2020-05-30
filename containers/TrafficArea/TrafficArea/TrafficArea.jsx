@@ -914,7 +914,7 @@ class TrafficArea extends React.Component {
         {geometryImg ?
           <div className={style.banksFigure}>
             <div className={style.title}>
-              <i />{areaNodename}路口渠化结构
+              {areaNodename}路口渠化结构
               <span className={style.clone} onClick={this.hanleCLoseInterInfo} />
             </div>
             <div className={style.content}>
@@ -924,7 +924,7 @@ class TrafficArea extends React.Component {
         {interPlanInfo === 'flow' ?
           <div className={style.trafficFlow}>
             <div className={style.title}>
-              <i />{areaNodename}路口流量
+              {areaNodename}路口流量
               <span className={style.clone} onClick={this.hanleCLoseInterInfo} />
             </div>
             <div className={style.content}>
@@ -951,7 +951,7 @@ class TrafficArea extends React.Component {
         {signalList ?
           <div className={style.signalList}>
             <div className={classNames({ [style.title]: true, [style.titleTwo]: true })}>
-              <i />{areaNodename}路口信号
+              {areaNodename}路口信号
               <span className={style.clone} onClick={this.hanleCLoseInterInfo} />
             </div>
             <div className={style.content}>
