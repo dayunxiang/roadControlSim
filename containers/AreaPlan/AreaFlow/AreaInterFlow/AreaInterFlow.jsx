@@ -328,17 +328,18 @@ class AreaInterFlow extends React.Component {
                 </Select>
               }
             </div>
-            <div className={styles.splitBorder} />
           </div>
           <div className={styles.importFlowMsg}>
             <div className={styles.title}>进口流量信息</div>
             {
               !!this.state.flowData && this.state.flowData.length > 0 ?
                 <div className={styles.roadMsgBox}>
-                  <div className={styles.roadMsg}>
-                    <div className={styles.roadLane} />
-                    <div className={styles.detactionBox} style={{ marginLeft: '85px' }}>
-                      <div className={styles.heade}>
+                  <div className={styles.roadMsg} style={{ backgroundColor: '#2B5391' }}>
+                    <div className={styles.roadLane} style={{ backgroundColor: '#2B5391' }}>
+                      <div className={styles.roadNameBox}>车道</div>
+                    </div>
+                    <div className={styles.detactionBox}>
+                      <div className={styles.heade} style={{ backgroundColor: '#2B5391' }}>
                         <div>类型/时段</div>
                         {
                           this.state.flowData[0].sort.map((item) => {

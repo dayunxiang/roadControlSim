@@ -2,6 +2,7 @@ $fontColor: #5BBDFF;
 $numColor: #FEFCFA;
 $borColor: #3C72A3;
 $gradientB: linear-gradient(to bottom, rgba(26, 66, 112, .9), rgba(19, 42, 83, .9));
+$gradient: linear-gradient(to right, rgba(19, 42, 83, .9), rgba(26, 66, 112, .9));
 
 @keyframes playGo {
   from {transform: rotate(0deg);}

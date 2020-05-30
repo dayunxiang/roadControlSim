@@ -983,7 +983,7 @@ class TrafficArea extends React.Component {
           </div> : null}
         {/* 右侧弹框 */}
         <div className={classNames(Prostyles.poin_area, style.poin_area)}>
-          <div className={Prostyles.poin_line}>
+          <div className={Prostyles.poin_line} style={{ height: '40px', lineHeight: '40px', paddingLeft: '10px', backgroundColor: 'rgba(13,27,66, .6)' }}>
             <span style={{ width: '150px' }}>建模区域{areaAndNodeList && areaAndNodeList.length}个</span>
           </div>
           <div className={Prostyles.pro_Button}>

@@ -6,8 +6,8 @@ import style from '../TrafficArea/TrafficArea.scss'
 import roadStyles from '../../InterPlan/Roadtraffic/Roadtraffic.scss'
 import Prostyles from '../../InterPlan/Projectmana/Projectmana.scss'
 import styles from './InfoManage.scss'
-import mapStyles from '../../../utlis/styles_2301'
 import getResponseDatas from '../../../utlis/getResponseData'
+import Map2301 from '../../../utlis/styles_2301'
 import { getDrag } from '../../../utlis/drag'
 import AreaNavgation from '../AreaNavgation/AreaNavgation'
 
@@ -383,8 +383,7 @@ class InfoManage extends React.Component {
     /* 初始化地图实例 */
     const map = new window.minemap.Map({
       container: 'mapContainer',
-      // style: '//10.11.57.105:60050/service/solu/style/id/4636',
-      style: mapStyles,
+      style:Map2301,
       center: [106.706278, 26.590897],
       zoom: 13.8,
       pitch: 0,
@@ -437,7 +436,7 @@ class InfoManage extends React.Component {
           </div> : null}
         {/* 右侧弹框 */}
         <div className={classNames(Prostyles.poin_area, style.poin_area)}>
-          <div className={Prostyles.poin_line}>
+          <div className={Prostyles.poin_line} style={{ height: '40px', lineHeight: '40px', paddingLeft: '10px', backgroundColor: 'rgba(13,27,66, .6)' }}>
             <span style={{ width: '150px' }}>建模区域{areaAndNodeList && areaAndNodeList.length}个</span>
           </div>
           <div className={Prostyles.pro_Button}>

@@ -1,11 +1,17 @@
+$fontColor: #5BBDFF;
+$numColor: #FEFCFA;
+$borColor: #3C72A3;
+$btnBg: #244372;
+$bgColor: #12244C;
+$colorBor: #1D305B;
+$gradientB: linear-gradient(to bottom, rgba(26, 66, 112, .9), rgba(19, 42, 83, .9));
 .singalStage {
   position: absolute;
   bottom: 60px;
   left: 50px;
   width: 55%;
   height: 150px;
-  background: url(../../../InterPlan/Singal/imgs/addBg.png) center center no-repeat;
-  background-size: 100% 150px;
+  border: 1px solid #1F3A65;
   z-index: 8;
   .stageBox {
     width: 98%;
@@ -25,12 +31,204 @@
   justify-content: center;
   align-items: center;
 }
+// .rightPopBox {
+//   position: absolute;
+//   bottom: 10px;
+//   right: 30px;
+//   width: 580px;
+//   height: calc(100% - 60px);
+//   display: flex;
+//   justify-content: space-between;
+//   z-index: 8;
+//   .rightPop {
+//     position: relative;
+//     width: 250px;
+//     height: 100%;
+//     background: url(../../../img/pop_right.png) center center no-repeat;
+//     background-size: 250px 100%;
+//     user-select: none;
+//     :global(.ant-spin-spinning){
+//       position: static;
+//       display: block;
+//       opacity: 1;
+//       margin: 80px auto;
+//     }
+//     .disabledMoudle {
+//       z-index: 3;
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       background-color: transparent;
+//     }
+//     .phaseManage {
+//       position: absolute;
+//       top: 35px;
+//       left: -135px;
+//       width: 100px;
+//       height: 30px;
+//       text-align: center;
+//       line-height: 30px;
+//       background: url(../../../img/smallBtnBg.png) center center no-repeat;
+//       background-size: 100px 30px;
+//       font-size: 15px;
+//       color: #ff8800;
+//       cursor: pointer;
+//       user-select: none;
+//     }
+//     .stageMsgBoxList {
+//       height: calc(100% - 65px);
+//       overflow: auto;
+//       padding-top:10px;
+//       :global(.ant-spin-spinning){
+//         position: static;
+//         display: block;
+//         opacity: 1;
+//         margin: 80px auto;
+//       }
+//       .stageMsgBox {
+//         .stageMsg {
+//           padding: 0 20px;
+//           margin-bottom: 10px;
+//           .phaseBox {
+//             height: 180px;
+//             margin-bottom: 3px;
+//             border: 1px solid #1b45ab;
+//             cursor: pointer;
+//             // background: url(./imgs/phase.png) center center no-repeat;
+//             // background-size: contain;
+//             position: relative;
+//             >span{
+//               display: none;
+//             }
+//             &:hover{
+//               box-shadow: inset 0px 0px 10px#fff;
+//             }
+//           }
+//           .phaseBoxSelect {
+//             box-shadow: inset 0px 0px 10px#fff;
+//           }
+//           .stageBox {
+//             position: relative;
+//             height: 26px;
+//             padding-left: 20px;
+//             line-height: 26px;
+//             background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+//             background-size: 100% 26px;
+//             color: #00f1ff;
+//             font-size: 12px;
+//             .closeIcon {
+//               position: absolute;
+//               top: 6px;
+//               right: 10px;
+//               width: 12px;
+//               height: 12px;
+//               display: flex;
+//               justify-content: center;
+//               align-items: center;
+//               color: #fff;
+//               cursor: pointer;
+//             }
+//           }
+//           .lightTime {
+//             height: 32px;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             .lightBox {
+//               width: 48%;
+//               height: 26px;
+//               padding-left: 10px;
+//               background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
+//               background-size: 100% 26px;
+//               color: #00f1ff;
+//               font-size: 12px;
+//               line-height: 26px;
+//               >span{
+//                 >span{
+//                   margin-left:3px;
+//                 }
+//                 :global(.ant-input-number){
+//                   border:unset;
+//                   border-radius: 0;
+//                   color:#22f4ad;
+//                   width:35px;
+//                   height:20px;
+//                   background:transparent;
+//                 }
+//                 :global(.ant-input-number .ant-input-number-handler-wrap){
+//                   display: none;
+//                 }
+//                 :global(.ant-input-number .ant-input-number-input){
+//                   height:20px;
+//                 }
+//                 :global(.ant-input-number .ant-input-number-input){
+//                   width:35px;
+//                   height:20px;
+//                   padding:0 3px;
+//                   font-size:12px;
+//                   overflow: hidden;
+//                   text-align: center;
+//                 }
+//                 :global(.anticon-edit){
+//                   cursor:pointer;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     .addStage {
+//       padding: 0 20px 20px;
+//       .addBtn {
+//         height: 30px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         border: 1px solid #1b45ab;
+//         border-radius: 5px;
+//         font-size: 16px;
+//         color: #fff;
+//         cursor: pointer;
+//       }
+//     }
+//     .singalImport {
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100px;
+//       .singalImportBtn {
+//         width: 200px;
+//         height: 30px;
+//         margin: 20px auto 0;
+//         text-align: center;
+//         line-height: 30px;
+//         background: url(../../../img/btnBg.png) center center no-repeat;
+//         background-size: 100% 100%;
+//         font-size: 15px;
+//         cursor: pointer;
+//         :global(.ant-upload) {
+//           color: #ff8800;
+//         }
+//       }
+//     }
+//   }
+//   .simulatDispatch {
+//     height: calc(100% - 70px);
+//     // background: url(./imgs/columnBg.png) 5px center no-repeat;
+//     // background-size: contain;
+//   }
+// }
 .rightPopBox {
   position: absolute;
   bottom: 10px;
   right: 30px;
   width: 580px;
-  height: calc(100% - 60px);
+  height: calc(100% - 50px);
   display: flex;
   justify-content: space-between;
   z-index: 8;
@@ -38,23 +236,15 @@
     position: relative;
     width: 250px;
     height: 100%;
-    background: url(../../../img/pop_right.png) center center no-repeat;
-    background-size: 250px 100%;
+    // background: url(../../img/pop_right.png) center center no-repeat;
+    // background-size: 250px 100%;
+    background-color: $bgColor;
     user-select: none;
     :global(.ant-spin-spinning){
       position: static;
       display: block;
       opacity: 1;
       margin: 80px auto;
-    }
-    .disabledMoudle {
-      z-index: 3;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
     }
     .phaseManage {
       position: absolute;
@@ -64,17 +254,29 @@
       height: 30px;
       text-align: center;
       line-height: 30px;
-      background: url(../../../img/smallBtnBg.png) center center no-repeat;
-      background-size: 100px 30px;
+      // background: url(../../img/smallBtnBg.png) center center no-repeat;
+      // background-size: 100px 30px;
+      background-color: #193364;
       font-size: 15px;
-      color: #ff8800;
+      color: $fontColor;
       cursor: pointer;
       user-select: none;
     }
+    .stageTit {
+      height: 32px;
+      line-height: 32px;
+      padding-left: 20px;
+      color: $fontColor;
+      font-size: 15px;
+      background-color: $bgColor;
+    }
+    .timeStageBox {
+      height: calc(100% - 32px);
+      background-color: #1B2F54;
+    }
     .stageMsgBoxList {
-      height: calc(100% - 65px);
+      height: calc(100% - 35px);
       overflow: auto;
-      padding-top:10px;
       :global(.ant-spin-spinning){
         position: static;
         display: block;
@@ -82,13 +284,15 @@
         margin: 80px auto;
       }
       .stageMsgBox {
+        background-image: $gradientB;
         .stageMsg {
           padding: 0 20px;
           margin-bottom: 10px;
+          padding-top: 10px;
           .phaseBox {
             height: 180px;
             margin-bottom: 3px;
-            border: 1px solid #1b45ab;
+            border: 1px solid #223E68;
             cursor: pointer;
             // background: url(./imgs/phase.png) center center no-repeat;
             // background-size: contain;
@@ -97,20 +301,34 @@
               display: none;
             }
             &:hover{
-              box-shadow: inset 0px 0px 10px#fff;
+              box-shadow: inset  0px 0px 10px $colorBor;
+              
+              >span{
+                display: block;
+              }
+              :global(.anticon-close){
+                position: absolute;
+                top:-7px;
+                right:-6px;
+                color: #fff;
+                font-size:12px;
+                border:1px solid #223E68;
+                background:#151b32;
+                border-radius: 100%;
+                -webkit-border-radius: 100%;
+                -moz-border-radius: 100%;
+                -ms-border-radius: 100%;
+                -o-border-radius: 100%;
+              }
             }
-          }
-          .phaseBoxSelect {
-            box-shadow: inset 0px 0px 10px#fff;
           }
           .stageBox {
             position: relative;
             height: 26px;
             padding-left: 20px;
             line-height: 26px;
-            background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
-            background-size: 100% 26px;
-            color: #00f1ff;
+            border: 1px solid #223E68;
+            color: $fontColor;
             font-size: 12px;
             .closeIcon {
               position: absolute;
@@ -134,9 +352,8 @@
               width: 48%;
               height: 26px;
               padding-left: 10px;
-              background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
-              background-size: 100% 26px;
-              color: #00f1ff;
+              border: 1px solid #223E68;
+              color: $fontColor;
               font-size: 12px;
               line-height: 26px;
               >span{
@@ -146,7 +363,7 @@
                 :global(.ant-input-number){
                   border:unset;
                   border-radius: 0;
-                  color:#22f4ad;
+                  color:$numColor;
                   width:35px;
                   height:20px;
                   background:transparent;
@@ -194,19 +411,18 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 100px;
+      height: 75px;
       .singalImportBtn {
         width: 200px;
         height: 30px;
         margin: 20px auto 0;
         text-align: center;
         line-height: 30px;
-        background: url(../../../img/btnBg.png) center center no-repeat;
-        background-size: 100% 100%;
+        background-color: #1E3A6C;
         font-size: 15px;
         cursor: pointer;
         :global(.ant-upload) {
-          color: #ff8800;
+          color: #69B9FE;
         }
       }
     }
@@ -382,6 +598,65 @@
     }
   }
 }
+// .rightSpan {
+//   width:85px;
+//   height: calc(88% - 10px);
+//   padding-top:8px;
+//   position: absolute;
+//   right: -73px;
+//   top: 53px;
+//   overflow-y: auto;
+//   .span_select{
+//     box-shadow: inset  0px 0px 10px#fff;
+//     border-radius: 5px;
+//     color: #00d31f;
+//   }
+//   > span {
+//     width: 70px;
+//     height: 25px;
+//     background: url(../../../InterPlan/Singal/imgs/leftBg.png) center center no-repeat;
+//     background-size: 100% 100%;
+//     display: inline-block;
+//     color: #fff;
+//     margin-bottom: 10px;
+//     text-align: center;
+//     line-height: 25px;
+//     font-size: 12px;
+//     cursor: pointer;
+//     position: relative;
+//     :global(.anticon-close){
+//       display: none;
+//     }
+//     > .Ileft {
+//       width: 6px;
+//       height: 8px;
+//       display: inline-block;
+//       background: url(../../../InterPlan/Singal/imgs/leftIcon.png) center center no-repeat;
+//       background-size: 100% 100%;
+//       margin-right: 4px;
+//     }
+//     &:hover {
+//       color: #00d31f;
+//       box-shadow: inset 0 0 10px #fff;
+//       border-radius: 5px;
+//       :global(.anticon-close){
+//         color: #fff;
+//         font-size:12px;
+//         display: block;
+//         position: absolute;
+//         top:-7px;
+//         right:-6px;
+//         border:1px rgb(20, 50, 129) solid;
+//         background:#151b32;
+//         border-radius: 100%;
+//         -webkit-border-radius: 100%;
+//         -moz-border-radius: 100%;
+//         -ms-border-radius: 100%;
+//         -o-border-radius: 100%;
+//       }
+//     }
+//   }
+// }
 .rightSpan {
   width:85px;
   height: calc(88% - 10px);
@@ -391,15 +666,13 @@
   top: 53px;
   overflow-y: auto;
   .span_select{
-    box-shadow: inset  0px 0px 10px#fff;
-    border-radius: 5px;
-    color: #00d31f;
+    background-color: #0673B6;
+    color: #23D1F3;
   }
   > span {
     width: 70px;
     height: 25px;
-    background: url(../../../InterPlan/Singal/imgs/leftBg.png) center center no-repeat;
-    background-size: 100% 100%;
+    background-color: #193364;
     display: inline-block;
     color: #fff;
     margin-bottom: 10px;
@@ -415,14 +688,13 @@
       width: 6px;
       height: 8px;
       display: inline-block;
-      background: url(../../../InterPlan/Singal/imgs/leftIcon.png) center center no-repeat;
+      // background: url(./imgs/leftIcon.png) center center no-repeat;
       background-size: 100% 100%;
       margin-right: 4px;
     }
     &:hover {
-      color: #00d31f;
-      box-shadow: inset 0 0 10px #fff;
-      border-radius: 5px;
+      color: #23D1F3;
+      background-color: #0673B6;
       :global(.anticon-close){
         color: #fff;
         font-size:12px;
@@ -449,18 +721,16 @@
     width: 100px;
     height: 30px;
     display: block;
-    background: url(../../../InterPlan/Projectmana/imgs/item.png) center center no-repeat;
-    background-size: 100% 100%;
-    color: #ffffff;
+    background-color: $btnBg;
+    color: $fontColor;
     font-size: 13px;
     text-align: center;
     line-height: 30px;
     margin: 3px 0;
     cursor: pointer;
   }
-  .flowPlanChecked {
-    background: url(../../imgs/checkedPlan.png) center center no-repeat;
-    background-size: 100% 100%;
+  .flowPlanChecked { 
+    color: #22f4ad;
   }
 }
 .timeBox {
@@ -593,8 +863,8 @@
         height: 25px;
         line-height:25px;
         padding:0 5px;
-        background: url(../../../InterPlan/Singal/imgs/leftBg.png) center center no-repeat;
-        background-size: 100% 100%;
+        background-color: #193364;
+        color: $numColor;
         text-decoration: none;
         text-align: center;
         cursor: pointer;
@@ -603,8 +873,8 @@
         }
         &:hover {
           color: #00d31f;
-          box-shadow: inset 0 0 10px #fff;
-          border-radius: 5px;
+          // box-shadow: inset 0 0 10px #fff;
+          // border-radius: 5px;
           >span {
             display: flex;
           }

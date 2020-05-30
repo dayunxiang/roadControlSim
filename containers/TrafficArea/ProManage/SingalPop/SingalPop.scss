@@ -1,3 +1,8 @@
+$fontColor: #5BBDFF;
+$btnBgColor: #204073;
+$numColor: #FEFCFA;
+$gradient: linear-gradient(to right, rgba(19, 42, 83, .9), rgba(26, 66, 112, .9));
+
 .canalizWrapper {
   position: absolute;
   top: 0;
@@ -6,10 +11,10 @@
   height: 100%;
   .canalizBox {
     position: absolute;
-    top: 75px;
+    top: 55px;
     left: 0;
     width: 100%;
-    height: calc(100% - 75px);
+    height: calc(100% - 55px);
     overflow: hidden;
     .centerWrapper {
       position: absolute;
@@ -33,8 +38,8 @@
         position: absolute;
         width: 90%;
         height: 90%;
-        background: url(../../../AreaPlan/imgs/flow_bg.png) no-repeat;
-        background-size: 107% 104%;
+        background-image: $gradient;
+        border-radius: 8px;
         > .title {
           width: 100%;
           height: 43px;
@@ -108,12 +113,11 @@
         padding-right: 20px;
         height: 30px;
         margin-bottom: 10px;
-        background: url(../../imgs/planBtn.png) center center no-repeat;
-        background-size: 100% 100%;
+        background-color: $btnBgColor;
         text-align: center;
         line-height: 30px;
         font-size: 14px;
-        color: #fff;
+        color: $fontColor;
         cursor: pointer;
         .delPlanIcon {
           position: absolute;
@@ -122,8 +126,7 @@
         }
       }
       .planChecked {
-        background: url(../../imgs/checkedPlan.png) center center no-repeat;
-        background-size: 100% 100%;
+        color: #03edff;
       }
     }
     .modeBox {
@@ -153,11 +156,10 @@
     background: url(../../../AreaPlan/imgs/gou.png) center center no-repeat;
   }
   > span {
-    width: 275px;
+    width: 175px;
     height: 47px;
     display: block;
-    background: url(../../imgs/pop_view_right.png) center center no-repeat;
-    background-size: 100% 100%;
+    background-color: $btnBgColor;
     font-size: 15px;
     text-align: center;
     line-height: 47px;
@@ -212,21 +214,20 @@
 }
 .modeBtn {
   // margin-left: 80px;
-  color: #07f8ff;
+  color: $fontColor;
   > .name {
     margin-right: 5px;
   }
   :global(.ant-input) {
     width: 230px;
     height: 34px;
-    background: url(../../../AreaPlan/imgs/kuang.png) center center no-repeat;
-    background-size: 100% 100%;
-    border: none;
+    border: 1px solid #2B4D7A;
     text-align: center;
-    color: #20f4aa;
+    color: $numColor;
+    background-color: transparent;
   }
   :global(.anticon svg) {
-    color: #07f8ff;
+    color: $numColor;
   }
   :global(.ant-calendar-picker-clear) {
     background: #010c2a;
@@ -234,11 +235,10 @@
   :global(.ant-time-picker-input) {
     width: 125px;
     height: 34px;
-    background: url(../../../AreaPlan/imgs/kuang.png) center center no-repeat;
-    background-size: 100% 100%;
-    border: none;
+    border: 1px solid #2B4D7A;
     text-align: center;
-    color: #20f4aa;
+    color: $numColor;
+    background-color: transparent;
   }
   :global(.ant-time-picker-clear) {
     background: #010c2a;

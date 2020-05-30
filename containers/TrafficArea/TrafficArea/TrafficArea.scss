@@ -744,17 +744,20 @@ $btnBg: #244372;
     margin: 5px 21px !important;
   }
   :global(.ant-tree-node-content-wrapper-open) {
-    background: url(../../InterPlan/Projectmana/imgs/kuang.png) center center no-repeat !important;
-    background-size: 100% 100% !important;
-    color: #d89f07 !important;
-    cursor: pointer !important;
+    // background: url(../../InterPlan/Projectmana/imgs/kuang.png) center center no-repeat !important;
+    // background-size: 100% 100% !important;
+    // color: #d89f07 !important;
+    // cursor: pointer !important;
+  }
+  :global(.ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:hover) {
+    background-color: #244372;
   }
   :global(.ant-tree li .ant-tree-node-content-wrapper) {
     color: #ffffff;
     width: 235px;
     height: 35px;
-    background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat;
-    background-size: 100% 100%;
+    // background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat;
+    // background-size: 100% 100%;
     text-align: center;
     margin: 5px 6px;
     line-height: 35px;
@@ -763,8 +766,8 @@ $btnBg: #244372;
   :global(.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper:hover) {
     width: 235px;
     height: 35px;
-    background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
-    background-size: 100% 100% !important;
+    // background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
+    // background-size: 100% 100% !important;
   }
   :global(li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span) {
     cursor: auto;

@@ -1,4 +1,7 @@
-
+$gradient: linear-gradient(to right, rgba(19, 42, 83, .9), rgba(26, 66, 112, .9));
+$numColor: #FEFCFA;
+$fontColor: #5AB2EC;
+$btnBg: #244372;
   .itemBox{
     display: flex;
     position: absolute;
@@ -429,45 +432,29 @@
 .organization {
   width: 66%; //1010px;//1350px;
   height: 218px;
-  background: url(../../InterPlan/Roadtraffic/img/signal.png) center center no-repeat;
-  background-size: 100% 100%;
-  position: fixed;
+  background-image: $gradient;
+  position: absolute;
   bottom: 2%;
   left: 40px;
-  color: #00b6c1;
-  padding: 22px 0 10px 0px;
+  color: $fontColor;
+  padding: 10px 0;
+  border-radius: 6px;
   .clone {
     width: 15px;
     height: 15px;
     position: absolute;
-    top: 1px;
-    right: 3px;
+    top: 8px;
+    right: 8px;
     background: url(../../img/clone.png) center center no-repeat;
     background-size: 100% 100%;
     z-index: 1;
     cursor: pointer;
   }
   .organ_title {
-    padding-left: 45px;
+    padding-left: 20px;
     width: 300px;
     height: 34px;
     line-height: 34px;
-    background: url(../../img/wire.png) bottom center no-repeat;
-    background-size: 100%;
-    > i {
-      width: 27px;
-      height: 22px;
-      display: inline-block;
-      background: url(../../img/hexagon.png) center center no-repeat;
-      background-size: 100% 100%;
-      vertical-align: middle;
-      margin-right: 6px;
-    }
-  }
-  .organ_cross {
-    width: 99.6%;
-    height: 12px;
-    background: url(../../InterPlan/Projectmana/imgs/line.png);
   }
   .organ_list {
     width: 100%;
@@ -479,6 +466,14 @@
       height: 28px;
       font-size: 13px;
       margin: 3px 0;
+      &:nth-child(2n-1) {
+        background-color: #1B3864;
+      }
+      &:first-child{
+        .listTh {
+          color: #5DB5E9;
+        }
+      }
       .listTd,
       .listTh {
         flex: 1;
@@ -487,24 +482,19 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        color: #03edff;
-        background: url(../../InterPlan/Projectmana/imgs/list_center.png) center center no-repeat;
-        background-size: 100% 100%;
+        color: $numColor;
         > span {
-          color: #c55513;
+          color: $numColor;
           cursor: pointer;
           width: 100%;
           height: 100%;
           text-align: center;
           line-height: 28px;
-          &:hover {
-            color: #00eaff;
-          }
         }
         :global(.ant-select-selection) {
           background: transparent;
           border: none;
-          color: #c55513;
+          color: $numColor;
           text-align: center;
         }
         :global(.ant-select-selection-selected-value) {
@@ -513,7 +503,7 @@
         :global(.ant-select-arrow) {
           width: 20px;
           color: #ffffff;
-          background: url(../../InterPlan/Informationmana/imgs/list_icon.png) center center no-repeat;
+          // background: url(../Informationmana/imgs/list_icon.png) center center no-repeat;
         }
         :global(.ant-upload) {
           color: #00fb00;
@@ -522,14 +512,7 @@
           color: #ffffff;
         }
       }
-      & > div:nth-child(1) {
-        background: url(../../InterPlan/Projectmana/imgs/list_left.png) center center no-repeat;
-        background-size: 100% 100%;
-        color: #ffffff;
-      }
       & > div:nth-child(5) {
-        background: url(../../InterPlan/Projectmana/imgs/list_right.png) center center no-repeat;
-        background-size: 100% 100%;
         > span {
           width: 42%;
           height: 20px;
@@ -537,38 +520,12 @@
           line-height: 20px;
           margin: 0 3px;
           display: inline-block;
-          background: url(../../InterPlan/Projectmana/imgs/list_del.png) center center no-repeat;
-          background-size: 100% 100%;
+          color: #28BBCF;
           cursor: pointer;
-          &:nth-child(1) {
-            color: #00fb00;
-            > i {
-              background: url(../../InterPlan/Projectmana/imgs/upload.png) center center no-repeat;
-              background-size: 100% 100%;
-            }
-          }
-          &:nth-child(2) {
-            color: #c0532a;
-            > i {
-              background: url(../../InterPlan/Projectmana/imgs/cond_del.png) center center no-repeat;
-              background-size: 100% 100%;
-            }
-          }
-          > i {
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            vertical-align: -2px;
-            margin-right: 5px;
-          }
         }
       }
       & > .listTh {
-        color: #fff;
-        :global(.ant-select-selection__rendered) {
-          height: 100%;
-          line-height: 30px;
-        }
+        color: $numColor;
       }
     }
   }

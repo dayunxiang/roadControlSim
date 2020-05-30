@@ -1,3 +1,9 @@
+$fontColor: #5BBDFF;
+$numColor: #FEFCFA;
+$borColor: #3C72A3;
+$btnBg: #244372;
+$gradientB: linear-gradient(to bottom, rgba(26, 66, 112, .9), rgba(19, 42, 83, .9));
+
 .container{
   width:600px;
   height:600px;
@@ -16,8 +22,7 @@
   font-size: 14px;
   .flowTimeBox {
     height: 125px;
-    background: url(../../../img/time_bg.png) center center no-repeat;
-    background-size: 100% 100%;
+    border: 1px solid #1F3A67;
     .timeBox{
       display: flex;
       height:50px;
@@ -144,18 +149,16 @@
     height: 40px;
     display: flex;
     align-items: center;
-    color: #00f1ff;
+    color: $fontColor;
     :global(.ant-select-selection) {
       width: 100px;
       height: 28px;
       background-color: transparent;
-      color: #22f4ad;
-      background: url(../../../InterPlan/Flow/imgs/planBtn.png) no-repeat;
-      background-size: 100% 100%;
-      border: none;
+      border: 1px solid #23406A;
+      color: $numColor;
     }
     :global(.ant-select-selection__rendered) {
-      line-height: 30px;
+      line-height: 28px;
     }
   }
   .flowPlay {
@@ -192,28 +195,50 @@
 .roadFlowWrapper {
   position: absolute;
   width: 40%;
-  height: calc(100% - 55px);
+  height: calc(100% - 65px);
   right: 20px;
   bottom: 10px;
-  background: url(../../../InterPlan/Flow/imgs/simulatRoad.png) center center no-repeat;
-  background-size: 100% 100%;
+  background-image: $gradientB;
   .exportFlowBox {
     position: relative;
     display: flex;
-    height: 80px;
-    margin-top: 20px;
+    height: 30px;
     align-items: center;
     font-size: 14px;
     color: #fff;
+    background-color: #2B5391;
     .roadBtnBox {
+      height: 30px;
       display: flex;
+      position: relative;
+      .checkedBaseRate {
+        position: absolute;
+        right: 30px;
+        bottom: 3px;
+        color: #fff;
+        :global(.ant-checkbox-inner) {
+          background-color: transparent;
+          border-color: #1e43ab;
+        }
+        .baseRateInput {
+          width: 60px;
+          height: 24px;
+          background-color: transparent;
+          color: #22f4ad;
+          border: 1px solid #1e43ab;
+          border-radius: 3px;
+          outline: none;
+          padding-left: 5px;
+          margin: 0 5px;
+        }
+      }
       .roadBtn {
         width: 90px;
         height: 30px;
-        margin-left: 20px;
-        background: url(../../../InterPlan/Flow/imgs/headerClick.png) center center no-repeat;
-        background-size: 100% 100%;
-        color: #fff;
+        // margin-left: 20px;
+        // background: url(./imgs/headerClick.png) center center no-repeat;
+        // background-size: 100% 100%;
+        color: $fontColor;
         font-size: 15px;
         display: flex;
         justify-content: center;
@@ -221,17 +246,9 @@
         cursor: pointer;
       }
       .activeBtn {
-        color: #ff8800;
+        background-color: #1E3A6C;
+        color: $numColor;
       }
-    }
-    .splitBorder {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 10px;
-      background: url(../../../InterPlan/Flow/imgs/splitBorder.png);
-      background-size: auto 10px;
     }
     .roadDetaction {
       display: flex;
@@ -261,9 +278,8 @@
       }
     }
     :global(.ant-select-selection--single){
-      border: none;
-      background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
-      background-size: 100% 100%;
+      border: 1px solid #1B3864;
+      background-color: transparent;
       outline: none;
       box-shadow: none;
     }
@@ -370,36 +386,37 @@
     }
   }
   .importFlowMsg {
-    height: calc(100% - 130px);
+    height: calc(100% - 35px);
     font-size: 14px;
     color: #fff;
     .title {
-      width: 200px;
-      height: 30px;
-      margin: 10px 0 15px 10px;
-      background: url(../../../InterPlan/Flow/imgs/titleBg.svg) center center no-repeat;
-      background-size: contain;
-      text-indent: 40px;
+      height: 40px;
+      line-height: 40px;
+      // background: url(./imgs/titleBg.svg) center center no-repeat;
+      // background-size: contain;
+      text-indent: 30px;
       font-size: 15px;
-      color: #00f1ff;
+      color: $fontColor;
     }
     .roadMsgBox {
-      height: calc(100% - 50px);
+      height: calc(100% - 40px);
+      background-image: $gradientB;
       overflow: auto;
       .roadMsg {
         display: flex;
-        padding-right: 10px;
+        // padding-right: 10px;
         margin-bottom: 10px;
         &:first-child {
           margin-bottom: 0;
         }
         .detactionBox {
+          flex: 1;
           .mutipleBox {
             display: flex;
             height: 55px;
             margin-bottom: 5px;
             align-items: center;
-            background: url(../../../InterPlan/Flow/imgs/roadBorder.png) center center no-repeat;
+            // background: url(./imgs/roadBorder.png) center center no-repeat;
             background-size: 100% 55px;
             div {
               width: 120px;
@@ -411,15 +428,15 @@
           .heade {
             display: flex;
             height: 30px;
-            margin-bottom: 5px;
             align-items: center;
-            background: url(../../../InterPlan/Flow/imgs/rectBorder.png) center center no-repeat;
-            background-size: 100% 30px;
+            // background: url(./imgs/rectBorder.png) center center no-repeat;
+            // background-size: 100% 30px;
             div {
               width: 120px;
               display: flex;
               justify-content: center;
               align-items: center;
+              border: none;
             }
             div:first-child {
               // flex: 0 120px;
@@ -427,7 +444,7 @@
               .checkBox {
                 width: 14px;
                 height: 14px;
-                border: 1px solid #22f4ad;
+                border: 1px solid #146A98;
                 border-radius: 50%;
                 margin-right: 3px;
                 cursor: pointer;
@@ -436,7 +453,7 @@
                 width: 12px;
                 height: 12px;
                 margin-left: 2px;
-                background-color: #0b47c9;
+                background-color: #63BEFE;
                 text-align: center;
                 line-height: 10px;
                 border-radius: 3px;
@@ -444,27 +461,36 @@
               }
             }
           }
+          .heade:nth-child(2n) {
+            background-color: #1B3864;
+          }
+          .heade:nth-child(2n-1) {
+            background-color: #1B2F54;
+          }
         }
         .roadLane {
           padding: 0 10px;
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: #264274;
+          border-bottom: 1px solid #1B335F;
           .roadNameBox {
             width: 85px;
             height: 30px;
-            background: url(../../../InterPlan/Flow/imgs/planBtn.png) center center no-repeat;
-            background-size: 85px 30px;
+            // background: url(./imgs/planBtn.png) center center no-repeat;
+            // background-size: 85px 30px;
             text-align: center;
             line-height: 30px;
-            color: #ff8800;
+            
+            color: $fontColor;
           }
         }
         .details {
           flex: 1;
           display: flex;
           height: 60px;
-          background: url(../../../InterPlan/Flow/imgs/roadBorder.png) center center no-repeat;
+          // background: url(./imgs/roadBorder.png) center center no-repeat;
           background-size: 100% 60px;
           align-items: center;
           div {
@@ -495,9 +521,8 @@
     width: 100px;
     height: 30px;
     display: block;
-    background: url(../../../InterPlan/Projectmana/imgs/item.png) center center no-repeat;
-    background-size: 100% 100%;
-    color: #ffffff;
+    background-color: $btnBg;
+    color: $fontColor;
     font-size: 13px;
     text-align: center;
     line-height: 30px;
@@ -505,7 +530,6 @@
     cursor: pointer;
   }
   .flowPlanChecked {
-    background: url(../../imgs/checkedPlan.png) center center no-repeat;
-    background-size: 100% 100%;
+    color: #22f4ad;
   }
 }

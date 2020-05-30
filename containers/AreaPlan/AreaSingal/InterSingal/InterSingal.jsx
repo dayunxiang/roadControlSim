@@ -437,7 +437,7 @@ class InterSingal extends React.Component {
                 </div>
               </div>
             }
-            <div style={{ padding: '20px 0 0 10px' }}><Title title={'周期：'+ cycleLength +' s'} /></div>
+            <div className={styles.stageTit}>{'周期：'+ cycleLength +' s'}</div>
             <div className={styles.stageMsgBoxList}>
               {phaseCvsArr && phaseCvsArr.length > 0 ? phaseCvsArr.map((item, i) => {
                 return (
@@ -497,7 +497,7 @@ class InterSingal extends React.Component {
           </div>
           <div id="rightPop" className={styles.rightPop}>
             <div className={styles.disabledMoudle} />
-            <div style={{ padding: '20px 0 0 10px' }}><Title title="仿真应用调度" /></div>
+            <div className={styles.stageTit}>仿真应用调度</div>
             {
               this.state.noSignal ? <Spin tip="无信号灯" /> :
                 (this.state.dispatchListArr && this.state.dispatchListArr.length > 0 ?

@@ -1,6 +1,7 @@
 $fontColor: #5BBDFF;
 $btnBgColor: #204073;
 $numColor: #FEFCFA;
+$gradient: linear-gradient(to right, rgba(19, 42, 83, .9), rgba(26, 66, 112, .9));
 
 .canalizWrapper {
   position: absolute;
@@ -374,13 +375,12 @@ $numColor: #FEFCFA;
     position: absolute;
     width: 90%;
     height: 90%;
-    background: url(../../../AreaPlan/imgs/flow_bg.png);
-    background-size: 107% 104%;
-    
+    background-image: $gradient;
+    border-radius: 8px;
     > .title {
       width: 100%;
       height: 43px;
-      color: #04eaff;
+      color: $fontColor;
       font-weight: 600;
       font-size: 17px;
       line-height: 43px;
