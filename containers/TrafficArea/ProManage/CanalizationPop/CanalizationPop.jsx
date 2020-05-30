@@ -316,7 +316,6 @@ class CanalizationPop extends React.Component {
               <div className={styles.cana_title} title={this.state.interName + '路口渠化方案管理'}>{this.state.interName}路口渠化方案管理</div>
               <span className={styles.close} onClick={this.getClose} />
               {/* <span className={styles.cana_close} /> */}
-              <div className={styles.cana_cross} />
               <div className={styles.cana_centent}>
                 <span className={styles.compass} />
                 {

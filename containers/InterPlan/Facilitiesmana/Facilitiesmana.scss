@@ -1,3 +1,9 @@
+$gradient: linear-gradient(to right, rgba(19, 42, 83, .9), rgba(26, 66, 112, .9));
+$gradientB: linear-gradient(to bottom, rgba(27,63,111, .9), rgba(21,46,86, .9));
+$numColor: #FEFCFA;
+$fontColor: #5AB2EC;
+$btnBg: #244372;
+
 .Content {
   width: 100%;
   height: 100%;
@@ -14,28 +20,24 @@
   cursor: move !important;
 }
 .histogram {
-  width: 624px;
-  height: 365px;
-  background: url(./imgs/histogram.png) center center no-repeat;
-  background-size: 100% 100%;
-  padding: 45px 15px;
+  width: 524px;
+  height: 265px;
+  background-color: rgba(13,27,66, .5);
   position: absolute;
-  right: 10px;
-  top: 133px;
+  right: 20px;
+  top: 160px;
   z-index: 998;
   /* &:hover {
       box-shadow: 0 0 60px #0194c0 inset, 0 0 30px #0194c0;
     } */
   .his_title {
     width: 280px;
-    height: 35px;
-    background: url(./imgs/sakuya.png) center center no-repeat;
-    background-size: 100% 100%;
-    color: #00e9de;
+    height: 40px;
+    color: $fontColor;
     font-size: 16px;
     font-weight: 600;
-    padding-left: 55px;
-    line-height: 17px;
+    line-height: 40px;
+    padding-left: 10px;
   }
   .bargraph {
     width: 100%;
@@ -43,25 +45,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: $gradientB;
   }
 }
 .facility_ed {
   width: 890px; //47%;
   height: 690px; //;64%
-  background: url(./imgs/facility_ed.png) center center no-repeat;
-  background-size: 100% 100%;
   position: absolute;
   top: 50%;
   left: 15px;
   margin-top: -345px;
   z-index: 999;
-  padding: 30px 10px;
+  padding: 20px;
+  background-color: rgba(26,58,105, .8);
+  border-radius: 8px;
   .clone {
     width: 15px;
     height: 15px;
     position: absolute;
-    top: 7px;
-    right: 3px;
+    top: 8px;
+    right: 8px;
     background: url(./imgs/clone.png) center center no-repeat;
     background-size: 100% 100%;
     z-index: 9999;
@@ -74,13 +77,9 @@
     .facility_title {
       width: 310px;
       height: 40px;
-      background: url(./imgs/sakuya.png) center center no-repeat;
-      background-size: 100% 100%;
       color: #00e9de;
       font-size: 16px;
       font-weight: 600;
-      padding-left: 60px;
-      margin: 7px 0;
     }
     .facility_content {
       width: 100%;
@@ -129,16 +128,17 @@
       width: 121px;
       height: 114px;
       color: #00e9de;
-      border: 1px solid #1842ae;
+      // border: 1px solid #1842ae;
       margin: 7px 0;
       padding: 2px 9px 0 9px;
       font-size: 13px;
+      background-image: $gradientB;
       cursor: pointer;
       > div {
         width: 105px;
         height: 84px;
-        background: url(./imgs/fac_itembg.png) center center no-repeat;
-        background-size: 100% 100%;
+        // background: url(./imgs/fac_itembg.png) center center no-repeat;
+        // background-size: 100% 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -150,14 +150,14 @@
       > span {
         width: 100px;
         display: inline-block;
-        background: url(./imgs/02.png) center center no-repeat;
-        background-size: 100% 100%;
         text-align: center;
         margin-top: 3px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         padding: 0 10px;
+        background-color: #254473;
+        color: $fontColor;
       }
     }
   }
@@ -395,24 +395,25 @@
 .makerFrame {
   width: 462px;
   height: 257px;
-  background: url(./imgs/fac_makerbg.png) center center no-repeat;
-  background-size: 100% 100%;
-  padding: 38px 4px;
+  // background: url(./imgs/fac_makerbg.png) center center no-repeat;
+  // background-size: 100% 100%;
+  background-image: $gradient;
+  padding: 10px;
   z-index: 9999999;
+  border-radius: 7px;
   .marker_title {
     width: 227px;
     height: 30px;
-    background: url(./imgs/sakuya.png) center center no-repeat;
-    background-size: 100% 100%;
-    color: #00e9de;
+    line-height: 30px;
+    color: $fontColor;
     font-size: 16px;
     font-weight: 600;
-    padding-left: 45px;
+    padding-left: 10px;
     margin-bottom: 14px;
   }
   .typeContent {
-    height: 110px;
-    overflow-y: scroll;
+    height: 155px;
+    overflow-y: auto;
   }
   .typeContent::-webkit-scrollbar {
     /*滚动条整体样式*/
@@ -436,37 +437,29 @@
   }
   p {
     width: 100%;
-    height: 32px;
-    line-height: 32px;
+    height: 30px;
+    line-height: 30px;
     padding-left: 25px;
-    color: #1098c2;
+    color: $fontColor;
     font-size: 14px;
-    &:nth-child(2) > span {
-      color: rgba(226, 205, 38, 1);
-    }
-    &:nth-child(3) > span {
-      color: rgba(197, 0, 253, 1);
-    }
-    &:nth-child(4) > span {
-      color: rgba(155, 253, 228, 1);
+    span {
+      color: $numColor;
     }
   }
   .markerActive {
     width: 120px;
     height: 35px;
-    background: url(./imgs/area_hover.png) center center no-repeat;
-    background-size: 100% 100%;
     text-align: center;
     line-height: 35px;
-    color: #02f5ef;
+    background-color: #214579;
+    color: $fontColor;
     font-size: 14px;
     float: right;
     margin-right: 40px;
     z-index: 999;
     cursor: pointer;
     &:hover {
-      background: url(./imgs/area_active.png) center center no-repeat;
-      background-size: 100% 100%;
+      color: #02f5ef;
     }
   }
 }
@@ -530,41 +523,6 @@
 }
 :global(.minemap-popup-content) {
   background: transparent !important;
-}
-.fac_item {
-  width: 121px;
-  height: 114px;
-  color: #00e9de;
-  border: 1px solid #1842ae;
-  margin: 7px 0;
-  padding: 2px 9px 0 9px;
-  font-size: 13px;
-  cursor: pointer;
-  > div {
-    width: 105px;
-    height: 84px;
-    background: url(./imgs/fac_itembg.png) center center no-repeat;
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      /* width: 54px;
-        height: 54px; */
-    }
-  }
-  > span {
-    width: 100px;
-    display: inline-block;
-    background: url(./imgs/02.png) center center no-repeat;
-    background-size: 100% 100%;
-    text-align: center;
-    margin-top: 3px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 0 10px;
-  }
 }
 :global(.ant-modal-content) {
   background: #343a52;

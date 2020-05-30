@@ -735,7 +735,7 @@ class Facilitiesmana extends React.Component {
     p.appendChild(p3)
     p.appendChild(p4)
     el.appendChild(p)
-    this.popup = new window.minemap.Popup({ closeOnClick: true, closeButton: true, offset: [0, -20] }).setHTML(`<div class=${styles.makerFrame}>
+    this.popup = new window.minemap.Popup({ closeOnClick: true, closeButton: false, offset: [0, -20] }).setHTML(`<div class=${styles.makerFrame}>
           <div class=${styles.marker_title}>` + item.nodeName + `</div>
             <div id='type-content' class=${styles.typeContent}></div>
             <div id='facilities-management' class=${styles.markerActive}>设施管理</div>
@@ -859,7 +859,7 @@ class Facilitiesmana extends React.Component {
           <div className={classNames(styles.histogram)
           }>
             <div className={styles.his_title}>重点交通设施共计{histogramNum || 0}个</div>
-            <div className={styles.bargraph}><ReactEcharts option={eachartOption} style={{ height: '240px', width: '600px' }} /></div>
+            <div className={styles.bargraph}><ReactEcharts option={eachartOption} style={{ height: '240px', width: '500px' }} /></div>
           </div > : null
         }
         {

@@ -327,7 +327,7 @@ class ProManage extends React.Component {
           this.state.planMessage === 'canalization' &&
           <div className={style.examineOther}>
             <div className={style.title}>{popShow.areaName}区域渠化方案管理
-              <span className={style.clone} popmessage={null} onClick={this.handleClosePlanPop} />
+              <span className={style.clone} popmessage={null} onClick={this.handleClosePlanPop}><Icon type="close" /></span>
             </div>
             <div className={style.canclizationPlan}>
               <CanalizationPop areaId={this.state.popShow.areaId} isDelete={this.getAreaPlanAgain} />
