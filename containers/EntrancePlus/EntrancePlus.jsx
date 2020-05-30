@@ -30,7 +30,7 @@ class EntrancePlus extends React.Component {
     limitArr.forEach((item) => {
       userLimit.push(item.id)
     })
-    console.log(userLimit, limitId)
+    if (!path) return
     if (userLimit.indexOf(limitId) === -1) {
       message.warning('暂无权限')
     } else {
@@ -57,9 +57,9 @@ class EntrancePlus extends React.Component {
           <div className={styles.modalBg}>
             <div modalname="/roadtraffic" limit="6" className={classNames(styles.modalItem, styles.inter)} onClick={this.handleGoSystem} />
             <div modalname="/trafficArea" limit="5" className={classNames(styles.modalItem, styles.area)} onClick={this.handleGoSystem} />
-            <div modalname="/trafficAnalysis" limit="4" className={classNames(styles.modalItem, styles.analysis)} onClick={this.handleGoSystem} />
+            <div className={classNames(styles.modalItem, styles.analysis)} onClick={this.handleGoSystem} />
             <div modalname="/trafficManage" limit="3" className={classNames(styles.modalItem, styles.manage)} onClick={this.handleGoSystem} />
-            <div modalname="/trafficDatas" limit="2" className={classNames(styles.modalItem, styles.datas)} onClick={this.handleGoSystem} />
+            {/* <div modalname="/trafficDatas" limit="2" className={classNames(styles.modalItem, styles.datas)} onClick={this.handleGoSystem} /> */}
           </div>
         </div>
       </div>

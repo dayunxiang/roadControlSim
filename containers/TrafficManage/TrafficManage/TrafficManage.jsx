@@ -554,10 +554,10 @@ class TrafficManage extends React.Component {
               <span>交通特性与模型参数管理</span>
               <span />
             </div>
-            <div className={classNames({ [navStyles.administer_itemclick]: this.state.hash === '#/TrafficAssess', [navStyles.road_administer_item]: true })} onClick={() => { this.getRoadtraffic('/TrafficAssess', 46) }}>
+            {/* <div className={classNames({ [navStyles.administer_itemclick]: this.state.hash === '#/TrafficAssess', [navStyles.road_administer_item]: true })} onClick={() => { this.getRoadtraffic('/TrafficAssess', 46) }}>
               <span>交通特性与模型参数评估</span>
               <span />
-            </div>
+            </div> */}
           </div>
           <div className={styles.planListBox}>
             {planList ? <AddPlanList planList={planList} TarsimState={TarsimState} handleItemPlan={this.handleItemPlanBefore} handleAddPlan={this.handleAddPlan} handleDelatePlan={this.handleDelatePlan} handleCompilePlan={this.handleCompilePlan} handleCheckPlan={this.handleCheckPlan} /> : []}
@@ -715,42 +715,6 @@ class TrafficManage extends React.Component {
                     </div>
                   </div>
                 </div>
-                <div className={styles.simulatStatus}>
-                  <div className={styles.title}>仿真状态</div>
-                  {/* <div className={styles.progressBox}>
-                    <div className={styles.progress}>
-                      <span className={styles.setNum}>当前配置{paramerDetailInfo.sim_duration || ''}</span>
-                    </div>
-                    <Progress
-                      strokeColor={{
-                        from: '#09308f',
-                        to: '#00c9fd',
-                      }}
-                      percent={70}
-                      status="active"
-                      showInfo={false}
-                    />
-                    <div className={styles.begainBtn}>开始仿真</div>
-                  </div> */}
-                  <div className={styles.progressBox}>
-                    <div className={styles.setNumBox}>
-                      <span className={styles.setNum}>仿真进度 :<span style={{ marginLeft: 10 }}>{paramerDetailInfo && paramerDetailInfo.simState === 3 ? '仿真异常' : paramerDetailInfo && paramerDetailInfo.simState === -1 ? '未开始仿真' : paramerDetailInfo && paramerDetailInfo.simFlagName}</span></span>
-                    </div>
-                    <Progress
-                      percent={paramerDetailInfo ? paramerDetailInfo.simProgress : 0}
-                      status="active"
-                    />
-                    <div className={styles.ProgressNumBox}>
-                      {!!progress && progress.map((item) => {
-                        return <span key={item} className={styles.ProgressNum}>{item}</span>
-                      })}
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.begainSimulat}>
-                  {<div className={styles.begainBtn} onClick={this.getTaskstart}>{paramerDetailInfo.simState === -1 ? '开始仿真' : '重新仿真'}</div>}
-                </div>
-                {paramerDetailInfo && paramerDetailInfo.simState === -1 || paramerDetailInfo && paramerDetailInfo.simState === 3 || (paramerDetailInfo && paramerDetailInfo.simState === 2 && ((paramerDetailInfo && paramerDetailInfo.simVideoYn === 0 && paramerDetailInfo && paramerDetailInfo.simFlag === 315) || (paramerDetailInfo && paramerDetailInfo.simVideoYn === 1 && paramerDetailInfo && paramerDetailInfo.simFlag === 316))) ? null : <div className={styles.simulatsetBox} onClick={this.getsimulatset} />}
               </div> : null}
           </div>
         </div>
