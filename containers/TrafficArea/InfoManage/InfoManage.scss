@@ -171,9 +171,9 @@ $btnBg: #244372;
   color: #dcdce6;
   margin-top: 60px;
 }
-:global(.ant-tree-node-selected, ) {
-  background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
-  background-size: 100% 100% !important;
+:global(.ant-tree-node-selected) {
+  background-color: #244372 !important;
+  color: #5AB2EC !important;
 }
 :global(.ant-modal-content) {
   background: #343a52;
