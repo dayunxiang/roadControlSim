@@ -197,13 +197,13 @@ class InfoManage extends React.Component {
       // 刷新地图点位
       this.getmarkersState()
       if (data) { //e.expanded
-        if (!this.edit) {
-          // 添加绘画层功能
-          this.addEditControl()
-        } else {
-          // 绑定绘画层
-          this.onEditBtnClick('rectangle')
-        }
+        // if (!this.edit) {
+        //   // 添加绘画层功能
+        //   this.addEditControl()
+        // } else {
+        //   // 绑定绘画层
+        //   this.onEditBtnClick('rectangle')
+        // }
         // 获取焦点
         this.myInput.input.focus()
         // 添加拖拽
@@ -294,7 +294,7 @@ class InfoManage extends React.Component {
     } else {
       popShow && popShow.nodes.push(item)
     }
-    this.setState({ popShow,dataPopshow }, () => {
+    this.setState({ popShow, dataPopshow }, () => {
       this.getmarkersState()
     })
   }
@@ -368,13 +368,13 @@ class InfoManage extends React.Component {
       // 刷新地图点位
       this.getmarkersState()
       this.myInput.input.focus()
-      if (!this.edit) {
-        // 添加绘画层功能
-        this.addEditControl()
-      } else {
-        // 绑定绘画层
-        this.onEditBtnClick('rectangle')
-      }
+      // if (!this.edit) {
+      //   // 添加绘画层功能
+      //   this.addEditControl()
+      // } else {
+      //   // 绑定绘画层
+      //   this.onEditBtnClick('rectangle')
+      // }
       // 添加拖拽
       /* getDrag(this.pointMarkerBox) */
     })
