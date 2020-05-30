@@ -80,7 +80,7 @@ $btnBg: #244372;
   }
   :global(span.ant-tree-node-content-wrapper::before) {
     height: 35px;
-    background: transparent !important;
+ background: transparent !important;
   }
   :global(.ant-tree-child-tree > li span.ant-tree-node-content-wrapper.ant-tree-node-selected) {
     color: #03edff;

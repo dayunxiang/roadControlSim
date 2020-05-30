@@ -734,18 +734,15 @@
     color: #ffffff;
     width: 235px;
     height: 35px;
-    background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
-    background-size: 100% 100% !important;
+    background: #244372;
   }
   :global(.ant-tree-node-content-wrapper-close) {
-    background: url(../../InterPlan/Projectmana/imgs/kuang.png) center center no-repeat !important;
-    background-size: 100% 100% !important;
+    background: #244372;
     color: #d89f07 !important;
     margin: 5px 21px !important;
   }
   :global(.ant-tree-node-content-wrapper-open) {
-    background: url(../../InterPlan/Projectmana/imgs/kuang.png) center center no-repeat !important;
-    background-size: 100% 100% !important;
+    background: #244372;
     color: #d89f07 !important;
     cursor: pointer !important;
   }
@@ -763,8 +760,7 @@
   :global(.ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper:hover) {
     width: 235px;
     height: 35px;
-    background: url(../../InterPlan/Projectmana/imgs/small.png) center center no-repeat !important;
-    background-size: 100% 100% !important;
+    background: #244372;
   }
   :global(li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span) {
     cursor: auto;
