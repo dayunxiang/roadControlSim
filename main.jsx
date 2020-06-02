@@ -198,7 +198,7 @@ reactDom.render(
         <Switch>
           <Redirect exact from="/" to="/login" />
           <Route exact path="/entrances" component={Entrances} />
-          {/* <Route exact path="/login" component={Login} /> */}
+          <Route exact path="/login" component={Login} />
           <Route path="/" component={Parent} />
         </Switch>
       </HashRouter>
