@@ -254,12 +254,6 @@ $bg_color: linear-gradient(to bottom, rgba(29, 64, 113, 0.9), rgba(21, 46, 83, 0
                 right: 15px;
                 cursor: pointer;
                 z-index: 1;
-                &:hover {
-                  /* transition: all 0.3s; */
-                  color: #07eeff;
-                  background: url(../../img/headerClick.png) center center no-repeat;
-                  background-size: 100% 100%;
-                }
               }
             }
             .box {

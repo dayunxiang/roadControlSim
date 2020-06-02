@@ -1,23 +1,22 @@
 .header {
   width: calc(100% - 49px);
-  height: 100px;
+  height: 95px;
   position: fixed;
-  top: 10px;
+  top:0px;
   left: 25px;
   background: url(./img/header.png) center center no-repeat;
-  background-size: contain;
+  background-size: 100%;
   > div {
     display: inline-block;
   }
   .header_left {
     width: 17%;
     height: 35px;
-    background: url(./img/header_left.png) center center no-repeat;
-    background-size: 100% 100%;
+    font-size: 18px;
     position: absolute;
     top: 30px;
     left: 6%;
-    color: #04ecff;
+    color:#5F9FDC;
     text-align: center;
     line-height: 35px;
     font-weight: bold;
@@ -67,10 +66,9 @@
       }
       .schedule {
         span {
-          background: url(./img/headerClick.png) center center no-repeat;
-          background-size: 100% 100%;
-          color: #04ecff !important;
-          font-weight: bold;
+          background-color: #22467a;
+          color: #60b5f1!important;
+          border-radius: 3px;
         }
         i {
           background: url(./img/flow_arrClick.png) center center no-repeat;

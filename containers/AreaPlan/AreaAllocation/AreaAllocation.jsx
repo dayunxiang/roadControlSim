@@ -363,7 +363,6 @@ class AreaAllocation extends React.Component {
                     <Checkbox value={1}>仿真过程中录制视频</Checkbox>
                   </Checkbox.Group> : '加载中...'}
               </div>
-              <div className={styles.splitBorder} />
             </div>
             <div className={styles.driveParams}>
               <div className={styles.title}>驾驶行为参数</div>
@@ -379,19 +378,19 @@ class AreaAllocation extends React.Component {
                     </Select> : '加载中...'}
                 </div>
                 <div className={styles.setItems}>
-                  <span style={{ color: '#ff0000' }}>前向观测距离：</span>
+                  <span>前向观测距离：</span>
                   <InputLabel labelText="最小值：" value={paramerDetailInfo ? paramerDetailInfo.frontDistanceMinimum : ''} color="#00994c" disabled="true" units="m" edit="true" />
                   <InputLabel left="10px" labelText="最大值：" value={paramerDetailInfo ? paramerDetailInfo.frontDistanceMaximum : ''} color="#ff0000" units="m" disabled="true" edit="true" />
                 </div>
               </div>
               <div className={styles.setItemsBox}>
                 <div className={styles.setItems}>
-                  <span style={{ color: '#ff0000' }}>后向观测距离：</span>
+                  <span>后向观测距离：</span>
                   <InputLabel labelText="最小值：" value={paramerDetailInfo ? paramerDetailInfo.rearDistanceMinimum : ''} color="#00994c" disabled="true" units="m" edit="true" />
                   <InputLabel left="10px" labelText="最大值：" value={paramerDetailInfo.rearDistanceMaximum || ''} color="#ff0000" disabled="true" units="m" edit="true" />
                 </div>
                 <div className={styles.setItems}>
-                  <span style={{ color: '#ff0000' }}>临时走神参数：</span>
+                  <span>临时走神参数：</span>
                   <InputLabel labelText="走神持续时间：" value={paramerDetailInfo ? paramerDetailInfo.wanderTime : ''} color="#ff8800" disabled="true" units="s" edit="true" />
                   <InputLabel left="10px" labelText="走神概率：" value={paramerDetailInfo ? paramerDetailInfo.wanderProbability : ''} color="#ff8800" units="%" disabled="true" edit="true" />
                 </div>
@@ -412,7 +411,7 @@ class AreaAllocation extends React.Component {
                   <InputLabel value={paramerDetailInfo ? paramerDetailInfo.slowDownMaximum : ''} units="m/s2" color="#ff8800" disabled="true" edit="true" />
                 </div>
                 <div className={styles.setItems}>
-                  <span style={{ color: '#ff0000' }}>黄灯期驾驶行为：</span>
+                  <span>黄灯期驾驶行为：</span>
                   {!!paramerDetailInfo && paramerDetailInfo.yellowDrivingBehavior ?
                     <Radio.Group defaultValue={paramerDetailInfo.yellowDrivingBehavior || ''} key={paramerDetailInfo.yellowDrivingBehavior}>
                       <Radio value={1} style={{ color: '#00994c' }}>与绿灯保持一致</Radio>
@@ -426,7 +425,7 @@ class AreaAllocation extends React.Component {
                   <InputLabel value={paramerDetailInfo ? paramerDetailInfo.nonVehicleRedProbability : ''} units="%" color="#ff0000" disabled="true" edit="true" />
                 </div>
                 <div className={styles.setItems}>
-                  <span style={{ color: '#ff0000' }}>行人闯红灯概率：</span>
+                  <span>行人闯红灯概率：</span>
                   <InputLabel value={paramerDetailInfo ? paramerDetailInfo.pedestrianRedProbability : ''} units="%" color="#ff0000" disabled="true" edit="true" />
                 </div>
               </div>
@@ -436,7 +435,7 @@ class AreaAllocation extends React.Component {
               <div className={styles.title}>仿真状态</div>
               <div className={styles.progressBox}>
                 <div className={styles.setNumBox}>
-                  <span className={styles.setNum}>仿真进度 :<span style={{ color: '#ff8800', marginLeft: 10 }}>{paramerDetail && paramerDetail.simState === 3 ? '仿真异常' : paramerDetail && paramerDetail.simFlagName}</span></span>
+                  <span className={styles.setNum}>仿真进度 :<span style={{ marginLeft: 10 }}>{paramerDetail && paramerDetail.simState === 3 ? '仿真异常' : paramerDetail && paramerDetail.simFlagName}</span></span>
                 </div>
                 <Progress
                   percent={paramerDetail ? paramerDetail.simProgress : 0}
